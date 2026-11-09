@@ -1,0 +1,1575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evolution of AI, 1950–2031 · AI Cheat Code Atlas</title>
+<meta name="description" content="It took 76 years, two winters, and people who refused to quit. Here’s how AI evolved, and what will happen in the next five years.">
+<meta name="theme-color" content="#F6F5F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151519" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://jocular-unicorn-a37f95.netlify.app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌌%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Cheat Code Atlas">
+<meta property="og:url" content="https://jocular-unicorn-a37f95.netlify.app/">
+<meta property="og:title" content="AI wasn&#x27;t born in 2022 🌌">
+<meta property="og:description" content="It took 76 years, two winters, and people who refused to quit. Here’s how AI evolved, and what will happen in the next five years.">
+<meta property="og:image" content="https://jocular-unicorn-a37f95.netlify.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI wasn't born in 2022. A timeline of AI from 1950 to 2031.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI wasn&#x27;t born in 2022 🌌">
+<meta name="twitter:description" content="It took 76 years, two winters, and people who refused to quit. Here’s how AI evolved, and what will happen in the next five years.">
+<meta name="twitter:image" content="https://jocular-unicorn-a37f95.netlify.app/og.png">
+<script>try { const t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap">
+</head>
+<body>
+<style>
+/* Layout: one long printed broadsheet. A 2017→2031 ribbon on top, the timeline as a ledger, the atlas as a card wall,
+   the future as columns printed in halftone (projected = dotted, real = solid). Tokens follow the Reel Classic system. */
+:root {
+  --paper: #F6F5F1; --card: #FFFFFF; --ink: #111111; --muted: #6E6B64; --hair: #DDDAD2; --chip: #EDEAE3;
+  --accent: #E8341A; --accent-ink: #FFFFFF; --device: #15161A; --device-ink: #F2EFE7; --dot: rgba(17,17,17,.16);
+  --likely: #1F7A47; --plausible: #9A6200; --spec: #6E6B64;
+  --f-display: "Space Grotesk", system-ui, sans-serif; --f-serif: "Instrument Serif", Georgia, serif; --f-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #151519; --card: #202127; --ink: #F2EFE7; --muted: #A3A099; --hair: #3F414A; --chip: #2A2B31;
+  --accent: #FF5A3D; --accent-ink: #151519; --device: #0B0B0D; --device-ink: #F2EFE7; --dot: rgba(242,239,231,.14);
+  --likely: #4CC481; --plausible: #E3A33B; --spec: #A3A099; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --paper: #151519; --card: #202127; --ink: #F2EFE7; --muted: #A3A099; --hair: #3F414A; --chip: #2A2B31;
+  --accent: #FF5A3D; --accent-ink: #151519; --device: #0B0B0D; --device-ink: #F2EFE7; --dot: rgba(242,239,231,.14);
+  --likely: #4CC481; --plausible: #E3A33B; --spec: #A3A099; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-display); font-size: 16px; line-height: 1.5;
+  background-image: radial-gradient(var(--dot) .7px, transparent .8px); background-size: 5px 5px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.mono { font-family: var(--f-mono); }
+.label { font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { text-wrap: balance; margin: 0; letter-spacing: -.02em; }
+em.s { font-family: var(--f-serif); font-style: italic; font-weight: 400; color: var(--accent); }
+
+/* top bar */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--hair); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; flex-wrap: wrap; }
+.brand { font-weight: 700; letter-spacing: -.01em; display: flex; align-items: center; gap: 10px; }
+.brand i { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.nav a { text-decoration: none; font-family: var(--f-mono); font-size: 12px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--hair); background: var(--card); }
+.nav a:hover { border-color: var(--ink); }
+.menubtn { display: none; align-items: center; gap: 8px; font: 700 13px/1 var(--f-mono); padding: 9px 14px; border-radius: 999px; border: 1.5px solid var(--ink); background: var(--card); color: var(--ink); cursor: pointer; }
+.menubtn svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; }
+.themebtn { order: 3; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; flex: none; border-radius: 50%; border: 1.5px solid var(--ink); background: var(--card); color: var(--ink); cursor: pointer; padding: 0; }
+.themebtn svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; }
+.themebtn:hover { background: var(--ink); color: var(--paper); }
+.themebtn .sun { display: none; }
+.is-dark .themebtn .sun { display: block; } .is-dark .themebtn .moon { display: none; }
+.top .nav { order: 2; margin-left: auto; }
+.top.open .menubtn { background: var(--ink); color: var(--paper); }
+.sw { display: inline-block; width: 18px; height: 10px; border-radius: 3px; border: 1.5px solid var(--ink); vertical-align: 1px; margin-right: 8px; }
+.sw.past { background: var(--chip); } .sw.e0 { background: color-mix(in srgb, var(--accent) 5%, var(--card)); }
+.sw.e1 { background: color-mix(in srgb, var(--accent) 12%, var(--card)); } .sw.e2 { background: color-mix(in srgb, var(--accent) 25%, var(--card)); }
+.sw.e3 { background: color-mix(in srgb, var(--accent) 45%, var(--card)); } .sw.e4 { background: var(--accent); }
+.sw.fut { background: var(--card) radial-gradient(color-mix(in srgb, var(--accent) 80%, transparent) 1.2px, transparent 1.4px) 0 0 / 4px 4px; }
+.ribbon-m { display: none; position: relative; padding-top: 30px; }
+.ribbon-m .row { display: grid; grid-template-columns: repeat(7, 1fr); height: 40px; border: 2px solid var(--ink); border-radius: 10px; overflow: hidden; }
+.ribbon-m .row span { border-right: 1px solid var(--hair); }
+.ribbon-m .row span:last-child { border-right: 0; }
+.ribbon-m .row .sw { width: auto; height: auto; border: 0; border-radius: 0; margin: 0; }
+.ribbon-m .row .sw.fut { background-size: 7px 7px; }
+.ribbon-m .nowm { position: absolute; top: 22px; height: 56px; left: calc(100% * 6 / 7 - 1px); width: 3px; background: var(--ink); }
+.ribbon-m .nowm b { position: absolute; top: -22px; right: -8px; white-space: nowrap; font: 700 11px/1 var(--f-mono); background: var(--ink); color: var(--paper); padding: 4px 7px; border-radius: 4px; }
+.ribbon-m .ends { display: grid; grid-template-columns: repeat(7, 1fr); margin-top: 6px; font: 700 11px/1.2 var(--f-mono); }
+.ribbon-m .ends span { padding-left: 3px; border-left: 1.5px solid var(--ink); }
+.ribbon-m .ends span:last-child { color: var(--muted); }
+.ribbon-m .key { display: block; margin-top: 8px; }
+
+/* hero */
+.hero { padding-block: 56px 28px; display: grid; gap: 22px; }
+.hero h1 { font-size: clamp(40px, 7vw, 84px); line-height: .98; font-weight: 700; max-width: 14ch; }
+.hero p { font-size: 19px; max-width: 60ch; margin: 0; }
+.inside { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.inside a { text-decoration: none; color: var(--ink); background: var(--card); border: 1px solid var(--hair); border-radius: 12px; padding: 10px 12px; display: grid; grid-template-columns: 26px 1fr; gap: 2px 8px; align-content: start; min-width: 0; }
+.inside a:hover { border-color: var(--ink); }
+.inside span { grid-row: span 2; font-family: var(--f-mono); font-size: 12px; color: var(--accent); padding-top: 3px; }
+.inside b { font-size: 15px; line-height: 1.2; }
+.inside small { font-size: 13px; color: var(--muted); line-height: 1.35; }
+@media (max-width: 860px) { .inside { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .inside { grid-template-columns: 1fr; gap: 6px; } .inside a { padding: 9px 12px; } }
+.ribbon { margin-top: 34px; }
+.ribbon .bar { display: grid; grid-template-columns: repeat(19, 1fr); height: 64px; border: 2px solid var(--ink); border-radius: 12px; position: relative; background: var(--card); }
+.ribbon .seg:first-child { border-radius: 10px 0 0 10px; }
+.ribbon .bar > .seg:nth-last-child(2) { border-radius: 0 10px 10px 0; }
+.ribbon .seg { border-right: 1px solid var(--hair); display: flex; align-items: flex-end; padding: 6px; font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.ribbon .seg:last-child { border-right: 0; }
+.ribbon .seg { font-size: 0; padding: 0; }
+.axis-y { position: relative; height: 26px; margin-top: 2px; font: 700 12px/1 var(--f-mono); }
+.axis-y span { position: absolute; top: 0; padding-top: 9px; transform: translateX(-50%); white-space: nowrap; }
+.axis-y span::before { content: ""; position: absolute; top: 0; left: 50%; width: 1.5px; height: 6px; background: var(--ink); }
+.axis-y span.first { transform: none; } .axis-y span.first::before { left: 0; }
+.axis-y span.last { transform: translateX(-100%); } .axis-y span.last::before { left: auto; right: 0; }
+.axis-y span.fut { color: var(--muted); }
+.ribbon .seg.past { background: var(--chip); }
+.ribbon .seg.wide { grid-column: span 2; color: var(--ink); }
+.ribbon .seg.e0 { background: color-mix(in srgb, var(--accent) 5%, var(--card)); }
+.ribbon .seg.e1 { background: color-mix(in srgb, var(--accent) 10%, var(--card)); }
+.ribbon .seg.e2 { background: color-mix(in srgb, var(--accent) 22%, var(--card)); }
+.ribbon .seg.e3 { background: color-mix(in srgb, var(--accent) 40%, var(--card)); color: var(--ink); }
+.ribbon .seg.e4 { background: var(--accent); color: var(--accent-ink); }
+.ribbon .seg.fut { background-image: radial-gradient(color-mix(in srgb, var(--accent) 70%, transparent) 1.4px, transparent 1.6px); background-size: 7px 7px; color: var(--ink); }
+.ribbon .now { position: absolute; top: -2px; bottom: -2px; left: calc(100% * (13.82 / 19)); width: 3px; background: var(--ink); }
+.ribbon .now span { position: absolute; top: -26px; left: -22px; font-family: var(--f-mono); font-size: 11px; font-weight: 700; background: var(--ink); color: var(--paper); padding: 2px 6px; border-radius: 4px; white-space: nowrap; }
+.eras { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 14px; }
+.era { border-top: 3px solid var(--ink); padding-top: 8px; min-width: 0; }
+.era b { display: block; font-size: 15px; }
+.era span { font-size: 13px; color: var(--muted); }
+.era.fut { border-top-style: dotted; }
+
+section { padding-block: 48px; border-top: 1px solid var(--hair); }
+.sec-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+.sec-head h2 { font-size: clamp(30px, 4.4vw, 48px); line-height: 1.02; }
+.sec-head p { margin: 6px 0 0; max-width: 58ch; color: var(--muted); }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip { font-family: var(--f-mono); font-size: 12px; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--hair); background: var(--card); color: var(--ink); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* timeline ledger */
+.year { display: grid; grid-template-columns: 120px 1fr; gap: 18px; padding-block: 14px; border-top: 2px solid var(--ink); }
+.year > h3 { font-size: 40px; line-height: 1; font-variant-numeric: tabular-nums; }
+.year .items { display: grid; gap: 10px; min-width: 0; }
+.item { display: grid; grid-template-columns: 74px 1fr; gap: 12px; background: var(--card); border: 1px solid var(--hair); border-radius: 12px; padding: 12px 14px; min-width: 0; }
+.item .when { font-family: var(--f-mono); font-size: 12px; color: var(--muted); padding-top: 3px; }
+.item h4 { margin: 0 0 2px; font-size: 18px; letter-spacing: -.01em; }
+.item p { margin: 0; font-size: 15px; }
+.item .tip { margin-top: 8px; font-size: 14px; padding-top: 8px; border-top: 1px dashed var(--hair); }
+.item .tip b { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; color: var(--accent); margin-right: 6px; }
+.tag { display: inline-block; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .04em; padding: 2px 7px; border-radius: 999px; background: var(--chip); color: var(--ink); margin-left: 6px; vertical-align: 2px; }
+.src { font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.empty { color: var(--muted); font-family: var(--f-mono); font-size: 13px; }
+
+/* agent map: a staircase of capability levels */
+.stairs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; align-items: end; }
+.step { display: grid; gap: 0; min-width: 0; }
+.step .riser { border: 2px solid var(--ink); border-radius: 12px 12px 0 0; border-bottom: 0; padding: 12px; background: var(--card); display: grid; gap: 4px; align-content: start; }
+.step .lv { font-family: var(--f-mono); font-size: 12px; font-weight: 700; color: var(--muted); display: flex; justify-content: space-between; gap: 6px; }
+.step .lv .now { background: var(--accent); color: var(--accent-ink); border-radius: 999px; padding: 0 7px; }
+.step h3 { font-size: 19px; line-height: 1.1; }
+.step .yr { font-family: var(--f-mono); font-size: 12px; }
+.step .block { border: 2px solid var(--ink); border-top: 0; border-radius: 0 0 12px 12px; background: var(--chip); }
+.step.l1 .block { height: 30px; } .step.l2 .block { height: 70px; } .step.l3 .block { height: 110px; }
+.step.l4 .block { height: 150px; } .step.l5 .block { height: 190px; background: var(--accent); }
+.step.l6 .riser, .step.l6 .block { border-style: dotted; }
+.step.l6 .block { height: 230px; background: transparent; background-image: radial-gradient(color-mix(in srgb, var(--accent) 70%, transparent) 1.4px, transparent 1.6px); background-size: 7px 7px; }
+.step[aria-pressed="true"] .riser { outline: 3px solid var(--accent); outline-offset: -5px; }
+.step button { all: unset; cursor: pointer; display: grid; }
+.step button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 12px; }
+.lvl-detail { margin-top: 16px; background: var(--card); border: 2px solid var(--ink); border-radius: 16px; padding: 18px; display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 18px; }
+.lvl-detail > div { min-width: 0; display: grid; gap: 8px; align-content: start; }
+.lvl-detail h3 { font-size: 26px; }
+.lvl-detail ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.lvl-detail li { display: grid; grid-template-columns: 70px 1fr; gap: 8px; font-size: 14px; }
+.lvl-detail li span { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.lvl-detail .box { border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+.lvl-detail .box b { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; margin-bottom: 2px; }
+.lvl-detail .give { background: var(--device); color: var(--device-ink); }
+.lvl-detail .give b { color: var(--accent); }
+.lvl-detail .risk { border: 1px dashed var(--accent); }
+.lvl-detail .risk b { color: var(--accent); }
+@media (max-width: 860px) {
+  .stairs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lvl-detail { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .stairs { grid-template-columns: 1fr; gap: 8px; }
+  .step button { grid-template-columns: 176px minmax(0, 1fr); align-items: stretch; }
+  .step h3 br { display: none; }
+  .step .riser { border: 2px solid var(--ink); border-right: 0; border-radius: 12px 0 0 12px; padding: 10px 12px; gap: 2px; }
+  .step h3 { font-size: 17px; }
+  .step .block { height: auto !important; border: 2px solid var(--ink); border-left: 0; border-radius: 0 12px 12px 0; justify-self: start; }
+  .step.l1 .block { width: 14%; } .step.l2 .block { width: 30%; } .step.l3 .block { width: 46%; }
+  .step.l4 .block { width: 62%; } .step.l5 .block { width: 80%; } .step.l6 .block { width: 100%; }
+}
+
+/* agentic stack rings */
+.stack { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+.rings { width: 100%; max-width: 100%; height: auto; display: block; }
+.rings .r-models { fill: color-mix(in srgb, var(--accent) 22%, var(--card)); }
+.rings .r-agents, .rings .r-infra { fill: var(--card); }
+.rings .r-systems { fill: var(--chip); }
+.rings .r-line { fill: none; stroke: var(--ink); stroke-width: 3; }
+.rings .dotfill { fill: color-mix(in srgb, var(--accent) 55%, transparent); }
+.rings .ring-hit { cursor: pointer; }
+.rings .ring-hit:hover { opacity: .92; }
+.rings .cpt.small text { font-size: 18px; }
+.rings .ttl { font-family: var(--f-display); font-weight: 700; font-size: 20px; fill: var(--accent); letter-spacing: -.5px; }
+.rings .sub { font-family: var(--f-mono); font-size: 12px; fill: var(--muted); }
+.rings .axis-line { stroke: var(--ink); stroke-width: 4; }
+.rings .axis-head { fill: var(--ink); }
+.rings .cpt { cursor: pointer; outline: none; }
+.rings .cpt text { font-family: var(--f-display); font-weight: 700; font-size: 21px; fill: var(--ink); letter-spacing: -.3px; }
+.rings .cpt circle { fill: var(--ink); }
+.rings .cpt:hover text, .rings .cpt:focus-visible text { fill: var(--accent); }
+.rings .cpt.on text { fill: var(--accent); }
+.rings .cpt.on circle { fill: var(--accent); }
+.rings .cpt:focus-visible circle { stroke: var(--accent); stroke-width: 6; }
+.stack-panel { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 70px); display: grid; gap: 12px; }
+.stack-panel .ringcard { background: var(--card); border: 2px solid var(--ink); border-radius: 16px; padding: 18px; display: grid; gap: 8px; }
+.stack-panel h3 { font-size: 28px; }
+.stack-panel p { margin: 0; }
+.stack-panel .cheat { font-size: 15px; }
+.stack-list { display: none; gap: 14px; }
+.stack-list .grp b { font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; color: var(--muted); display: block; margin-bottom: 6px; }
+.stack-list .grp div { display: flex; flex-wrap: wrap; gap: 6px; }
+.stack-list button { font: inherit; font-size: 14px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--hair); background: var(--card); color: var(--ink); cursor: pointer; }
+.stack-list button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 860px) { .stack { grid-template-columns: 1fr; } .stack-panel { position: static; } }
+/* inside the labs: brand tabs over a ring diagram per lab */
+.brand-anchor { display: block; height: 0; scroll-margin-top: 140px; }
+.brand-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+.brand-tab { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border: 2px solid var(--ink); border-radius: 12px; background: var(--card); color: var(--ink); font: inherit; cursor: pointer; text-align: left; }
+.brand-tab .lg { font-size: 26px; }
+.brand-tab b { display: block; font-size: 18px; line-height: 1.2; }
+.brand-tab span span { display: block; font-family: var(--f-mono); font-size: 11px; opacity: .7; }
+.brand-tab[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+.rings .r-line.dash { stroke-dasharray: 10 8; }
+.rings .cpt.pv circle { fill: var(--card); stroke: var(--ink); stroke-width: 3; }
+.rings .cpt.pv.on circle { stroke: var(--accent); }
+.stack-list button.pv { border-style: dashed; }
+.stat { display: inline-block; font-family: var(--f-mono); font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 3px 9px; border-radius: 999px; border: 1.5px solid currentColor; }
+.stat.live { color: var(--likely); } .stat.preview { color: var(--plausible); } .stat.soon, .stat.reported { color: var(--spec); }
+.nav .nav-lab { display: inline-flex; align-items: center; gap: 6px; }
+/* where the money sits: value bars per layer of the stack */
+.money { display: grid; gap: 8px; }
+.mrow { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 6px 18px; align-items: center; width: 100%; text-align: left; font: inherit; color: var(--ink); background: var(--card); border: 2px solid var(--hair); border-radius: 14px; padding: 12px 16px; cursor: pointer; }
+.mrow[aria-pressed="true"] { border-color: var(--ink); }
+.mrow:hover { border-color: var(--ink); }
+.mk b { display: block; font-size: 20px; line-height: 1.1; }
+.mk span { font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.mbar { position: relative; display: flex; align-items: center; gap: 10px; height: 34px; }
+.mbar i { display: block; height: 100%; border-radius: 6px; background: var(--accent); flex: none; }
+.mrow:nth-child(2) .mbar i { background: color-mix(in srgb, var(--accent) 70%, var(--card)); }
+.mrow:nth-child(3) .mbar i { background: color-mix(in srgb, var(--accent) 45%, var(--card)); }
+.mrow:nth-child(4) .mbar i { background: color-mix(in srgb, var(--accent) 28%, var(--card)); }
+.mrow:nth-child(5) .mbar i { background: var(--chip); border: 1px solid var(--hair); }
+.mbar em { font-style: normal; font-family: var(--f-mono); font-weight: 700; font-size: 15px; white-space: nowrap; }
+.mco { grid-column: 2; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; color: var(--muted); }
+.mco span { display: inline-flex; align-items: center; gap: 5px; }
+.money-wrap { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+.money-det .ringcard { background: var(--card); border: 2px solid var(--ink); border-radius: 16px; padding: 18px; display: grid; gap: 12px; }
+.money-det { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 80px); display: grid; gap: 12px; }
+.mlist { display: grid; gap: 10px; }
+.mlist > div { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding-bottom: 10px; border-bottom: 1px solid var(--hair); }
+.mlist > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.mn { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; }
+.mv { font-family: var(--f-mono); font-weight: 700; }
+.mt { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+.mv { text-align: right; white-space: nowrap; }
+.mv small { display: block; font-family: var(--f-mono); font-size: 10px; font-weight: 500; color: var(--muted); }
+.mn { flex-wrap: wrap; }
+.mtag { font-family: var(--f-mono); font-size: 10px; font-weight: 700; letter-spacing: .04em; padding: 1px 6px; border-radius: 999px; border: 1px solid var(--hair); color: var(--muted); }
+.mtag.new { border-color: var(--accent); color: var(--accent); }
+.mco sup { font-family: var(--f-mono); font-size: 9px; font-weight: 700; color: var(--accent); margin-left: 1px; }
+.mgrp { display: block; font-family: var(--f-mono); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-top: 4px; }
+@media (max-width: 860px) { .money-wrap { grid-template-columns: 1fr; } .money-det { position: static; } }
+@media (max-width: 640px) { .mrow { grid-template-columns: 1fr; padding: 12px; } .mco { grid-column: 1; } }
+@media (max-width: 640px) { .brand-tabs { flex-wrap: nowrap; } .brand-tab { flex: 1 1 0; min-width: 0; flex-direction: column; gap: 4px; padding: 10px 4px; text-align: center; } .brand-tab b { font-size: 15px; } .brand-tab span span { display: none; } }
+@media (max-width: 640px) { .stack-list { display: grid; } }
+
+/* frontier labs lane chart */
+.lanes-scroll { overflow-x: auto; border: 2px solid var(--ink); border-radius: 16px; background: var(--card); }
+.lanes { min-width: 1700px; padding: 10px 18px 14px 0; }
+.lane { display: grid; grid-template-columns: 150px 1fr; border-bottom: 1px solid var(--hair); }
+.lane:last-child { border-bottom: 0; }
+.lane .who { position: sticky; left: 0; z-index: 2; background: var(--card); padding: 12px 14px; display: grid; align-content: end; gap: 2px; border-right: 1px solid var(--hair); }
+.lane .who b { font-size: 16px; }
+.lane .who span { font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.track { position: relative; height: 118px; }
+.track::after { content: ""; position: absolute; left: 0; right: 0; top: 92px; border-top: 1px dashed var(--hair); }
+.rel { position: absolute; top: 92px; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; background: var(--ink); border: 2px solid var(--ink); cursor: pointer; z-index: 1; padding: 0; }
+.rel.open { background: var(--card); }
+.rel.anth { background: var(--accent); border-color: var(--accent); }
+.rel.anth.open { background: var(--card); }
+.rel[aria-pressed="true"] { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 40%, transparent); }
+.rel .nm { position: absolute; left: 6px; bottom: 12px; transform-origin: left bottom; transform: rotate(-38deg); white-space: nowrap; font-size: 11.5px; font-weight: 700; color: var(--ink); pointer-events: none; }
+.axis { display: grid; grid-template-columns: 150px 1fr; border-bottom: 2px solid var(--ink); }
+.axis .ticks { position: relative; height: 30px; }
+.axis .ticks span { position: absolute; bottom: 6px; transform: translateX(-50%); font-family: var(--f-mono); font-size: 12px; font-weight: 700; }
+.rel-detail { margin-top: 12px; display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; background: var(--device); color: var(--device-ink); border-radius: 12px; padding: 12px 16px; font-size: 15px; }
+.rel-detail b { font-size: 18px; }
+.rel-detail .mono { color: var(--accent); font-size: 12px; }
+.key { display: flex; gap: 16px; flex-wrap: wrap; font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-top: 10px; align-items: center; }
+.key i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--ink); vertical-align: -2px; margin-right: 6px; }
+
+/* brand marks */
+.lg { width: 1.05em; height: 1.05em; fill: currentColor; flex: none; vertical-align: -.17em; }
+.mg { width: 1.25em; height: 1.25em; border-radius: 50%; border: 1.5px solid currentColor; display: inline-grid; place-items: center; font-family: var(--f-mono); font-size: .62em; font-weight: 700; flex: none; vertical-align: -.2em; }
+.tools span { display: inline-flex; align-items: center; gap: 6px; }
+.lane .who b { display: flex; align-items: center; gap: 8px; }
+.lane .who .lg, .lane .who .mg { font-size: 20px; }
+.item h4 .lg { margin-right: 6px; }
+
+/* atlas */
+.atlas { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.card { background: var(--card); border: 1px solid var(--hair); border-radius: 16px; padding: 18px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.card .n { font-family: var(--f-mono); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; }
+.card h3 { font-size: 22px; }
+.card p { margin: 0; font-size: 15px; }
+.tools { display: flex; flex-wrap: wrap; gap: 6px; }
+.tools span { font-size: 13px; padding: 3px 9px; border-radius: 6px; border: 1px solid var(--hair); }
+.cheat { background: var(--device); color: var(--device-ink); border-radius: 12px; padding: 12px 14px; font-size: 14px; }
+.cheat b { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; color: var(--accent); margin-bottom: 4px; }
+.fit { display: flex; gap: 6px; }
+.fit span { font-family: var(--f-mono); font-size: 10.5px; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--ink); }
+
+/* future */
+.future { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+.fy { border: 2px dotted var(--ink); border-radius: 16px; padding: 16px; display: grid; gap: 12px; align-content: start; min-width: 0;
+  background-image: radial-gradient(color-mix(in srgb, var(--accent) 22%, transparent) 1px, transparent 1.2px); background-size: 8px 8px; background-color: var(--card); }
+.fy h3 { font-size: 34px; font-variant-numeric: tabular-nums; }
+.pred { background: var(--card); border: 1px solid var(--hair); border-radius: 12px; padding: 12px; display: grid; gap: 6px; }
+.pred h4 { margin: 0; font-size: 16px; }
+.pred p { margin: 0; font-size: 14px; }
+.conf { font-family: var(--f-mono); font-size: 11px; font-weight: 700; letter-spacing: .05em; display: inline-flex; align-items: center; gap: 6px; }
+.conf::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
+.conf.likely { color: var(--likely); } .conf.plausible { color: var(--plausible); } .conf.speculative { color: var(--spec); }
+.conf.speculative::before { background: transparent; border: 2px dotted currentColor; width: 7px; height: 7px; }
+.pred .do { font-size: 13px; border-top: 1px dashed var(--hair); padding-top: 6px; }
+.pred .do b { color: var(--accent); font-family: var(--f-mono); font-size: 11px; margin-right: 4px; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* jobs */
+.job-eras { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; margin-bottom: 14px; }
+.job-era { font: inherit; text-align: left; background: var(--card); color: var(--ink); border: 1px solid var(--hair); border-radius: 12px; padding: 10px 12px; cursor: pointer; display: grid; gap: 2px; min-width: 0; }
+.job-era b { font-size: 15px; line-height: 1.15; }
+.job-era span { font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.job-era i { font-style: normal; font-family: var(--f-mono); font-size: 11px; color: var(--accent); }
+.job-era[aria-selected="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.job-era[aria-selected="true"] span { color: var(--paper); opacity: .7; }
+.job-panel { background: var(--card); border: 2px solid var(--ink); border-radius: 16px; padding: 18px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; }
+.job-panel > div { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.job-panel h3 { font-size: 24px; }
+.job-panel .lesson { grid-column: 1 / -1; background: var(--device); color: var(--device-ink); border-radius: 12px; padding: 12px 14px; font-size: 15px; }
+.job-panel .lesson b { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; color: var(--accent); margin-bottom: 2px; }
+.role { display: grid; grid-template-columns: 64px 1fr; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hair); }
+.role:first-of-type { border-top: 0; }
+.role .yr { font-family: var(--f-mono); font-size: 12px; color: var(--accent); padding-top: 2px; }
+.role h4 { margin: 0; font-size: 16px; }
+.role p { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+.role.gone .yr { color: var(--muted); }
+.role.gone h4 { text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: var(--accent); }
+.job-k { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; font-weight: 700; }
+.job-k.up { color: var(--likely); } .job-k.down { color: var(--accent); }
+.job-stats { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 14px; margin-top: 28px; }
+.jstat { background: var(--card); border: 1px solid var(--hair); border-radius: 16px; padding: 16px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.jstat .big { font-family: var(--f-display); font-size: 44px; line-height: 1; font-weight: 700; font-variant-numeric: tabular-nums; }
+.jstat .big em { font-style: normal; color: var(--accent); }
+.jstat p { margin: 0; font-size: 14px; }
+.flow { display: grid; gap: 8px; }
+.flow .fr { display: grid; grid-template-columns: 92px 1fr; gap: 10px; align-items: center; font-size: 13px; }
+.flow .fr span { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.flow .fb { height: 26px; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-family: var(--f-mono); font-size: 12px; font-weight: 700; white-space: nowrap; }
+.flow .fb.mk { background: var(--accent); color: var(--accent-ink); }
+.flow .fb.ls { background: var(--chip); color: var(--ink); border: 1px dashed var(--muted); }
+.flow .fb.nt { background: var(--ink); color: var(--paper); }
+.job-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.jl { background: var(--card); border: 1px solid var(--hair); border-radius: 16px; padding: 16px; min-width: 0; }
+.jl ol { margin: 10px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; counter-reset: jl; }
+.jl li { counter-increment: jl; display: grid; grid-template-columns: 28px 1fr; gap: 8px; font-size: 15px; align-items: baseline; }
+.jl li::before { content: counter(jl, decimal-leading-zero); font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.jl li em { font-style: normal; font-family: var(--f-mono); font-size: 11px; color: var(--accent); margin-left: 6px; }
+.jl.down li { color: var(--muted); }
+.paths-h { margin: 34px 0 14px; display: grid; gap: 4px; }
+.paths-h h3 { font-size: 28px; }
+.paths-h p { margin: 0; color: var(--muted); max-width: 64ch; }
+.path-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.path-panel { background: var(--card); border: 2px solid var(--ink); border-radius: 16px; padding: 18px; display: grid; gap: 14px; }
+.path-top { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.path-top > div { border-radius: 12px; padding: 12px 14px; font-size: 14px; min-width: 0; }
+.path-top b { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; margin-bottom: 4px; }
+.path-top .risk { border: 1px dashed var(--accent); } .path-top .risk b { color: var(--accent); }
+.path-top .keep { background: var(--device); color: var(--device-ink); } .path-top .keep b { color: var(--accent); }
+.path-grid { display: grid; grid-template-columns: 150px repeat(3, minmax(0, 1fr)); gap: 0 26px; align-items: stretch; }
+.path-grid .hd { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; color: var(--muted); padding-bottom: 6px; }
+.path-now { grid-row: 2 / span 3; grid-column: 1; background: var(--ink); color: var(--paper); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; justify-content: center; gap: 4px; margin: 8px 0; position: relative; }
+.path-now span { font-family: var(--f-mono); font-size: 11px; opacity: .7; }
+.path-now b { font-size: 19px; line-height: 1.15; }
+.plane { display: contents; }
+.pn { position: relative; margin: 8px 0; padding: 10px 12px; border: 1px solid var(--hair); border-radius: 12px; background: var(--paper); min-width: 0; display: grid; gap: 3px; align-content: start; }
+.pn::before { content: ""; position: absolute; left: -27px; top: 50%; width: 26px; border-top: 2px solid var(--ink); }
+.pn::after { content: ""; position: absolute; left: -8px; top: calc(50% - 4px); border: 4px solid transparent; border-left: 6px solid var(--ink); }
+.pn .tk { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .06em; color: var(--accent); font-weight: 700; }
+.pn h4 { margin: 0; font-size: 15px; line-height: 1.2; }
+.pn p { margin: 0; font-size: 13px; color: var(--muted); }
+.pn.end { border: 2px solid var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--card)); }
+.path-skills { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.path-skills b { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; margin-right: 4px; }
+.path-skills span { font-size: 13px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--ink); }
+@media (max-width: 860px) {
+  .path-top { grid-template-columns: 1fr; }
+  .path-grid { grid-template-columns: 1fr; gap: 0; }
+  .path-grid .hd { display: none; }
+  .path-now { grid-row: auto; margin: 0 0 6px; }
+  .plane { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; padding: 10px 0 4px 18px; margin-left: 10px; border-left: 2px solid var(--ink); position: relative; }
+  .plane::before { content: attr(data-name); font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; font-weight: 700; color: var(--accent); margin: 6px 0 2px; }
+  .pn { margin: 5px 0; }
+  .pn::before { left: -19px; width: 14px; }
+  .pn::after { left: -7px; }
+}
+.jobs-next-h { margin: 34px 0 14px; display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; }
+.jobs-next-h h3 { font-size: 28px; }
+.jobs-next { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+@media (max-width: 860px) {
+  .job-eras { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .job-panel { grid-template-columns: 1fr; }
+  .job-stats { grid-template-columns: 1fr 1fr; } .job-stats .jstat:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .job-eras { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .job-lists { grid-template-columns: 1fr; }
+  .job-stats { grid-template-columns: 1fr; }
+  .jstat .big { font-size: 38px; }
+  .flow .fr { grid-template-columns: 76px 1fr; }
+}
+
+footer { padding-block: 40px 60px; border-top: 2px solid var(--ink); font-size: 14px; }
+footer ul { padding-left: 18px; margin: 8px 0 0; display: grid; gap: 4px; }
+footer li { word-break: break-word; }
+
+@media (max-width: 640px) {
+  .year { grid-template-columns: 1fr; gap: 8px; }
+  .year > h3 { font-size: 32px; }
+  .item { grid-template-columns: 1fr; gap: 4px; }
+  .top .wrap { padding-block: 10px; flex-wrap: nowrap; }
+  .menubtn { display: inline-flex; }
+  .brand { margin-right: auto; }
+  .menubtn { order: 1; }
+  .themebtn { order: 2; width: 38px; height: 38px; }
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px max(16px, env(safe-area-inset-right, 0px)) 16px max(16px, env(safe-area-inset-left, 0px)); background: var(--paper); border-bottom: 1px solid var(--hair); box-shadow: 0 12px 24px -12px rgba(0,0,0,.25); }
+  .top.open .nav { display: grid; }
+  .nav a { display: flex; justify-content: center; align-items: center; gap: 6px; padding: 11px 8px; font-size: 13px; border-radius: 10px; }
+  .ribbon .bar, .ribbon > .key, .axis-y { display: none; }
+  .ribbon { margin-top: 6px; }
+  .ribbon-m { display: block; }
+  .eras { grid-template-columns: 1fr; gap: 0; margin-top: 10px; }
+  .era { border-top: 1px solid var(--hair); padding: 9px 0; }
+  .era.fut { border-top-style: solid; }
+  .era > span { display: block; padding-left: 26px; }
+  .lanes { min-width: 1300px; }
+  .lane, .axis { grid-template-columns: 96px 1fr; }
+  .lane .who { padding: 10px 8px; }
+  .lane .who b { font-size: 13px; gap: 6px; }
+  .lane .who > span { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ribbon .now { animation: blink 1.4s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: .35; } }
+}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><i aria-hidden="true"></i>AI Cheat Code Atlas</div>
+    <button type="button" class="themebtn" id="themebtn" aria-label="Switch to dark mode"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button type="button" class="menubtn" id="menubtn" aria-expanded="false" aria-controls="sitenav"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg>Menu</button>
+    <nav class="nav" id="sitenav" aria-label="Sections">
+      <a href="#timeline">Timeline</a><a href="#agents">Agents</a><a href="#stack">Stack</a><a href="#labs">Labs</a><a class="nav-lab" data-logo="openai" href="#openai">OpenAI</a><a class="nav-lab" data-logo="anthropic" href="#anthropic">Anthropic</a><a class="nav-lab" data-logo="google" href="#google">Google</a><a href="#money-sec">Money</a><a href="#atlas">Products</a><a href="#jobs">Jobs</a><a href="#future">Next 5 years</a><a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="label">For founders shipping without a big engineering team</span>
+    <h1>AI wasn't born in <em class="s">2022</em> 🌌</h1>
+    <p>It took 76 years, two winters, and people who refused to quit. This space maps how AI got here, who builds and funds it, what it changes for your product and your career, and what the next five years bring.</p>
+    <nav class="inside" aria-label="What this space covers"><a href="#timeline"><span>01</span><b>Timeline</b><small>Every breakthrough since 1950, and what each one means for you today</small></a><a href="#agents"><span>02</span><b>Agent map</b><small>The six levels of AI agents, and what you can hand off at each one</small></a><a href="#stack"><span>03</span><b>Agentic stack</b><small>How models, agents and the infrastructure around them fit together</small></a><a href="#labs"><span>04</span><b>Frontier labs</b><small>Every major model release since 2018, lab by lab</small></a><a href="#inside"><span>05</span><b>Inside the labs</b><small>What OpenAI, Anthropic and Google have shipped, and what is coming</small></a><a href="#money-sec"><span>06</span><b>Where the money sits</b><small>The AI economy in five layers, with every major player valued</small></a><a href="#atlas"><span>07</span><b>Product atlas</b><small>12 product categories and how to use them without an engineering team</small></a><a href="#jobs"><span>08</span><b>Jobs</b><small>The roles AI ended and created, and career paths to 2030</small></a><a href="#future"><span>09</span><b>Next 5 years</b><small>Where this goes, with each prediction tied to a signal you can check</small></a></nav>
+    <div class="ribbon" aria-label="Timeline from 1950 to 2031, with today marked in November 2026">
+      <div class="bar" id="ribbon"><div class="now"><span>NOW · NOV 2026</span></div></div>
+      <div class="ribbon-m" aria-hidden="true"><div class="row" id="ribbonm"></div><span class="nowm"><b>NOW · NOV 2026</b></span><div class="ends"><span>1950</span><span>2012</span><span>2017</span><span>2022</span><span>2024</span><span>2025</span><span>2027+</span></div><div class="key">Solid = happened · Dotted = projected</div></div>
+      <div class="axis-y" id="ribbonaxis" aria-hidden="true"></div>
+      <div class="key" style="margin-top:8px">Solid = happened · Dotted = projected</div>
+      <div class="eras">
+        <div class="era"><b>Classic AI</b><span>1950–2011 · Turing, two AI winters, Deep Blue</span></div>
+        <div class="era"><b>Deep learning</b><span>2012–2016 · GPUs, AlphaGo, open-source frameworks</span></div>
+        <div class="era"><b>Foundations</b><span>2017–2021 · the Transformer, GPT-3, first copilots</span></div>
+        <div class="era"><b>Chat</b><span>2022–2023 · ChatGPT makes AI a product</span></div>
+        <div class="era"><b>Copilots &amp; builders</b><span>2024 · AI writes and runs whole apps</span></div>
+        <div class="era"><b>Agents</b><span>2025–2026 · AI takes tasks, not questions</span></div>
+        <div class="era fut"><b>Agent economy</b><span>2027–2031 · projected</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="timeline">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">01 · What happened</span><h2>The timeline</h2><p>From 1950 to this week: research breakthroughs, the GitHub repos that spread them, and the products built on top, with what each one means for you now.</p></div>
+        <div class="chips" role="group" aria-label="Filter the timeline" id="tl-filters"></div>
+      </div>
+      <div id="tl"></div>
+    </div>
+  </section>
+
+  <section id="agents">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">02 · How agents grew up</span><h2>The agent map</h2><p>Six levels, from AI that answers to AI that acts with its own budget. Each step up hands a founder a bigger job to delegate. Pick a level to see its milestones.</p></div>
+      </div>
+      <div class="stairs" id="stairs" role="group" aria-label="Agent capability levels"></div>
+      <div class="lvl-detail" id="lvl" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">03 · How the pieces fit</span><h2>The agentic stack</h2><p>Four rings, from the model at the centre to the infrastructure that keeps agents safe in production. Each ring wraps the one inside it. Select any concept for what it means and how to use it.</p></div>
+      </div>
+      <div class="stack">
+        <div>
+          <svg class="rings" id="rings" viewBox="0 0 1000 1000" role="group" aria-label="The agentic stack: models, agents, agentic systems and agentic infrastructure as nested rings"></svg>
+          <div class="stack-list" id="stacklist"></div>
+        </div>
+        <div class="stack-panel" id="stackpanel" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="labs">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">04 · Who builds the brains</span><h2>The frontier labs</h2><p>Every major model release from the labs that set the pace, 2018 to today. Read a lane left to right to see how fast each lab ships. Select a dot for details.</p></div>
+      </div>
+      <div class="lanes-scroll" tabindex="0" aria-label="Model releases by lab, scrolls sideways"><div class="lanes" id="lanes"></div></div>
+      <div class="key"><span><i style="background:var(--accent);border-color:var(--accent)"></i>Anthropic</span><span><i style="background:var(--ink)"></i>Closed model</span><span><i style="background:var(--card)"></i>Open weights</span><span>2018–2022 is compressed · scroll sideways for the early years</span></div>
+      <div class="rel-detail" id="reldet" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="inside">
+    <span class="brand-anchor" id="openai"></span><span class="brand-anchor" id="anthropic"></span><span class="brand-anchor" id="google"></span>
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">05 · Inside the labs</span><h2>What each lab has shipped, and what's next</h2><p>Pick a lab. The centre ring is its models, then the agents built on them, then the products and developer tools. The dotted outer ring is announced or reported, not out yet. Hollow dots are previews or betas.</p></div>
+      </div>
+      <div class="brand-tabs" role="tablist" aria-label="Choose a lab" id="brandtabs"></div>
+      <div class="stack">
+        <div>
+          <svg class="rings" id="brandrings" viewBox="-40 0 1080 1000" role="group"></svg>
+          <div class="stack-list" id="brandlist"></div>
+        </div>
+        <div class="stack-panel" id="brandpanel" aria-live="polite"></div>
+      </div>
+      <p class="key" style="margin-top:14px">Status as of October 2026, plus November's GPT-6 Cyber, from each lab's release notes and announcements. Items marked Reported come from news coverage only.</p>
+    </div>
+  </section>
+
+  <section id="money-sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">06 · Where the money sits</span><h2>The AI stack, by value</h2><p>The AI economy as five layers, from the power plants at the bottom to the apps founders build at the top. Every major player is here, including the new entrants. Each company counts once, in its main layer. Select a layer for the names, the numbers and what it means for you.</p></div>
+      </div>
+      <div class="money-wrap">
+        <div class="money" id="money"></div>
+        <div class="money-det" id="moneydet" aria-live="polite"></div>
+      </div>
+      <p class="key" style="margin-top:14px">Approximate, late October 2026. Public companies: market cap, which moves daily. Private companies: last funding round or deal. Est. = estimate or an older snapshot; Reported = news reports only; New = entered this layer in 2024 or later. Cloud and chip values are whole companies, not only their AI business. Not investment advice.</p>
+    </div>
+  </section>
+
+  <section id="atlas">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">07 · What it created</span><h2>The product atlas</h2><p>Twelve categories of AI products and services, the names you'll hear, and how to use each one without an engineering team.</p></div>
+        <div class="chips" role="group" aria-label="Filter by company stage" id="at-filters"></div>
+      </div>
+      <div class="atlas" id="at"></div>
+    </div>
+  </section>
+
+  <section id="jobs">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">08 · Who does the work</span><h2>The jobs AI ended, made, and is making</h2><p>Every wave of computing removed some tasks and created new job titles. Pick an era to see which roles appeared and which faded, then see where the next five years point.</p></div>
+      </div>
+      <div class="job-eras" role="tablist" aria-label="Choose an era" id="joberas"></div>
+      <div class="job-panel" id="jobpanel" role="tabpanel" aria-live="polite"></div>
+
+      <div class="job-stats">
+        <div class="jstat"><span class="label">By 2030 · WEF Future of Jobs 2025</span>
+          <div class="flow" aria-label="170 million jobs created, 92 million displaced, 78 million net new">
+            <div class="fr"><span>Created</span><div class="fb mk" style="width:100%">170M</div></div>
+            <div class="fr"><span>Displaced</span><div class="fb ls" style="width:54%">−92M</div></div>
+            <div class="fr"><span>Net new</span><div class="fb nt" style="width:46%">+78M</div></div>
+          </div>
+          <p>More jobs are created than lost overall, but they are not the same jobs or the same people.</p></div>
+        <div class="jstat"><span class="label">Skills that change</span><div class="big"><em>39%</em></div><p>Share of a worker's core skills expected to change or go out of date between 2025 and 2030 (WEF). About 22% of all jobs are expected to be disrupted.</p></div>
+        <div class="jstat"><span class="label">The first rung</span><div class="big"><em>−13%</em></div><p>Relative drop in employment for 22–25 year olds in the most AI-exposed jobs, such as software and customer service, since late 2022 (Stanford Digital Economy Lab, 2025).</p></div>
+      </div>
+
+      <div class="job-lists">
+        <div class="jl"><span class="job-k up">▲ FASTEST GROWING, BY 2030</span>
+          <ol><li>Big data specialists</li><li>Fintech engineers</li><li>AI and machine learning specialists</li><li>Software and app developers</li><li>Security management specialists</li><li>Data warehousing specialists</li><li>Autonomous and electric vehicle specialists</li><li>UI and UX designers</li></ol></div>
+        <div class="jl down"><span class="job-k down">▼ FASTEST DECLINING, BY 2030</span>
+          <ol><li>Postal service clerks</li><li>Bank tellers</li><li>Data entry clerks</li><li>Cashiers and ticket clerks</li><li>Admin assistants and executive secretaries</li><li>Printing workers</li><li>Accounting, bookkeeping and payroll clerks</li><li><span>Graphic designers<em>#11 · first creative role</em></span></li></ol></div>
+      </div>
+      <p class="key" style="margin-top:10px">Ranked by expected percentage change, from employers surveyed for the World Economic Forum's Future of Jobs Report 2025 (published January 2025). Graphic designers rank 11th, the first creative role on the declining list.</p>
+
+      <div class="paths-h"><span class="label">Where to go from here</span><h3>Career paths, 2026 to 2030</h3><p>Three directions for each role, based on the roles growing in the data above. Pick your role. Each path reads left to right: what to learn now, the role it leads to, and where that goes by 2030.</p></div>
+      <div class="path-tabs" role="tablist" aria-label="Choose a role" id="pathtabs"></div>
+      <div class="path-panel" id="pathpanel" role="tabpanel" aria-live="polite"></div>
+      <p class="key" style="margin-top:10px">Our read of the job data above, not a guarantee. Titles are already in use today unless marked 2030.</p>
+
+      <div class="jobs-next-h"><h3>Jobs being made, 2027–2031</h3><div class="legend"><span class="conf likely">LIKELY</span><span class="conf plausible">PLAUSIBLE</span><span class="conf speculative">SPECULATIVE</span></div></div>
+      <div class="jobs-next" id="jobsnext"></div>
+    </div>
+  </section>
+
+  <section id="future">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">09 · What's being built</span><h2>The next 5 years</h2><p>Our read of where this goes, each tied to a signal you can see today. These are projections, not facts.</p></div>
+        <div class="legend"><span class="conf likely">LIKELY</span><span class="conf plausible">PLAUSIBLE</span><span class="conf speculative">SPECULATIVE</span></div>
+      </div>
+      <div class="future" id="fu"></div>
+    </div>
+  </section>
+
+  <footer id="sources">
+    <div class="wrap">
+      <span class="label">Sources and method</span>
+      <p>Dates before 2026 are well-documented public launches. Several 2026 items come from news reports and are labelled with their source. Predictions are opinion, ranked by how strong today's signal is. Product names and logos identify the products and are trademarks of their owners; they are examples, not endorsements. Logo artwork from Simple Icons (CC0); products without one there show a letter mark; check current pricing and terms before you buy.</p>
+      <ul>
+        <li><a href="https://www.geekwire.com/2026/former-github-ceo-launches-rival-platform-built-for-ai-coding-agents/" target="_blank" rel="noopener">GeekWire: former GitHub CEO launches platform built for AI coding agents (Oct 2026)</a></li>
+        <li><a href="https://cybernews.com/news/zeabur-cloud-provider-shutdown-two-breaches-3-million-records/" target="_blank" rel="noopener">Cybernews: Zeabur shutting down after two breaches (Oct 2026)</a></li>
+        <li><a href="https://this.weekinsecurity.com/this-week-in-security-october-25-2026-edition" target="_blank" rel="noopener">This Week in Security, 25 Oct 2026 (Railway secrets breach)</a></li>
+        <li><a href="https://thenextweb.com/news/lovable-vibe-coding-security-crisis-exposed" target="_blank" rel="noopener">The Next Web: Lovable security crisis</a></li>
+        <li><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Vaswani et al., "Attention Is All You Need" (2017)</a></li>
+        <li><a href="https://openai.com/index/gpt-6-astra-next-generation-work" target="_blank" rel="noopener">OpenAI: GPT-6 Astra</a></li>
+        <li><a href="https://www.theregister.com/security/2026/11/05/openai-releases-gpt-6-cyber-and-promises-this-one-stays-within-rules-of-engagement/5307855" target="_blank" rel="noopener">The Register: GPT-6 Cyber (5 Nov 2026)</a></li>
+        <li><a href="https://cyberscoop.com/openai-gpt-6-cyber-security-model/" target="_blank" rel="noopener">CyberScoop: GPT-6 Cyber (5 Nov 2026)</a></li>
+        <li><a href="https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor" target="_blank" rel="noopener">TechCrunch: Meta acquires Conductor (4 Nov 2026)</a></li>
+        <li><a href="https://www.cnbc.com/2026/09/29/openai-devday-2026-live-updates.html" target="_blank" rel="noopener">CNBC: OpenAI DevDay 2026 recap</a></li>
+        <li><a href="https://www.tomsguide.com/ai/openai-court-filings-just-revealed-new-details-on-ai-device-with-jony-ive" target="_blank" rel="noopener">Tom's Guide: OpenAI device court filings</a></li>
+        <li><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Claude Platform release notes</a></li>
+        <li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic newsroom</a></li>
+        <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/" target="_blank" rel="noopener">Google: Gemini 4 Argon (13 Oct 2026)</a></li>
+        <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/" target="_blank" rel="noopener">Google: Gemini 4 Carbon (28 Oct 2026)</a></li>
+        <li><a href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" target="_blank" rel="noopener">Google: 100 things announced at I/O 2026</a></li>
+        <li><a href="https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/" target="_blank" rel="noopener">Google Developers: I/O 2026 developer keynote</a></li>
+        <li><a href="https://www.fool.com/research/largest-companies-by-market-cap/" target="_blank" rel="noopener">Motley Fool: largest companies by market cap, October 2026</a></li>
+        <li><a href="https://stockanalysis.com/stocks/nvda/market-cap/" target="_blank" rel="noopener">StockAnalysis: Nvidia market cap</a></li>
+        <li><a href="https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/" target="_blank" rel="noopener">TechCrunch: OpenAI raise at $1.25T valuation (Oct 2026)</a></li>
+        <li><a href="https://valueaddvc.com/blog/highest-valued-private-ai-companies-2026" target="_blank" rel="noopener">ValueAdd VC: highest-valued private AI companies 2026</a></li>
+        <li><a href="https://www.fool.com/investing/2026/10/24/constellation-vistra-and-ge-vernova-ranked-from-wo/" target="_blank" rel="noopener">Motley Fool: Constellation, Vistra and GE Vernova (Oct 2026)</a></li>
+        <li><a href="https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/" target="_blank" rel="noopener">TechCrunch: Etched at $10.3B (Jul 2026)</a></li>
+        <li><a href="https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/" target="_blank" rel="noopener">TechCrunch: Tenstorrent at $6.2B (Oct 2026)</a></li>
+        <li><a href="https://newmarketpitch.com/blogs/news/neocloud-top-startups-valuation" target="_blank" rel="noopener">New Market Pitch: neocloud valuations 2026</a></li>
+        <li><a href="https://ecorpit.com/meta-compute-cloud-gpu-llama-enterprise-2026/" target="_blank" rel="noopener">eCorpIT: Meta enters the cloud market (2026)</a></li>
+        <li><a href="https://eqvista.com/top-ai-startups-by-valuation/" target="_blank" rel="noopener">Eqvista: top AI startups by valuation 2026</a></li>
+        <li><a href="https://www.legalcheek.com/2026/10/ai-giant-legora-hits-8-8-billion-valuation-after-fresh-funding-round/" target="_blank" rel="noopener">Legal Cheek: Legora at $8.8B (Oct 2026)</a></li>
+        <li><a href="https://stockanalysis.com/stocks/nee/market-cap/" target="_blank" rel="noopener">StockAnalysis: NextEra market cap</a></li>
+        <li><a href="https://247wallst.com/investing/2026/10/29/memory-mania-has-micron-back-near-1000/" target="_blank" rel="noopener">24/7 Wall St: Micron near $1.1T (Oct 2026)</a></li>
+        <li><a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" target="_blank" rel="noopener">World Economic Forum: Future of Jobs Report 2025</a></li>
+        <li><a href="https://siepr.stanford.edu/publications/working-paper/canaries-coal-mine-six-facts-about-recent-employment-effects-artificial" target="_blank" rel="noopener">Brynjolfsson, Chandar and Chen (Stanford): Canaries in the Coal Mine? (Aug 2025)</a></li>
+        <li><a href="https://www.socialmediatoday.com/news/linkedin-shares-data-on-rising-job-roles/809069/" target="_blank" rel="noopener">Social Media Today: LinkedIn Jobs on the Rise 2026</a></li>
+        <li><a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">Model Context Protocol</a></li>
+        <li><a href="https://artificialintelligenceact.eu" target="_blank" rel="noopener">EU AI Act: timeline and obligations</a></li>
+      </ul>
+    </div>
+  </footer>
+</main>
+
+<script>
+const TL = [
+  { y: 1950, m: 'Oct', c: 'research', t: 'Turing asks "Can machines think?"', d: 'Alan Turing\'s paper "Computing Machinery and Intelligence" proposes the imitation game, later called the Turing test.' },
+  { y: 1956, m: 'Aug', c: 'research', t: 'The Dartmouth workshop', d: 'John McCarthy, Marvin Minsky and others coin "artificial intelligence" and launch it as a field. Their proposal aims for machines that can simulate every aspect of learning and intelligence: general AI was the goal from day one.' },
+  { y: 1958, m: '1958', c: 'research', t: 'The perceptron', d: 'Frank Rosenblatt builds a machine that learns to classify from examples: the first neural network people could see working.' },
+  { y: 1966, m: '1966', c: 'models', t: 'ELIZA', d: 'Joseph Weizenbaum\'s chatbot imitates a therapist with simple patterns. People confide in it anyway.', tip: 'Fifty years later the lesson stands: people trust things that talk. Design your AI\'s tone on purpose.' },
+  { y: 1969, m: '1969', c: 'research', t: '"Perceptrons" and the first AI winter', d: 'Minsky and Papert show the limits of single-layer networks. Funding dries up through the 1970s.' },
+  { y: 1980, m: '1980', c: 'research', t: 'Expert systems boom', d: 'Rule-based systems like XCON at Digital Equipment save real money. AI becomes a business for the first time.' },
+  { y: 1986, m: '1986', c: 'research', t: 'Backpropagation', d: 'Rumelhart, Hinton and Williams popularise the training method still used by every neural network today.' },
+  { y: 1987, m: '1987', c: 'research', t: 'The second AI winter', d: 'The expert-system and Lisp-machine market collapses. "AI" becomes a word companies avoid.', tip: 'Hype cycles end. Build on what works today, not on the promise.' },
+  { y: 1997, m: 'May', c: 'research', t: 'Deep Blue beats Kasparov', d: 'IBM\'s chess computer defeats the world champion in a match.' },
+  { y: 1997, m: 'Nov', c: 'research', t: 'LSTM', d: 'Hochreiter and Schmidhuber publish the memory-cell network that powered speech and translation for two decades.' },
+  { y: 1998, m: 'Nov', c: 'research', t: 'LeNet and MNIST', d: 'Yann LeCun\'s convolutional network reads handwritten digits; banks use it on cheques.' },
+  { y: 2006, m: '2006', c: 'research', t: 'Deep learning revival', d: 'Geoffrey Hinton\'s team shows deep networks can be trained layer by layer. The term "deep learning" takes off.' },
+  { y: 2009, m: '2009', c: 'research', t: 'ImageNet', d: 'Fei-Fei Li\'s team releases millions of labelled images. Data becomes the fuel of AI progress.' },
+  { y: 2010, m: '2010', c: 'agi', t: 'DeepMind founded', d: 'Demis Hassabis, Shane Legg and Mustafa Suleyman start a lab with the stated aim of building general intelligence. Google buys it in 2014.' },
+  { y: 2011, m: 'Feb', c: 'models', t: 'Watson wins Jeopardy!', d: 'IBM\'s system beats the show\'s champions on live TV.' },
+  { y: 2011, m: 'Oct', c: 'models', t: 'Siri', d: 'Apple puts a voice assistant in millions of pockets.' },
+  { y: 2012, m: 'Sep', c: 'research', t: 'AlexNet', d: 'A deep network trained on gaming GPUs crushes the ImageNet contest. GPUs become AI hardware.', tip: 'Compute is the hidden variable. It still decides what\'s possible and what it costs.' },
+  { y: 2013, m: 'Jan', c: 'research', t: 'word2vec', d: 'Google turns words into vectors where meaning is distance. The idea behind today\'s embeddings and semantic search.' },
+  { y: 2014, m: 'Jun', c: 'research', t: 'GANs', d: 'Ian Goodfellow\'s generative adversarial networks: two networks compete, one learns to make realistic images.' },
+  { y: 2014, m: 'Sep', c: 'research', t: 'Attention for translation', d: 'Bahdanau, Cho and Bengio let a model look back at the words that matter. The seed of the Transformer.' },
+  { y: 2015, m: 'Nov', c: 'oss', t: 'TensorFlow goes open source', d: 'Google publishes its deep learning framework on GitHub. AI research starts happening in public repos.', tip: 'Open source is how AI spreads. Watch GitHub stars to see what developers adopt before the press does.' },
+  { y: 2015, m: 'Dec', c: 'agi', t: 'OpenAI founded', d: 'A non-profit research lab launches with the mission of making sure artificial general intelligence (AGI) benefits all of humanity.' },
+  { y: 2016, m: 'Mar', c: 'research', t: 'AlphaGo beats Lee Sedol', d: 'DeepMind\'s system wins at Go, a game long thought decades away for computers.' },
+  { y: 2016, m: 'Oct', c: 'oss', t: 'PyTorch', d: 'Facebook\'s framework makes building networks feel like normal Python. It becomes the research default.' },
+  { y: 2017, m: 'Jun', c: 'models', t: 'The Transformer', d: 'Google researchers publish "Attention Is All You Need", the architecture inside every modern language model.', tip: 'Nothing to buy. Every tool on this page traces back to this paper.' },
+  { y: 2018, m: 'Jun', c: 'models', t: 'GPT-1', d: 'OpenAI shows that pre-training on lots of text, then fine-tuning, beats task-specific models.' },
+  { y: 2018, m: 'Oct', c: 'models', t: 'BERT', d: 'Google\'s model learns context in both directions and soon powers search understanding.' },
+  { y: 2018, m: 'Nov', c: 'oss', t: 'Hugging Face Transformers', d: 'A GitHub repo that makes BERT easy to use grows into the library and hub where most open models now live.', tip: 'Hugging Face is where to look first for a free, open model for your use case.' },
+  { y: 2019, m: 'Feb', c: 'models', t: 'GPT-2', d: 'Released in stages over misuse worries. The first time AI-written text felt human to most readers.' },
+  { y: 2020, m: 'May', c: 'models', t: 'GPT-3', d: 'A model that does new tasks from a few examples in the prompt. The first wave of AI writing startups is built on its API.', tip: 'The prompt became a product. Good examples in a prompt still beat long instructions.' },
+  { y: 2020, m: 'Nov', c: 'research', t: 'AlphaFold 2', d: 'DeepMind predicts protein structures with lab-level accuracy. AI starts doing science.' },
+  { y: 2021, m: 'Jan', c: 'creative', t: 'DALL·E', d: 'Images from a text description. The start of AI design tools.' },
+  { y: 2021, m: '2021', c: 'models', t: 'Anthropic founded', d: 'Former OpenAI researchers start a lab focused on AI safety research and reliable models.' },
+  { y: 2021, m: 'Jun', c: 'coding', t: 'GitHub Copilot preview', d: 'AI autocomplete inside the code editor. Coding help moves from search results into the editor.' },
+  { y: 2022, m: 'Oct', c: 'agents', t: 'ReAct', d: 'A research paper shows models can reason step by step and call tools in a loop. The pattern almost every agent still uses.' },
+  { y: 2022, m: 'Oct', c: 'oss', t: 'LangChain', d: 'A Python repo for chaining model calls, tools and memory. It becomes the first popular agent framework.' },
+  { y: 2022, m: 'Nov', c: 'oss', t: 'LlamaIndex', d: 'Started as GPT Index: connect a model to your own documents. The start of "chat with your data" (RAG).' },
+  { y: 2022, m: 'Aug', c: 'creative', t: 'Stable Diffusion', d: 'An open image model anyone can run, which sets off a wave of creative apps.' },
+  { y: 2022, m: 'Nov', c: 'models', t: 'ChatGPT', d: 'A chat window on top of a large model becomes the fastest-growing consumer app of its time.', tip: 'Your customers now expect to talk to software. A chat box is an interface, not a feature.' },
+  { y: 2023, m: 'Mar', c: 'models', t: 'GPT-4 and Claude', d: 'Both launch in the same week. Models start passing professional exams and reading long documents.' },
+  { y: 2022, m: 'Dec', c: 'research', t: 'Constitutional AI', d: 'Anthropic trains a model to follow a written set of principles, using AI feedback instead of only human ratings.' },
+  { y: 2023, m: 'Jul', c: 'models', t: 'Claude 2', d: 'A 100K-token context window: a model that reads a whole book or codebase section in one go.', tip: 'Long context means you can paste the whole contract, spec or transcript. Stop summarising first.' },
+  { y: 2023, m: 'Mar', c: 'agi', t: '"Sparks of AGI"', d: 'Microsoft Research publishes a paper arguing GPT-4 shows early signs of general intelligence. The AGI debate goes mainstream.' },
+  { y: 2023, m: 'Nov', c: 'agi', t: '"Levels of AGI"', d: 'Google DeepMind proposes defining AGI in stages by performance and generality, instead of one finish line.', tip: 'There is no single AGI moment to wait for. Capabilities arrive task by task; adopt them task by task.' },
+  { y: 2023, m: 'Mar', c: 'agents', t: 'ChatGPT plugins', d: 'ChatGPT can call outside services: book, search, calculate. The first mainstream AI that does things.' },
+  { y: 2023, m: 'Mar', c: 'oss', t: 'llama.cpp', d: 'Georgi Gerganov runs Meta\'s LLaMA on a laptop CPU. Local AI goes mainstream.' },
+  { y: 2023, m: 'Apr', c: 'oss', t: 'BabyAGI', d: 'A short script that creates, ranks and runs its own task list. A template for countless agent repos.' },
+  { y: 2023, m: 'Jun', c: 'oss', t: 'gpt-engineer', d: 'A repo that builds a whole codebase from a prompt. Its team later turns it into Lovable.' },
+  { y: 2023, m: 'Jun', c: 'oss', t: 'vLLM', d: 'Fast open-source model serving. Running your own model becomes affordable.' },
+  { y: 2023, m: 'Jul', c: 'oss', t: 'Ollama', d: 'One command to download and run open models on your own machine.', tip: 'Test an open model locally for free before paying for an API.' },
+  { y: 2023, m: 'Sep', c: 'oss', t: 'AutoGen', d: 'Microsoft\'s framework for multiple agents that talk to each other to finish a task.' },
+  { y: 2023, m: 'Oct', c: 'research', t: 'SWE-bench', d: 'A benchmark of real GitHub issues. "Can it fix real bugs?" becomes the scoreboard for coding agents.' },
+  { y: 2023, m: 'Nov', c: 'oss', t: 'CrewAI', d: 'Role-based agent teams (researcher, writer, reviewer) in a few lines of Python.' },
+  { y: 2023, m: 'Apr', c: 'agents', t: 'AutoGPT goes viral', d: 'An open-source loop that sets its own sub-goals. Unreliable, but it shows millions what an autonomous agent could be.', tip: 'The lesson still holds: agents fail on vague goals. Give them a clear task and a finish line.' },
+  { y: 2023, m: 'Jun', c: 'agents', t: 'Function calling', d: 'OpenAI\'s API returns structured tool calls. Developers can wire models to any system reliably.' },
+  { y: 2023, m: 'Jul', c: 'models', t: 'Llama 2 open weights', d: 'Meta releases a strong model companies can run on their own servers, commercially.', tip: 'Open models are your fallback for cost, privacy or lock-in worries.' },
+  { y: 2023, m: 'Nov', c: 'agents', t: 'GPTs and the Assistants API', d: 'Anyone can package instructions, files and tools into a custom assistant without code.' },
+  { y: 2023, m: 'Dec', c: 'models', t: 'Gemini', d: 'Google\'s multimodal model family, built to read text, images, audio and video together.' },
+  { y: 2024, m: 'Mar', c: 'agents', t: 'Devin', d: 'Cognition shows an "AI software engineer" that plans and works through tasks on its own.' },
+  { y: 2024, m: 'Mar', c: 'oss', t: 'OpenDevin (now OpenHands)', d: 'An open-source answer to Devin, built in public within weeks of the announcement.' },
+  { y: 2024, m: 'Apr', c: 'oss', t: 'SWE-agent', d: 'Princeton\'s open agent shows how much the interface between agent and computer matters.' },
+  { y: 2024, m: 'May', c: 'models', t: 'GPT-4o', d: 'Real-time voice and vision in one model. Voice agents become practical.' },
+  { y: 2024, m: 'Jun', c: 'builders', t: 'Claude 3.5 Sonnet and Artifacts', d: 'A model that codes well, plus a live preview of what it builds. Chat starts producing working apps.' },
+  { y: 2024, m: 'Sep', c: 'models', t: 'OpenAI o1', d: 'Reasoning models that think before answering. Big gains on maths, logic and hard code.' },
+  { y: 2024, m: 'Oct', c: 'agents', t: 'Computer use', d: 'Claude can use a computer: look at the screen, move the mouse, type.' },
+  { y: 2024, m: 'Oct', c: 'builders', t: 'Bolt and the app builders', d: 'Bolt.new, then Lovable and v0: describe an app, get a running one in the browser.', tip: 'Prototype here in an afternoon, then have a coding agent audit the code before real users arrive.' },
+  { y: 2024, m: 'Nov', c: 'agents', t: 'Model Context Protocol', d: 'Anthropic opens a standard way to plug AI into tools and data. Other vendors adopt it.', tip: 'If a tool has an MCP server, your AI can use it today. Check before building an integration.' },
+  { y: 2025, m: 'Jan', c: 'models', t: 'DeepSeek R1', d: 'An open reasoning model at a fraction of the price resets what AI should cost.' },
+  { y: 2025, m: 'Jan', c: 'agents', t: 'Operator', d: 'OpenAI\'s browser agent fills forms and completes web tasks for consumers.' },
+  { y: 2025, m: 'Feb', c: 'agents', t: 'Deep Research', d: 'Research agents read hundreds of pages for minutes, then write a cited report.', tip: 'Use a research agent for market maps and competitor teardowns before paying a consultant.' },
+  { y: 2025, m: 'Feb', c: 'builders', t: '"Vibe coding"', d: 'Andrej Karpathy names the habit of building software by describing it and accepting what AI writes.' },
+  { y: 2025, m: 'Feb', c: 'coding', t: 'Claude Code', d: 'A coding agent that works in your terminal and codebase, not a chat window. Generally available in May.', tip: 'Give it a CLAUDE.md with your stack and rules, and ask for a plan before any code.' },
+  { y: 2025, m: 'Mar', c: 'agents', t: 'Agents SDK and Responses API', d: 'OpenAI ships building blocks for agents: tools, hand-offs between agents, and tracing.' },
+  { y: 2025, m: 'Apr', c: 'agents', t: 'Agent2Agent protocol', d: 'Google proposes A2A, a standard for agents from different vendors to talk to each other.' },
+  { y: 2025, m: 'May', c: 'coding', t: 'GitHub Copilot coding agent', d: 'Assign a GitHub issue to an agent and get a pull request back.' },
+  { y: 2025, m: 'May', c: 'coding', t: 'Codex cloud agent', d: 'OpenAI ships an agent that takes coding tasks in parallel in the cloud and returns changes for review.' },
+  { y: 2025, m: 'Jul', c: 'agents', t: 'ChatGPT agent', d: 'Browsing, research and actions merge into one agent inside ChatGPT, with its own virtual computer.' },
+  { y: 2025, m: 'Aug', c: 'policy', t: 'EU AI Act: general-purpose AI rules', d: 'Obligations for general-purpose AI model providers start applying in the EU.', tip: 'Selling into the EU? Keep a simple record of which models you use and for what.' },
+  { y: 2025, m: 'Aug', c: 'models', t: 'GPT-5', d: 'OpenAI\'s next flagship, routing between fast and deep-thinking modes automatically.' },
+  { y: 2025, m: 'Sep', c: 'agents', t: 'Claude Agent SDK', d: 'The harness behind Claude Code opens up for building any kind of agent, not just coding ones.' },
+  { y: 2025, m: 'Oct', c: 'agents', t: 'Agent Skills', d: 'Packaged instructions and scripts an agent loads when a task needs them. Know-how becomes reusable.', tip: 'Write your team\'s processes down once as skills. Every agent run follows them.' },
+  { y: 2025, m: 'Dec', c: 'agents', t: 'MCP moves to a neutral foundation', d: 'Anthropic donates the Model Context Protocol to a new Linux Foundation home for agent standards.', tip: 'MCP is now the safe default for connecting your product to agents.' },
+  { y: 2025, m: 'Nov', c: 'models', t: 'Claude Opus 4.5 and Gemini 3', d: 'A new round of frontier releases pushes coding agents further on long, multi-step work.' },
+  { y: 2026, m: 'Apr', c: 'security', t: 'App-builder access flaw', d: 'A reported authorization flaw on Lovable exposed other users\' projects and credentials.', src: 'The Next Web', tip: 'Treat builder-made apps as drafts until someone has checked access rules.' },
+  { y: 2026, m: 'Jan', c: 'agents', t: 'Claude Cowork', d: 'Anthropic gives non-engineers its coding agent\'s abilities: Claude works through folders of files on your computer. Generally available in April.', tip: 'Hand it a folder of invoices or interview notes and ask for the finished spreadsheet.' },
+  { y: 2026, m: 'Feb', c: 'models', t: 'Opus 4.6, GPT-5.3-Codex and Gemini 3.1 Pro', d: 'Three labs ship upgrades within two weeks. A 1M-token context window becomes normal.' },
+  { y: 2026, m: 'Apr', c: 'security', t: 'Claude Mythos and Project Glasswing', d: 'Anthropic says its new model is strong enough at finding software vulnerabilities that it limits access to security partners.', tip: 'Attackers will use AI to find bugs too. Patch faster than you used to.' },
+  { y: 2026, m: 'Apr', c: 'agents', t: 'Managed agents', d: 'Anthropic (April) and Google (May) launch hosted agents: one API call gives an agent its own sandbox, memory and schedule.', tip: 'You no longer need your own agent infrastructure to ship an agent feature.' },
+  { y: 2026, m: 'May', c: 'coding', t: 'Antigravity 2.0', d: 'Google\'s agent-first coding platform adds a desktop app for running many agents in parallel, plus a CLI and SDK.' },
+  { y: 2026, m: 'Jun', c: 'models', t: 'Claude 5 generation', d: 'Anthropic releases Fable 5 and Sonnet 5, followed by Opus 5 in July.' },
+  { y: 2026, m: 'Jul', c: 'models', t: 'GPT-5.6 Sol, Terra and Luna', d: 'OpenAI ships its models in named tiers by price and power, after a limited preview.' },
+  { y: 2026, m: 'Sep', c: 'models', t: 'GPT-6 Astra', d: 'OpenAI\'s new flagship for long, multi-step work. GPT-6 Sol and Luna follow three weeks later at a fraction of the price.', tip: 'Route most calls to a cheap model and keep the flagship for the hardest step.' },
+  { y: 2026, m: 'Sep', c: 'models', t: 'Fable 5.1, Opus 5.5 and Sonnet 5.5', d: 'Anthropic\'s September releases target long-running agent work. Opus 5.5 lands the same day as GPT-6 Sol.' },
+  { y: 2026, m: 'Sep', c: 'models', t: 'Gemini 3.8 Flash', d: 'Google\'s third Flash release in about four months. Fast models now improve every few weeks.' },
+  { y: 2026, m: 'Oct', c: 'models', t: 'Gemini 4 Argon and Gemini 4 Carbon', d: 'Google starts the Gemini 4 family with named models. Argon is available to everyone from 13 October. Carbon, its strongest model for long agent runs and cyber defence, follows on 28 October, for vetted cyber defenders only at first.', tip: 'Both cost $2 in and $10 out per million tokens until 30 November, then double. Build on Argon now and move up when Carbon opens to developers.' },
+  { y: 2026, m: 'Oct', c: 'agents', t: 'Proactive agents arrive', d: 'Google\'s Gemini Spark (beta from May), OpenAI\'s dots (shown in September) and Claude Duet (October) work in the background and ask before acting.', tip: 'The question shifts from what to ask AI to what to let it watch.' },
+  { y: 2026, m: 'Oct', c: 'security', t: 'Vibe-coding hosts breached', d: 'Zeabur announces it will shut down after two breaches; Railway reports customer secrets were exposed and asks users to rotate keys.', src: 'Cybernews · This Week in Security', tip: 'Rotate keys now, store secrets in your host\'s secret manager, and never in the browser.' },
+  { y: 2026, m: 'Oct', c: 'coding', t: 'Entire launches', d: 'GitHub\'s former CEO launches a code platform built for agents, replacing the pull request with "Trails". Waitlist now, wider release expected early 2027.', src: 'GeekWire', tip: 'Code review is becoming the founder\'s job. Learn to review outcomes, not lines.' },
+  { y: 2026, m: 'Nov', c: 'security', t: 'GPT-6 Cyber', d: 'OpenAI releases its security research model, rated Critical under its own risk framework. It\'s limited to approved Daybreak Red customers for now. OpenAI says it found 81 serious Firefox flaws and built exploits for 948 Linux kernel bugs.', src: 'The Register · CyberScoop' },
+  { y: 2026, m: 'Nov', c: 'coding', t: 'Meta buys Conductor', d: 'Meta buys the startup behind a tool for running several coding agents in parallel. Conductor\'s cloud service shuts down on 20 November, and user cloud data starts being deleted after that.', src: 'TechCrunch', tip: 'If you use Conductor\'s cloud service, move your work out before 20 November.' },
+];
+const CATS = { all: 'All', research: 'Research', agi: 'AGI', oss: 'Open source', models: 'Models', coding: 'Coding', builders: 'App builders', agents: 'Agents', creative: 'Creative', security: 'Security', policy: 'Policy' };
+
+const ATLAS = [
+  { t: 'Frontier models & APIs', d: 'The brains everything else rents.', tools: ['Claude', 'GPT', 'Gemini', 'Llama', 'DeepSeek', 'Mistral'], fit: ['startup', 'enterprise'], cheat: 'Route easy, high-volume work to a small cheap model and keep the frontier model for the hard 10%. That alone can cut an AI bill several times over.' },
+  { t: 'Coding agents', d: 'Agents that read your codebase, plan, write and test changes.', tools: ['Claude Code', 'OpenAI Codex', 'Cursor', 'GitHub Copilot', 'Devin'], fit: ['startup', 'enterprise'], cheat: 'Ask for a written plan first, approve it, then let it build. Plans are cheap to fix; code isn\'t.' },
+  { t: 'App builders', d: 'Describe an app in plain words, get a running one.', tools: ['Lovable', 'Bolt', 'v0', 'Replit'], fit: ['startup'], cheat: 'Use them to test demand in days. Before charging money, export the code and run a security review with a coding agent.' },
+  { t: 'Agent plumbing', d: 'Standards and sandboxes that let agents use tools safely.', tools: ['MCP', 'Agent Skills', 'E2B', 'Daytona', 'Browser agents'], fit: ['startup', 'enterprise'], cheat: 'Give every agent its own revocable key with the smallest permission that works, and run code it writes in a sandbox.' },
+  { t: 'Backend in a box', d: 'Database, auth, storage and hosting without a backend team.', tools: ['Supabase', 'Firebase', 'Vercel', 'Railway', 'Neon'], fit: ['startup'], cheat: 'Turn on row-level security before your first real user. It\'s the most common hole in AI-built apps.' },
+  { t: 'Search & research', d: 'AI that reads the web for you, and where buyers now ask before they visit you.', tools: ['Perplexity', 'ChatGPT search', 'Claude research', 'Gemini Deep Research'], fit: ['startup', 'enterprise'], cheat: 'Buyers ask AI for recommendations. A clear pricing page and honest comparison pages make you easy to quote.' },
+  { t: 'Voice, video & design', d: 'A content studio in a subscription.', tools: ['ElevenLabs', 'Runway', 'Veo', 'Midjourney', 'Figma AI'], fit: ['startup'], cheat: 'Lock one voice and one design system and reuse them everywhere. Consistency is what makes AI content look like a brand.' },
+  { t: 'Support & sales agents', d: 'Agents that answer customers and research prospects.', tools: ['Intercom Fin', 'Sierra', 'Decagon', 'Clay'], fit: ['startup', 'enterprise'], cheat: 'Start with your 20 most common questions only, and hand everything else to a human. Expand once the answers are right.' },
+  { t: 'Legal & finance', d: 'Contract review, compliance checklists and bookkeeping help.', tools: ['Harvey', 'Legora', 'General assistants for drafts'], fit: ['enterprise', 'startup'], cheat: 'AI drafts and checklists, a professional signs off. You pay for an hour of review instead of a day of drafting.' },
+  { t: 'Observability & evals', d: 'See what your AI said, what it cost, and whether it got better.', tools: ['Langfuse', 'LangSmith', 'Braintrust', 'Helicone'], fit: ['startup', 'enterprise'], cheat: 'Log every prompt and answer from day one. You can\'t fix what you never saw.' },
+  { t: 'Security for AI-built apps', d: 'Find leaked keys, open databases and risky code before attackers do.', tools: ['Secret scanning', 'Snyk', 'Semgrep', 'AI code review'], fit: ['startup', 'enterprise'], cheat: 'Before every launch, ask a coding agent for a security review of auth, secrets and database rules. It takes minutes.' },
+  { t: 'Enterprise AI platforms', d: 'Models bought through the cloud you already use, with enterprise controls.', tools: ['AWS Bedrock', 'Google Vertex AI', 'Azure AI Foundry', 'Microsoft Copilot'], fit: ['enterprise'], cheat: 'Selling to enterprises? Running on their cloud\'s AI platform can shorten their security review a lot.' },
+];
+const FITS = { all: 'All stages', startup: 'Startup', enterprise: 'Enterprise' };
+
+const LEVELS = [
+  { n: 1, t: 'Answers', yr: '2022', d: 'You ask, it answers. No access to anything outside the chat.',
+    ms: [['Nov 2022', 'ChatGPT'], ['Mar 2023', 'GPT-4 and Claude']],
+    tools: ['ChatGPT', 'Claude', 'Gemini'], give: 'Drafts, explanations, brainstorming, rewriting.', risk: 'Confident wrong answers. Check facts and numbers.' },
+  { n: 2, t: 'Uses tools', yr: '2023', d: 'It calls search, APIs and apps for you, one step at a time.',
+    ms: [['Oct 2022', 'ReAct pattern'], ['Mar 2023', 'ChatGPT plugins'], ['Jun 2023', 'Function calling'], ['Nov 2023', 'GPTs and Assistants API']],
+    tools: ['Custom GPTs', 'Claude Projects', 'Zapier AI'], give: 'Lookups, moving data between apps, simple automations.', risk: 'Wrong inputs to the right tool. Log what it calls.' },
+  { n: 3, t: 'Uses a computer', yr: '2024–25', d: 'It sees a screen, clicks, types and browses like a person.',
+    ms: [['Oct 2024', 'Claude computer use'], ['Jan 2025', 'Operator'], ['Jul 2025', 'ChatGPT agent']],
+    tools: ['ChatGPT agent', 'Browser agents', 'Claude computer use'], give: 'Web forms, multi-site research, tools with no API.', risk: 'Web pages can hide instructions aimed at the agent. Keep it off sites with your passwords.' },
+  { n: 4, t: 'Works for hours', yr: '2025', d: 'Give it a goal and it plans, works, tests and reports back.',
+    ms: [['Mar 2024', 'Devin'], ['Feb 2025', 'Deep Research'], ['Feb 2025', 'Claude Code'], ['May 2025', 'Codex and Copilot coding agent']],
+    tools: ['Claude Code', 'Codex', 'Cursor', 'Devin', 'Deep Research'], give: 'Features, bug fixes, market research, reports.', risk: 'It ships what you asked, not what you meant. Approve a plan first, review the result.' },
+  { n: 5, t: 'Agent teams', yr: '2025–26', now: true, d: 'Agents plug into any tool through shared standards and hand work to each other.',
+    ms: [['Nov 2024', 'Model Context Protocol'], ['Mar 2025', 'Agents SDK'], ['Apr 2025', 'Agent2Agent'], ['Oct 2025', 'Agent Skills'], ['Dec 2025', 'MCP to a neutral foundation'], ['Oct 2026', 'Entire: code platform for agents']],
+    tools: ['MCP servers', 'Claude Agent SDK', 'OpenAI Agents SDK', 'Sandboxes'], give: 'Whole workflows: support queue, outbound, release pipeline.', risk: 'Shared keys and runaway bills. One key per agent, spending caps on.' },
+  { n: 6, t: 'Acts with authority', yr: '2027+', fut: true, d: 'Agents with their own identity, permissions and budget that buy, negotiate and sign off within limits. This is about autonomy, not AGI: an agent can act on its own without being generally intelligent.',
+    ms: [['2026', 'Vendors publish agent identity and permission guidance'], ['2027+', 'Agent accounts, audit logs, agent payments']],
+    tools: ['In the making'], give: 'Purchasing, renewals, vendor negotiation, within a budget you set.', risk: 'Who is liable when an agent signs? Expect audits, insurance and new rules.' },
+];
+
+const FUTURE = [
+  { y: '2027', p: [
+    { c: 'likely', t: 'Agents review code first, humans approve', d: 'The pull request gives way to agent-written changes checked by agent reviewers.', s: 'Entire\'s wider release is expected early 2027; coding tools are shipping review agents now.', do: 'Learn to judge outcomes: does it work, is it safe, is it what the customer asked for.' },
+    { c: 'likely', t: 'Agents get identities and permissions', d: 'Each agent has its own account, scopes and audit log, like an employee.', s: 'Big vendors are publishing agent security guidance in 2026.', do: 'Stop sharing your own keys with agents. One key per agent, smallest scope.' },
+    { c: 'likely', t: 'EU high-risk AI rules bite', d: 'Obligations for high-risk AI systems phase in; timing may shift.', s: 'The EU AI Act\'s phased timeline.', do: 'If you touch hiring, credit, health or education, map your AI use now.' },
+  ] },
+  { y: '2028', p: [
+    { c: 'plausible', t: 'Software sells to agents, not just people', d: 'Buyers\' agents compare, trial and buy tools through APIs and MCP.', s: 'MCP adoption across major vendors since 2025.', do: 'Ship an API and an MCP server early. Be the tool an agent can use.' },
+    { c: 'plausible', t: 'Small models do most of the work', d: 'Fast on-device and small cloud models handle everyday tasks; frontier models handle the hard ones.', s: 'Steady price drops and strong small open models.', do: 'Design your product so the model can be swapped.' },
+  ] },
+  { y: '2029', p: [
+    { c: 'plausible', t: 'Tiny teams, real revenue', d: 'Companies of one to ten people run sales, support and engineering with agent teams.', s: 'Coding, support and sales agents already in production in 2026.', do: 'Hire for judgement and taste. Agents cover throughput.' },
+    { c: 'plausible', t: 'Audits and insurance for AI-built software', d: 'Buyers and insurers ask for proof your AI-built app is secure.', s: 'The 2026 breaches at vibe-coding hosts.', do: 'Keep a security checklist and a record of every review from now on.' },
+  ] },
+  { y: '2030–31', p: [
+    { c: 'speculative', t: 'Describe outcomes, not features', d: 'Most software is built by stating the result you want; engineers become reviewers and architects.', s: 'The jump from autocomplete (2021) to agents (2025) took four years.', do: 'Get very good at writing specs. It\'s the skill that compounds.' },
+    { c: 'speculative', t: 'AGI: claimed, disputed, undefined', d: 'Some labs may say they have reached AGI; others will disagree, because there is no agreed definition. Public estimates range from a few years to decades.', s: 'Labs\' stated AGI missions and DeepMind\'s 2023 "Levels of AGI" framework.', do: 'Don\'t bet the company on a date. Build on what models do today, and design so you can swap in a better model the day it ships.' },
+    { c: 'speculative', t: 'Agents transact with agents', d: 'Purchasing, payments and negotiation between companies\' agents, under new rules.', s: 'Agent identity and permission work underway in 2026.', do: 'Watch payments and identity standards. That\'s where the rules get set.' },
+  ] },
+];
+
+// Brand marks: Simple Icons path data (CC0). Trademarks belong to their owners; shown only to identify the products.
+const LOGO = {"alibabacloud":"M3.996 4.517h5.291L8.01 6.324 4.153 7.506a1.668 1.668 0 0 0-1.165 1.601v5.786a1.668 1.668 0 0 0 1.165 1.6l3.857 1.183 1.277 1.807H3.996A3.996 3.996 0 0 1 0 15.487V8.513a3.996 3.996 0 0 1 3.996-3.996m16.008 0h-5.291l1.277 1.807 3.857 1.182c.715.227 1.17.889 1.165 1.601v5.786a1.668 1.668 0 0 1-1.165 1.6l-3.857 1.183-1.277 1.807h5.291A3.996 3.996 0 0 0 24 15.487V8.513a3.996 3.996 0 0 0-3.996-3.996m-4.007 8.345H8.002v-1.804h7.995Z","anthropic":"M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z","claude":"m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z","elevenlabs":"M4.6035 0v24h4.9317V0zm9.8613 0v24h4.9317V0z","figma":"M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z","firebase":"M19.455 8.369c-.538-.748-1.778-2.285-3.681-4.569-.826-.991-1.535-1.832-1.884-2.245a146 146 0 0 0-.488-.576l-.207-.245-.113-.133-.022-.032-.01-.005L12.57 0l-.609.488c-1.555 1.246-2.828 2.851-3.681 4.64-.523 1.064-.864 2.105-1.043 3.176-.047.241-.088.489-.121.738-.209-.017-.421-.028-.632-.033-.018-.001-.035-.002-.059-.003a7.46 7.46 0 0 0-2.28.274l-.317.089-.163.286c-.765 1.342-1.198 2.869-1.252 4.416-.07 2.01.477 3.954 1.583 5.625 1.082 1.633 2.61 2.882 4.42 3.611l.236.095.071.025.003-.001a9.59 9.59 0 0 0 2.941.568q.171.006.342.006c1.273 0 2.513-.249 3.69-.742l.008.004.313-.145a9.63 9.63 0 0 0 3.927-3.335c1.01-1.49 1.577-3.234 1.641-5.042.075-2.161-.643-4.304-2.133-6.371m-7.083 6.695c.328 1.244.264 2.44-.191 3.558-1.135-1.12-1.967-2.352-2.475-3.665-.543-1.404-.87-2.74-.974-3.975.48.157.922.366 1.315.622 1.132.737 1.914 1.902 2.325 3.461zm.207 6.022c.482.368.99.712 1.513 1.028-.771.21-1.565.302-2.369.273a8 8 0 0 1-.373-.022c.458-.394.869-.823 1.228-1.279zm1.347-6.431c-.516-1.957-1.527-3.437-3.002-4.398-.647-.421-1.385-.741-2.194-.95.011-.134.026-.268.043-.4.014-.113.03-.216.046-.313.133-.689.332-1.37.589-2.025.099-.25.206-.499.321-.74l.004-.008c.177-.358.376-.719.61-1.105l.092-.152-.003-.001c.544-.851 1.197-1.627 1.942-2.311l.288.341c.672.796 1.304 1.548 1.878 2.237 1.291 1.549 2.966 3.583 3.612 4.48 1.277 1.771 1.893 3.579 1.83 5.375-.049 1.395-.461 2.755-1.195 3.933-.694 1.116-1.661 2.05-2.8 2.708-.636-.318-1.559-.839-2.539-1.599.79-1.575.952-3.28.479-5.072zm-2.575 5.397c-.725.939-1.587 1.55-2.09 1.856-.081-.029-.163-.06-.243-.093l-.065-.026c-1.49-.616-2.747-1.656-3.635-3.01-.907-1.384-1.356-2.993-1.298-4.653.041-1.19.338-2.327.882-3.379.316-.07.638-.114.96-.131l.084-.002c.162-.003.324-.003.478 0 .227.011.454.035.677.07.073 1.513.445 3.145 1.105 4.852.637 1.644 1.694 3.162 3.144 4.515z","github":"M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12","githubcopilot":"M23.922 16.997C23.061 18.492 18.063 22.02 12 22.02 5.937 22.02.939 18.492.078 16.997A.641.641 0 0 1 0 16.741v-2.869a.883.883 0 0 1 .053-.22c.372-.935 1.347-2.292 2.605-2.656.167-.429.414-1.055.644-1.517a10.098 10.098 0 0 1-.052-1.086c0-1.331.282-2.499 1.132-3.368.397-.406.89-.717 1.474-.952C7.255 2.937 9.248 1.98 11.978 1.98c2.731 0 4.767.957 6.166 2.093.584.235 1.077.546 1.474.952.85.869 1.132 2.037 1.132 3.368 0 .368-.014.733-.052 1.086.23.462.477 1.088.644 1.517 1.258.364 2.233 1.721 2.605 2.656a.841.841 0 0 1 .053.22v2.869a.641.641 0 0 1-.078.256Zm-11.75-5.992h-.344a4.359 4.359 0 0 1-.355.508c-.77.947-1.918 1.492-3.508 1.492-1.725 0-2.989-.359-3.782-1.259a2.137 2.137 0 0 1-.085-.104L4 11.746v6.585c1.435.779 4.514 2.179 8 2.179 3.486 0 6.565-1.4 8-2.179v-6.585l-.098-.104s-.033.045-.085.104c-.793.9-2.057 1.259-3.782 1.259-1.59 0-2.738-.545-3.508-1.492a4.359 4.359 0 0 1-.355-.508Zm2.328 3.25c.549 0 1 .451 1 1v2c0 .549-.451 1-1 1-.549 0-1-.451-1-1v-2c0-.549.451-1 1-1Zm-5 0c.549 0 1 .451 1 1v2c0 .549-.451 1-1 1-.549 0-1-.451-1-1v-2c0-.549.451-1 1-1Zm3.313-6.185c.136 1.057.403 1.913.878 2.497.442.544 1.134.938 2.344.938 1.573 0 2.292-.337 2.657-.751.384-.435.558-1.15.558-2.361 0-1.14-.243-1.847-.705-2.319-.477-.488-1.319-.862-2.824-1.025-1.487-.161-2.192.138-2.533.529-.269.307-.437.808-.438 1.578v.021c0 .265.021.562.063.893Zm-1.626 0c.042-.331.063-.628.063-.894v-.02c-.001-.77-.169-1.271-.438-1.578-.341-.391-1.046-.69-2.533-.529-1.505.163-2.347.537-2.824 1.025-.462.472-.705 1.179-.705 2.319 0 1.211.175 1.926.558 2.361.365.414 1.084.751 2.657.751 1.21 0 1.902-.394 2.344-.938.475-.584.742-1.44.878-2.497Z","google":"M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z","googlecloud":"M12.19 2.38a9.344 9.344 0 0 0-9.234 6.893c.053-.02-.055.013 0 0-3.875 2.551-3.922 8.11-.247 10.941l.006-.007-.007.03a6.717 6.717 0 0 0 4.077 1.356h5.173l.03.03h5.192c6.687.053 9.376-8.605 3.835-12.35a9.365 9.365 0 0 0-2.821-4.552l-.043.043.006-.05A9.344 9.344 0 0 0 12.19 2.38zm-.358 4.146c1.244-.04 2.518.368 3.486 1.15a5.186 5.186 0 0 1 1.862 4.078v.518c3.53-.07 3.53 5.262 0 5.193h-5.193l-.008.009v-.04H6.785a2.59 2.59 0 0 1-1.067-.23h.001a2.597 2.597 0 1 1 3.437-3.437l3.013-3.012A6.747 6.747 0 0 0 8.11 8.24c.018-.01.04-.026.054-.023a5.186 5.186 0 0 1 3.67-1.69z","googlegemini":"M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81","huggingface":"M1.4446 11.5059c0 1.1021.1673 2.1585.4847 3.1563-.0378-.0028-.0691-.0058-.1058-.0058-.4209 0-.8015.16-1.0704.4512-.3454.3737-.4984.8335-.4316 1.293a1.576 1.576 0 0 0 .2148.5978c-.2319.1864-.4018.4456-.4844.7578-.0646.2448-.131.7543.2149 1.2794a1.4552 1.4552 0 0 0-.0625.1055c-.208.3923-.2207.8372-.0371 1.25.2783.6258.9696 1.1175 2.3126 1.6467.8356.3292 1.5988.5411 1.6056.543 1.1046.2847 2.104.4277 2.969.4277 1.4173 0 2.4754-.3849 3.1525-1.1446 1.538.2651 2.791.1403 3.592.006.6773.7555 1.7332 1.1387 3.1467 1.1387.8649 0 1.8643-.143 2.969-.4278.0068-.0019.77-.2138 1.6056-.543 1.343-.5292 2.0343-1.0208 2.3126-1.6466.1836-.4129.171-.8577-.037-1.25a1.4685 1.4685 0 0 0-.0626-.1056c.346-.525.2795-1.0346.2149-1.2793-.0826-.3122-.2525-.5714-.4844-.7579.11-.1816.1831-.3788.2148-.5977.0669-.4595-.0862-.9193-.4316-1.293-.2688-.2913-.6495-.4513-1.0704-.4513-.0209 0-.0376.0008-.0588.0018.3162-.9966.4846-2.0518.4846-3.1523 0-5.807-4.7362-10.5144-10.5789-10.5144-5.8426 0-10.5788 4.7073-10.5788 10.5144Zm10.5788-9.4831c5.2727 0 9.5476 4.246 9.5476 9.483a9.4201 9.4201 0 0 1-.2696 2.2365c-.0039-.0047-.0079-.011-.0117-.0156-.274-.3255-.6679-.5059-1.1075-.5059-.352 0-.714.1155-1.0763.3438-.2403.1517-.5058.422-.7793.7598-.2534-.3492-.608-.5832-1.0137-.6465a1.5174 1.5174 0 0 0-.2344-.0176c-.9263 0-1.4828.7993-1.6935 1.5177-.1046.2426-.6065 1.3482-1.3614 2.0978-1.1681 1.1601-1.4458 2.3534-.8396 3.6382-.843.1029-1.5836.0927-2.365-.006.5906-1.212.3626-2.4388-.8426-3.6322-.755-.7496-1.2568-1.8552-1.3614-2.0978-.2107-.7184-.7673-1.5177-1.6935-1.5177-.078 0-.1568.0054-.2344.0176-.4057.0633-.7604.2973-1.0137.6465-.2735-.3379-.539-.6081-.7794-.7598-.3622-.2283-.7243-.3438-1.0762-.3438-.4266 0-.8094.171-1.0821.4786a9.4208 9.4208 0 0 1-.2598-2.1936c0-5.237 4.2749-9.483 9.5475-9.483zM8.6443 7.0036c-.4838.0043-.9503.2667-1.1934.7227-.3536.6633-.1006 1.4873.5645 1.84.351.1862.4883-.5261.836-.6485.3107-.1095.841.399 1.0078.086.3536-.6634.1025-1.4874-.5625-1.84a1.3659 1.3659 0 0 0-.6524-.1602Zm6.8403 0c-.2199-.002-.4426.05-.6504.1602-.665.3526-.9181 1.1766-.5645 1.84.1669.313.6971-.1955 1.0079-.086.3476.1224.4867.8347.838.6485.6649-.3527.916-1.1767.5624-1.84-.243-.456-.7096-.7184-1.1934-.7227Zm-9.7565 1.418a.8768.8768 0 0 0-.877.877c0 .4846.3925.877.877.877a.8768.8768 0 0 0 .877-.877.8768.8768 0 0 0-.877-.877zm12.6434 0c-.4845 0-.879.3925-.879.877 0 .4846.3945.877.879.877a.8768.8768 0 0 0 .877-.877.8768.8768 0 0 0-.877-.877zM8.7927 11.459c-.179-.003-.2793.1107-.2793.416 0 .8097.3874 2.125 1.4279 2.924.207-.7123 1.3453-1.2832 1.5079-1.2012.2315.1167.2191.4417.6074.7266.3884-.285.374-.6098.6056-.7266.1627-.082 1.3009.4889 1.5079 1.2012 1.0404-.799 1.4278-2.1144 1.4278-2.924 0-1.2212-1.583.6402-3.5413.6485-1.4686-.0061-2.7266-1.0558-3.2639-1.0645zM4.312 14.4768c.5792.365 1.6964 2.2751 2.1056 3.0177.1371.2488.371.3536.582.3536.4188 0 .7465-.4138.0391-.9395-1.0636-.791-.6914-2.0846-.1836-2.1642a.4302.4302 0 0 1 .0664-.004c.4616 0 .666.7892.666.7892s.5959 1.4898 1.6213 2.508c.942.9356 1.062 1.703.4961 2.6661-.0164-.004-.0159.0236-.1484.2149-.1853.2673-.4322.4688-.7188.6152-.5062.2269-1.1397.2696-1.7833.2696-1.037 0-2.1017-.1824-2.6975-.336-.0293-.0075-3.6505-.9567-3.1916-1.8224.0771-.1454.2033-.2031.3633-.2031.6463 0 1.823.9551 2.3283.9551.113 0 .196-.0865.2285-.2031.2249-.8045-3.2787-1.0522-2.9846-2.1642.0519-.1967.193-.2757.3907-.2754.854 0 2.7704 1.4923 3.172 1.4923.0307 0 .0525-.0085.0645-.0274.2012-.3227.1096-.5865-1.3087-1.4395-1.4182-.8533-2.4315-1.329-1.8653-1.9416.0651-.0707.1574-.1015.2695-.1015.8611.0002 2.8948 1.84 2.8948 1.84s.5487.5683.8809.5683c.0762 0 .1416-.0315.1855-.1054.2355-.3946-2.1858-2.2183-2.3224-2.971-.0926-.51.0641-.7676.3555-.7676-.0006.008.1701-.0285.4942.1759zm16.2257.5918c-.1366.7526-2.5579 2.5764-2.3224 2.9709.044.074.1092.1055.1855.1055.3321 0 .881-.5684.881-.5684s2.0336-1.8397 2.8947-1.84c.1121 0 .2044.0308.2695.1016.5662.6125-.447 1.0882-1.8653 1.9415-1.4183.853-1.51 1.1168-1.3087 1.4396.012.0188.0337.0273.0644.0273.4016 0 2.3181-1.4923 3.1721-1.4923.1977-.0002.3388.0787.3907.2754.294 1.112-3.2095 1.3597-2.9846 2.1642.0325.1166.1156.2032.2285.2032.5054 0 1.682-.9552 2.3283-.9552.16 0 .2862.0577.3633.2032.459.8656-3.1623 1.8149-3.1916 1.8224-.5958.1535-1.6605.336-2.6975.336-.6351 0-1.261-.0409-1.7638-.2599-.2949-.1472-.5488-.3516-.7383-.625-.0411-.0682-.1026-.1476-.1426-.205-.5726-.9679-.455-1.7371.4903-2.676 1.0254-1.0182 1.6212-2.508 1.6212-2.508s.2044-.7891.666-.7891a.4318.4318 0 0 1 .0665.0039c.5078.0796.88 1.3732-.1836 2.1642-.7074.5257-.3797.9395.039.9395.211 0 .445-.1047.5821-.3535.4092-.7426 1.5264-2.6527 2.1056-3.0178.5588-.3524.99-.1816.8497.5918z","intercom":"M21 0H3C1.343 0 0 1.343 0 3v18c0 1.658 1.343 3 3 3h18c1.658 0 3-1.342 3-3V3c0-1.657-1.342-3-3-3zm-5.801 4.399c0-.44.36-.8.802-.8.44 0 .8.36.8.8v10.688c0 .442-.36.801-.8.801-.443 0-.802-.359-.802-.801V4.399zM11.2 3.994c0-.44.357-.799.8-.799s.8.359.8.799v11.602c0 .44-.357.8-.8.8s-.8-.36-.8-.8V3.994zm-4 .405c0-.44.359-.8.799-.8.443 0 .802.36.802.8v10.688c0 .442-.36.801-.802.801-.44 0-.799-.359-.799-.801V4.399zM3.199 6c0-.442.36-.8.802-.8.44 0 .799.358.799.8v7.195c0 .441-.359.8-.799.8-.443 0-.802-.36-.802-.8V6zM20.52 18.202c-.123.105-3.086 2.593-8.52 2.593-5.433 0-8.397-2.486-8.521-2.593-.335-.288-.375-.792-.086-1.128.285-.334.79-.375 1.125-.09.047.041 2.693 2.211 7.481 2.211 4.848 0 7.456-2.186 7.479-2.207.334-.289.839-.25 1.128.086.289.336.25.84-.086 1.128zm.281-5.007c0 .441-.36.8-.801.8-.441 0-.801-.36-.801-.8V6c0-.442.361-.8.801-.8.441 0 .801.357.801.8v7.195z","langchain":"M6.0988 5.9175C2.7359 5.9175 0 8.6462 0 12s2.736 6.0825 6.0988 6.0825h11.8024C21.2641 18.0825 24 15.3538 24 12s-2.736-6.0825-6.0988-6.0825ZM5.9774 7.851c.493.0124 1.02.2496 1.273.6228.3673.4592.4778 1.0668.8944 1.4932.5604.6118 1.199 1.1505 1.7161 1.802.4892.5954.8386 1.2937 1.1436 1.9975.1244.2335.1257.5202.31.7197.0908.1204.5346.4483.4383.5645.0555.1204.4702.286.3263.4027-.1944.04-.4129.0476-.5616-.1074-.0549.126-.183.0596-.2819.0432a4 4 0 0 0-.025.0736c-.3288.0219-.5754-.3126-.732-.565-.3111-.168-.6642-.2702-.982-.446-.0182.2895.0452.6485-.231.8353-.014.5565.8436.0656.9222.4804-.061.0067-.1286-.0095-.1774.0373-.2239.2172-.4805-.1645-.7385-.007-.3464.174-.3808.3161-.8096.352-.0237-.0359-.0143-.0592.0059-.0811.1207-.1399.1295-.3046.3356-.3643-.2122-.0334-.3899.0833-.5686.1757-.2323.095-.2304-.2141-.5878.0164-.0396-.0322-.0208-.0615.0018-.0864.0908-.1107.2102-.127.345-.1208-.663-.3686-.9751.4507-1.2813.0432-.092.0243-.1265.1068-.1845.1652-.05-.0548-.0123-.1212-.0099-.1857-.0598-.028-.1356-.041-.1179-.1366-.1171-.0395-.1988.0295-.286.0952-.0787-.0608.0532-.1492.0776-.2125.0702-.1216.23-.025.3111-.1126.2306-.1308.552.0814.8155.0455.203.0255.4544-.1825.3526-.39-.2171-.2767-.179-.6386-.1839-.9695-.0268-.1929-.491-.4382-.6252-.6462-.1659-.1873-.295-.4047-.4243-.6182-.4666-.9008-.3198-2.0584-.9077-2.8947-.266.1466-.6125.0774-.8418-.119-.1238.1125-.1292.2598-.139.4161-.297-.2962-.2593-.8559-.022-1.1855.0969-.1302.2127-.2373.342-.3316.0292-.0213.0391-.0419.0385-.0747.1174-.5267.5764-.7391 1.0694-.7267m12.4071.46c.5575 0 1.0806.2159 1.474.6082s.61.9145.61 1.4704c0 .556-.2167 1.078-.61 1.4698v.0006l-.902.8995a2.08 2.08 0 0 1-.8597.5166l-.0164.0047-.0058.0164a2.05 2.05 0 0 1-.474.7308l-.9018.8995c-.3934.3924-.917.6083-1.4745.6083s-1.0806-.216-1.474-.6083c-.813-.8107-.813-2.1294 0-2.9402l.9019-.8995a2.056 2.056 0 0 1 .858-.5143l.017-.0053.0058-.0158a2.07 2.07 0 0 1 .4752-.7337l.9018-.8995c.3934-.3924.9171-.6083 1.4745-.6083zm0 .8965a1.18 1.18 0 0 0-.8388.3462l-.9018.8995a1.181 1.181 0 0 0-.3427.9252l.0053.0572c.0323.2652.149.5044.3374.6917.13.1296.2733.2114.4471.2686a.9.9 0 0 1 .014.1582.884.884 0 0 1-.2609.6304l-.0554.0554c-.3013-.1028-.5525-.253-.7794-.4792a2.06 2.06 0 0 1-.5761-1.0968l-.0099-.0578-.0461.0368a1.1 1.1 0 0 0-.0876.0794l-.9024.8995c-.4623.461-.4623 1.212 0 1.673.2311.2305.535.346.8394.3461.3043 0 .6077-.1156.8388-.3462l.9019-.8995c.4623-.461.4623-1.2113 0-1.673a1.17 1.17 0 0 0-.4367-.2749 1 1 0 0 1-.014-.1611c0-.2591.1023-.505.2901-.6923.3019.1028.57.2694.7962.495.3007.2999.4994.679.5756 1.0968l.0105.0578.0455-.0373a1.1 1.1 0 0 0 .0887-.0794l.902-.8996c.4622-.461.4628-1.2124 0-1.6735a1.18 1.18 0 0 0-.8395-.3462Zm-9.973 5.1567-.0006.0006c-.0793.3078-.1048.8318-.506.847-.033.1776.1228.2445.2655.1874.141-.0645.2081.0508.2557.1657.2177.0317.5394-.0725.5516-.3298-.325-.1867-.4253-.5418-.5662-.8709","meta":"M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z","ollama":"M16.361 10.26a.894.894 0 0 0-.558.47l-.072.148.001.207c0 .193.004.217.059.353.076.193.152.312.291.448.24.238.51.3.872.205a.86.86 0 0 0 .517-.436.752.752 0 0 0 .08-.498c-.064-.453-.33-.782-.724-.897a1.06 1.06 0 0 0-.466 0zm-9.203.005c-.305.096-.533.32-.65.639a1.187 1.187 0 0 0-.06.52c.057.309.31.59.598.667.362.095.632.033.872-.205.14-.136.215-.255.291-.448.055-.136.059-.16.059-.353l.001-.207-.072-.148a.894.894 0 0 0-.565-.472 1.02 1.02 0 0 0-.474.007Zm4.184 2c-.131.071-.223.25-.195.383.031.143.157.288.353.407.105.063.112.072.117.136.004.038-.01.146-.029.243-.02.094-.036.194-.036.222.002.074.07.195.143.253.064.052.076.054.255.059.164.005.198.001.264-.03.169-.082.212-.234.15-.525-.052-.243-.042-.28.087-.355.137-.08.281-.219.324-.314a.365.365 0 0 0-.175-.48.394.394 0 0 0-.181-.033c-.126 0-.207.03-.355.124l-.085.053-.053-.032c-.219-.13-.259-.145-.391-.143a.396.396 0 0 0-.193.032zm.39-2.195c-.373.036-.475.05-.654.086-.291.06-.68.195-.951.328-.94.46-1.589 1.226-1.787 2.114-.04.176-.045.234-.045.53 0 .294.005.357.043.524.264 1.16 1.332 2.017 2.714 2.173.3.033 1.596.033 1.896 0 1.11-.125 2.064-.727 2.493-1.571.114-.226.169-.372.22-.602.039-.167.044-.23.044-.523 0-.297-.005-.355-.045-.531-.288-1.29-1.539-2.304-3.072-2.497a6.873 6.873 0 0 0-.855-.031zm.645.937a3.283 3.283 0 0 1 1.44.514c.223.148.537.458.671.662.166.251.26.508.303.82.02.143.01.251-.043.482-.08.345-.332.705-.672.957a3.115 3.115 0 0 1-.689.348c-.382.122-.632.144-1.525.138-.582-.006-.686-.01-.853-.042-.57-.107-1.022-.334-1.35-.68-.264-.28-.385-.535-.45-.946-.03-.192.025-.509.137-.776.136-.326.488-.73.836-.963.403-.269.934-.46 1.422-.512.187-.02.586-.02.773-.002zm-5.503-11a1.653 1.653 0 0 0-.683.298C5.617.74 5.173 1.666 4.985 2.819c-.07.436-.119 1.04-.119 1.503 0 .544.064 1.24.155 1.721.02.107.031.202.023.208a8.12 8.12 0 0 1-.187.152 5.324 5.324 0 0 0-.949 1.02 5.49 5.49 0 0 0-.94 2.339 6.625 6.625 0 0 0-.023 1.357c.091.78.325 1.438.727 2.04l.13.195-.037.064c-.269.452-.498 1.105-.605 1.732-.084.496-.095.629-.095 1.294 0 .67.009.803.088 1.266.095.555.288 1.143.503 1.534.071.128.243.393.264.407.007.003-.014.067-.046.141a7.405 7.405 0 0 0-.548 1.873c-.062.417-.071.552-.071.991 0 .56.031.832.148 1.279L3.42 24h1.478l-.05-.091c-.297-.552-.325-1.575-.068-2.597.117-.472.25-.819.498-1.296l.148-.29v-.177c0-.165-.003-.184-.057-.293a.915.915 0 0 0-.194-.25 1.74 1.74 0 0 1-.385-.543c-.424-.92-.506-2.286-.208-3.451.124-.486.329-.918.544-1.154a.787.787 0 0 0 .223-.531c0-.195-.07-.355-.224-.522a3.136 3.136 0 0 1-.817-1.729c-.14-.96.114-2.005.69-2.834.563-.814 1.353-1.336 2.237-1.475.199-.033.57-.028.776.01.226.04.367.028.512-.041.179-.085.268-.19.374-.431.093-.215.165-.333.36-.576.234-.29.46-.489.822-.729.413-.27.884-.467 1.352-.561.17-.035.25-.04.569-.04.319 0 .398.005.569.04a4.07 4.07 0 0 1 1.914.997c.117.109.398.457.488.602.034.057.095.177.132.267.105.241.195.346.374.43.14.068.286.082.503.045.343-.058.607-.053.943.016 1.144.23 2.14 1.173 2.581 2.437.385 1.108.276 2.267-.296 3.153-.097.15-.193.27-.333.419-.301.322-.301.722-.001 1.053.493.539.801 1.866.708 3.036-.062.772-.26 1.463-.533 1.854a2.096 2.096 0 0 1-.224.258.916.916 0 0 0-.194.25c-.054.109-.057.128-.057.293v.178l.148.29c.248.476.38.823.498 1.295.253 1.008.231 2.01-.059 2.581a.845.845 0 0 0-.044.098c0 .006.329.009.732.009h.73l.02-.074.036-.134c.019-.076.057-.3.088-.516.029-.217.029-1.016 0-1.258-.11-.875-.295-1.57-.597-2.226-.032-.074-.053-.138-.046-.141.008-.005.057-.074.108-.152.376-.569.607-1.284.724-2.228.031-.26.031-1.378 0-1.628-.083-.645-.182-1.082-.348-1.525a6.083 6.083 0 0 0-.329-.7l-.038-.064.131-.194c.402-.604.636-1.262.727-2.04a6.625 6.625 0 0 0-.024-1.358 5.512 5.512 0 0 0-.939-2.339 5.325 5.325 0 0 0-.95-1.02 8.097 8.097 0 0 1-.186-.152.692.692 0 0 1 .023-.208c.208-1.087.201-2.443-.017-3.503-.19-.924-.535-1.658-.98-2.082-.354-.338-.716-.482-1.15-.455-.996.059-1.8 1.205-2.116 3.01a6.805 6.805 0 0 0-.097.726c0 .036-.007.066-.015.066a.96.96 0 0 1-.149-.078A4.857 4.857 0 0 0 12 3.03c-.832 0-1.687.243-2.456.698a.958.958 0 0 1-.148.078c-.008 0-.015-.03-.015-.066a6.71 6.71 0 0 0-.097-.725C8.997 1.392 8.337.319 7.46.048a2.096 2.096 0 0 0-.585-.041Zm.293 1.402c.248.197.523.759.682 1.388.03.113.06.244.069.292.007.047.026.152.041.233.067.365.098.76.102 1.24l.002.475-.12.175-.118.178h-.278c-.324 0-.646.041-.954.124l-.238.06c-.033.007-.038-.003-.057-.144a8.438 8.438 0 0 1 .016-2.323c.124-.788.413-1.501.696-1.711.067-.05.079-.049.157.013zm9.825-.012c.17.126.358.46.498.888.28.854.36 2.028.212 3.145-.019.14-.024.151-.057.144l-.238-.06a3.693 3.693 0 0 0-.954-.124h-.278l-.119-.178-.119-.175.002-.474c.004-.669.066-1.19.214-1.772.157-.623.434-1.185.68-1.382.078-.062.09-.063.159-.012z","openai":"M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z","perplexity":"M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z","pytorch":"M12.005 0L4.952 7.053a9.865 9.865 0 000 14.022 9.866 9.866 0 0014.022 0c3.984-3.9 3.986-10.205.085-14.023l-1.744 1.743c2.904 2.905 2.904 7.634 0 10.538s-7.634 2.904-10.538 0-2.904-7.634 0-10.538l4.647-4.646.582-.665zm3.568 3.899a1.327 1.327 0 00-1.327 1.327 1.327 1.327 0 001.327 1.328A1.327 1.327 0 0016.9 5.226 1.327 1.327 0 0015.573 3.9z","railway":"M.113 10.27A13.026 13.026 0 000 11.48h18.23c-.064-.125-.15-.237-.235-.347-3.117-4.027-4.793-3.677-7.19-3.78-.8-.034-1.34-.048-4.524-.048-1.704 0-3.555.005-5.358.01-.234.63-.459 1.24-.567 1.737h9.342v1.216H.113v.002zm18.26 2.426H.009c.02.326.05.645.094.961h16.955c.754 0 1.179-.429 1.315-.96zm-17.318 4.28s2.81 6.902 10.93 7.024c4.855 0 9.027-2.883 10.92-7.024H1.056zM11.988 0C7.5 0 3.593 2.466 1.531 6.108l4.75-.005v-.002c3.71 0 3.849.016 4.573.047l.448.016c1.563.052 3.485.22 4.996 1.364.82.621 2.007 1.99 2.712 2.965.654.902.842 1.94.396 2.934-.408.914-1.289 1.458-2.353 1.458H.391s.099.42.249.886h22.748A12.026 12.026 0 0024 12.005C24 5.377 18.621 0 11.988 0z","replit":"M2 1.5A1.5 1.5 0 0 1 3.5 0h7A1.5 1.5 0 0 1 12 1.5V8H3.5A1.5 1.5 0 0 1 2 6.5ZM12 8h8.5A1.5 1.5 0 0 1 22 9.5v5a1.5 1.5 0 0 1-1.5 1.5H12ZM2 17.5A1.5 1.5 0 0 1 3.5 16H12v6.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 2 22.5Z","snyk":"M17.097 13.344c.143-.37.06-2.117-.222-4.675l-.004-.04.904-2.431v-.05c0-1.06-1.374-3.9-2.186-5.41L15.192 0l-.84 5.854-.503.829-.125-.042c-.351-.118-1.042-.316-1.728-.316-.65 0-1.294.171-1.72.315l-.125.042-.504-.827L8.807 0l-.396.737c-.812 1.51-2.186 4.35-2.186 5.411v.05l.904 2.432-.004.039c-.283 2.558-.366 4.305-.222 4.674.13.332.642 1.041 1.072 1.605l-.619 5.724.617.442.576-5.329c.012.414.064 1.277.275 2.068l-.389 3.592L12 24l4.279-3.067.375-.268-.62-5.73c.428-.561.934-1.262 1.063-1.591zM15.59 2.298c.694 1.408 1.421 3.08 1.471 3.779l-.388 1.045c-.935-1.31-1.228-3.441-1.253-3.636zm-1.124 7.8c.84 0 .212.712.138.792h-1.587c.144-.18.69-.792 1.45-.792zm-.452 1.468a.178.178 0 0 1-.175.153.292.292 0 1 0 .441-.31h.504v.024a.662.662 0 0 1-1.325 0v-.025h.511l-.008.007c.039.038.06.093.052.15zM12.39 19.29c.097.064.2.115.306.156-.168.19-.399.287-.697.287-.299 0-.53-.097-.697-.288.107-.04.21-.092.306-.156a.573.573 0 0 0 .391.114c.103 0 .255 0 .391-.113zm-2.62-7.724a.178.178 0 0 1-.174.153.292.292 0 1 0 .441-.31h.504v.024a.662.662 0 0 1-1.326 0v-.025h.511l-.008.007c.039.038.06.093.052.15zm-.374-.676c-.074-.08-.702-.792.138-.792.759 0 1.305.612 1.45.792zM6.948 6.077c.05-.699.778-2.37 1.471-3.78l.185 1.29c-.07.48-.393 2.37-1.257 3.56zM9.473 18.09c-.373-1.02-.377-2.446-.377-2.507v-.097l-.06-.076c-.551-.683-1.477-1.9-1.616-2.257l-.005-.014c-.124-.43.1-2.997.268-4.513l.008-.066-.187-.502.07-.075c.476-.497.88-1.213 1.203-2.126L9 5.223l.118.82.807 1.326.22-.094c.009-.004.934-.4 1.851-.4H12v.44h-.004c-.812 0-1.669.36-1.677.363l-.571.246-.797-1.308c-.27.62-.585 1.137-.94 1.543l.129.347-.019.169c-.24 2.156-.348 4.044-.285 4.332.086.2.523.812 1 1.437l.748-.218 1.17-1.334.184 3.458c-.011.015-.28.393-.28.609 0 .235.344.541.685.786.005-.01.007-.02.013-.03.12-.212.275-.251.346-.087.04.092.028.369.028.369l.005.002v.328c-.013.027-.302.674-1.014.674-.275 0-.948-.089-1.248-.911zm2.536 2.409c-.527 0-1.297-.257-1.374-.952.029.001.057.003.086.003.06 0 .119-.003.177-.01.235.455.665.6 1.102.6.436 0 .865-.146 1.1-.6.059.007.119.01.18.01.029 0 .057-.002.085-.003-.076.695-.835.952-1.356.952zm2.956-5.09l-.061.077v.097c0 .06-.004 1.487-.377 2.507-.3.822-.973.91-1.248.91-.71 0-1.002-.658-1.014-.686V18l.005-.004s-.012-.276.028-.368c.07-.164.226-.126.346.088.006.009.009.02.013.03.34-.246.686-.552.686-.787 0-.216-.269-.593-.28-.61l.183-3.457 1.17 1.334 1.2.35c-.23.304-.463.6-.651.834zm-8.472-1.907c-.22-.563-.022-2.916.187-4.817l-.895-2.409v-.128c0-.312.095-.734.246-1.207-1.177.253-1.808.49-1.808.49v12.996l2.67 1.914.577-5.332c-.538-.718-.868-1.226-.977-1.507zm3.853-7.346c.446-.136 1.042-.27 1.65-.27.61 0 1.21.135 1.658.27l.276-.453.184-1.288s-1.288-.068-2.103-.068c-.759 0-1.467.026-2.125.07l.184 1.286zm7.623-1.217c.151.474.247.896.247 1.21v.127l-.895 2.409c.208 1.901.406 4.253.186 4.818-.109.279-.435.782-.968 1.493l.578 5.337 2.66-1.906V5.432s-.632-.24-1.808-.493Z","supabase":"M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z","tensorflow":"M1.292 5.856L11.54 0v24l-4.095-2.378V7.603l-6.168 3.564.015-5.31zm21.43 5.311l-.014-5.31L12.46 0v24l4.095-2.378V14.87l3.092 1.788-.018-4.618-3.074-1.756V7.603l6.168 3.564z","v0":"M14.066 6.028v2.22h5.729q.075-.001.148.005l-5.853 5.752a2 2 0 0 1-.024-.309V8.247h-2.353v5.45c0 2.322 1.935 4.222 4.258 4.222h5.675v-2.22h-5.675q-.03 0-.059-.003l5.729-5.629q.006.082.006.166v5.465H24v-5.465a4.204 4.204 0 0 0-4.205-4.205zM0 8.245l8.28 9.266c.839.94 2.396.346 2.396-.914V8.245H8.19v5.44l-4.86-5.44Z","vercel":"M24 22.525H0l12-21.05 12 21.05z","x":"M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const logo = slug => LOGO[slug] ? `<svg class="lg" viewBox="0 0 24 24" aria-hidden="true"><path d="${LOGO[slug]}"/></svg>` : '';
+const mono = name => `<span class="mg" aria-hidden="true">${esc(name.replace(/[^A-Za-z]/g, '')[0] || '•')}</span>`;
+// product / lab name → Simple Icons slug; names in MONO get a letter mark (no logo available); anything else (concepts) gets nothing
+const BRAND = { 'Anthropic': 'anthropic', 'Claude': 'claude', 'Claude Code': 'claude', 'Claude research': 'claude', 'Claude computer use': 'claude', 'Claude Projects': 'claude', 'Claude Agent SDK': 'claude',
+  'OpenAI': 'openai', 'GPT': 'openai', 'OpenAI Codex': 'openai', 'Codex': 'openai', 'ChatGPT': 'openai', 'ChatGPT search': 'openai', 'ChatGPT agent': 'openai', 'Custom GPTs': 'openai', 'OpenAI Agents SDK': 'openai',
+  'Google DeepMind': 'google', 'Gemini': 'googlegemini', 'Gemini Deep Research': 'googlegemini', 'Google Vertex AI': 'googlecloud', 'Veo': 'google',
+  'Meta': 'meta', 'Llama': 'meta', 'Alibaba': 'alibabacloud', 'GitHub Copilot': 'githubcopilot', 'Secret scanning': 'github', 'Replit': 'replit', 'v0': 'v0',
+  'Supabase': 'supabase', 'Firebase': 'firebase', 'Vercel': 'vercel', 'Railway': 'railway', 'Perplexity': 'perplexity', 'ElevenLabs': 'elevenlabs', 'Figma AI': 'figma',
+  'Intercom Fin': 'intercom', 'LangSmith': 'langchain', 'Snyk': 'snyk', 'Zapier AI': '', 'MCP': 'anthropic', 'MCP servers': 'anthropic' };
+const MONO = new Set(['Mistral', 'DeepSeek', 'xAI', 'Cursor', 'Devin', 'Lovable', 'Bolt', 'E2B', 'Daytona', 'Neon', 'Runway', 'Midjourney', 'Sierra', 'Decagon', 'Clay', 'Harvey', 'Legora',
+  'Langfuse', 'Braintrust', 'Helicone', 'Semgrep', 'AWS Bedrock', 'Azure AI Foundry', 'Microsoft Copilot', 'Zapier AI']);
+const mark = name => BRAND[name] ? logo(BRAND[name]) : MONO.has(name) ? mono(name) : '';
+const TL_LOGO = { 'TensorFlow goes open source': 'tensorflow', 'PyTorch': 'pytorch', 'Hugging Face Transformers': 'huggingface', 'LangChain': 'langchain', 'Ollama': 'ollama',
+  'GitHub Copilot preview': 'githubcopilot', 'GitHub Copilot coding agent': 'githubcopilot', 'ChatGPT': 'openai', 'ChatGPT plugins': 'openai', 'ChatGPT agent': 'openai', 'GPT-4 and Claude': 'claude',
+  'Claude Code': 'claude', 'Claude 2': 'claude', 'Claude 3.5 Sonnet and Artifacts': 'claude', 'Claude 5 generation': 'claude', 'Claude Agent SDK': 'claude', 'Anthropic founded': 'anthropic',
+  'Model Context Protocol': 'anthropic', 'Constitutional AI': 'anthropic', 'Agent Skills': 'anthropic', 'Computer use': 'claude', 'OpenAI founded': 'openai', 'GPT-1': 'openai', 'GPT-2': 'openai', 'GPT-3': 'openai',
+  'GPT-4o': 'openai', 'GPT-5': 'openai', 'OpenAI o1': 'openai', 'Operator': 'openai', 'Deep Research': 'openai', 'Agents SDK and Responses API': 'openai', 'Codex cloud agent': 'openai',
+  'GPTs and the Assistants API': 'openai', 'Function calling': 'openai', 'Gemini': 'googlegemini', 'BERT': 'google', 'Agent2Agent protocol': 'google', 'Llama 2 open weights': 'meta', 'Perplexity': 'perplexity' };
+const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
+
+// ribbon: 2017 … 2031, coloured by era, future dotted
+(function () {
+  const bar = document.getElementById('ribbon'), now = bar.firstElementChild;
+  const era = y => y >= 2027 ? 'fut' : y >= 2025 ? 'e4' : y === 2024 ? 'e3' : y >= 2022 ? 'e2' : 'e1';
+  [['past wide', '1950→2011'], ['e0 wide', '2012–16']].forEach(([c, txt]) => {
+    const d = document.createElement('div'); d.className = 'seg y ' + c; d.textContent = txt; bar.insertBefore(d, now);
+  });
+  const col = y => y < 2012 ? 0 : y < 2017 ? 2 : 4 + y - 2017, ticks = [1950, 2012, 2017, 2022, 2024, 2025, 2027, 2032];   // era start years
+  document.getElementById('ribbonaxis').innerHTML = ticks.map((y, i) => `<span class="${i === 0 ? 'first' : i === ticks.length - 1 ? 'last' : ''}${y >= 2027 ? ' fut' : ''}" style="left:${(col(y) / 19 * 100).toFixed(2)}%">${i === ticks.length - 1 ? 2031 : y}</span>`).join('');
+  for (let y = 2017; y <= 2031; y++) {
+    const d = document.createElement('div');
+    d.className = 'seg ' + era(y) + (y % 2 ? ' y' : '');
+    d.textContent = "'" + String(y).slice(2);
+    bar.insertBefore(d, now);
+  }
+})();
+
+// era colours: the same scale on the bar, the phone bar and the era list
+(function () {
+  const cls = ['past', 'e0', 'e1', 'e2', 'e3', 'e4', 'fut'];
+  document.querySelectorAll('.eras .era').forEach((e, i) => e.querySelector('b').insertAdjacentHTML('afterbegin', `<i class="sw ${cls[i]}" aria-hidden="true"></i>`));
+  document.getElementById('ribbonm').innerHTML = cls.map(c => `<span class="sw ${c}"></span>`).join('');
+})();
+
+// phone menu
+(function () {
+  const root = document.documentElement, tb = document.getElementById('themebtn'), mq = window.matchMedia('(prefers-color-scheme: dark)');
+  const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : mq.matches;
+  const sync = () => { const d = dark(); root.classList.toggle('is-dark', d); tb.setAttribute('aria-label', d ? 'Switch to light mode' : 'Switch to dark mode');
+    document.querySelectorAll('meta[name="theme-color"]').forEach(m => m.content = d ? '#151519' : '#F6F5F1'); };
+  tb.addEventListener('click', () => { root.dataset.theme = dark() ? 'light' : 'dark'; store.set('theme', root.dataset.theme); sync(); });
+  mq.addEventListener('change', sync); sync();
+  const top = document.querySelector('.top'), btn = document.getElementById('menubtn');
+  const set = open => { top.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); };
+  btn.addEventListener('click', () => set(!top.classList.contains('open')));
+  document.getElementById('sitenav').addEventListener('click', e => { if (e.target.closest('a')) set(false); });
+  document.addEventListener('click', e => { if (!top.contains(e.target)) set(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+})();
+
+function chips(el, map, key, onPick) {
+  let cur = store.get(key) || 'all'; if (!map[cur]) cur = 'all';
+  const draw = () => { el.innerHTML = Object.entries(map).map(([k, v]) => `<button type="button" class="chip" id="${key}-${k}" data-k="${k}" aria-pressed="${k === cur}">${esc(v)}</button>`).join(''); };
+  el.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; cur = b.dataset.k; store.set(key, cur); draw(); onPick(cur); });
+  draw(); onPick(cur);
+}
+
+// The agentic stack: four rings, inside out. Each concept: [label (\n = line break), what it is, cheat code]
+const RINGS = [
+  { k: 'models', t: 'Models', sub: 'The brain', d: 'A language model predicts the next word. Everything else is built around it.', c: [
+    ['Context\nwindow', 'How much text the model can read at once, measured in tokens.', 'Paste the whole document. Long context beats your summary of it.'],
+    ['Prompting', 'The instructions and examples you give the model.', 'Show two good examples instead of writing ten rules.'],
+    ['Context\nengineering', 'Choosing exactly what goes into the model\'s context for each step.', 'Feed it the files and facts for this task only. More context is not always better.'],
+    ['RAG', 'Retrieval: look up your own documents and hand the relevant parts to the model.', 'Start with plain search over your docs before buying a vector database.'],
+    ['Fine-tuning', 'Training a model further on your own examples.', 'Try prompting and RAG first. Fine-tune only for style or very narrow tasks.'],
+    ['Reasoning', 'Models that think step by step before answering.', 'Turn on thinking for planning, maths and code; leave it off for simple replies to save money.'] ] },
+  { k: 'agents', t: 'Agents', sub: 'The worker', d: 'A model in a loop: it decides, uses a tool, looks at the result, and decides again until the task is done.', c: [
+    ['Tool use\n(MCP)', 'The agent calls APIs, databases and apps through a standard connector.', 'If a tool you use has an MCP server, connect it before writing any code.'],
+    ['Planning', 'Breaking a goal into steps before acting.', 'Always ask for the plan first and approve it.'],
+    ['Reason–act\nloop', 'Think, act, observe, repeat (the ReAct pattern).', 'Give it a clear "done" condition, or it loops and burns money.'],
+    ['Memory', 'What the agent keeps between steps and sessions.', 'Keep a project notes file (like CLAUDE.md) the agent reads every time.'],
+    ['Skills', 'Packaged know-how the agent loads when a task needs it.', 'Write each repeatable process down once as a skill.'],
+    ['Computer\nuse', 'Seeing a screen, clicking and typing like a person.', 'Use it for tools with no API. Keep it away from logged-in accounts it doesn\'t need.'],
+    ['Human\napproval', 'The agent pauses for a yes before risky actions.', 'Require approval for anything that spends money, deletes data or emails customers.'] ] },
+  { k: 'systems', t: 'Agentic systems', sub: 'The team', d: 'Several agents working together on one workflow, each with its own job.', c: [
+    ['Orchestration', 'A lead agent splits work and hands it to specialists.', 'One lead agent, a few specialists. Big agent org charts break.'],
+    ['Hand-offs\n(A2A)', 'Agents passing tasks and results to each other, even across vendors.', 'Write the hand-off format down: what goes in, what comes back.'],
+    ['Model\nrouting', 'Sending each step to the cheapest model that can do it well.', 'Small model for sorting and summaries, frontier model for hard calls.'],
+    ['Shared\nknowledge', 'One source of truth every agent reads from.', 'Keep one shared doc of decisions so agents don\'t contradict each other.'],
+    ['Evals', 'Tests that score agent output on real examples.', 'Save 20 real cases and re-run them every time you change a prompt or model.'],
+    ['Cost\nbudgets', 'Limits on tokens, time and spend per task.', 'Set a hard spend cap per run. Runaway loops are the classic surprise bill.'] ] },
+  { k: 'infra', t: 'Agentic infra', sub: 'The building', d: 'What keeps agents safe, observable and running in production.', c: [
+    ['Sandboxes', 'Isolated machines where agent-written code runs.', 'Never let agent code run on your laptop or production server directly.'],
+    ['Identity &\npermissions', 'Each agent gets its own account and the smallest access that works.', 'One key per agent. Revoke it the day the agent is retired.'],
+    ['Secrets', 'API keys and passwords kept out of code and prompts.', 'Store keys in your host\'s secret manager. Never in the browser or a repo.'],
+    ['Observability', 'Logs and traces of every prompt, tool call and cost.', 'Log from day one. You can\'t debug what you never recorded.'],
+    ['Prompt-injection\ndefence', 'Stopping hidden instructions in web pages or files from steering the agent.', 'Treat anything the agent reads from outside as untrusted data, never as orders.'],
+    ['Retries &\nresilience', 'Recovering when a model, tool or network call fails.', 'Make every agent step safe to run twice.'],
+    ['Scaling', 'Queues and workers so many agent runs happen at once.', 'Run agents as background jobs, not inside a web request.'],
+    ['Compliance', 'GDPR, the EU AI Act, sector rules, audit trails.', 'Keep a simple register: which model, which data, which decision.'] ] },
+];
+
+// Frontier labs: [YYYY-MM, model, note, open weights?]
+const LABS = [
+  { lab: 'Anthropic', sub: 'Claude', anth: true, r: [
+    ['2023-03', 'Claude', 'First public Claude model and API.'],
+    ['2023-07', 'Claude 2', '100K-token context window.'],
+    ['2023-11', 'Claude 2.1', '200K context, fewer made-up answers.'],
+    ['2024-03', 'Claude 3', 'Haiku, Sonnet and Opus: a family by price and power, with vision.'],
+    ['2024-06', 'Claude 3.5 Sonnet', 'Big jump in coding; launched with Artifacts.'],
+    ['2024-10', 'Claude 3.5 Sonnet (new) + Haiku', 'Computer use in beta.'],
+    ['2025-02', 'Claude 3.7 Sonnet', 'Extended thinking; Claude Code preview.'],
+    ['2025-05', 'Claude 4', 'Opus 4 and Sonnet 4; Claude Code generally available.'],
+    ['2025-08', 'Opus 4.1', 'Coding and agent upgrades.'],
+    ['2025-09', 'Sonnet 4.5', 'Long-running agent work; Claude Agent SDK.'],
+    ['2025-10', 'Haiku 4.5', 'Small, fast model for agent sub-tasks.'],
+    ['2025-11', 'Opus 4.5', 'Frontier coding and agent model.'],
+    ['2026-02', 'Opus 4.6 · Sonnet 4.6', '1M-token context; adaptive thinking.'],
+    ['2026-04', 'Opus 4.7 · Mythos Preview', 'Mythos: a cyber-capable model limited to security partners.'],
+    ['2026-05', 'Opus 4.8', '1M context by default, 128K output.'],
+    ['2026-06', 'Fable 5 · Sonnet 5', 'The Claude 5 generation begins.'],
+    ['2026-07', 'Opus 5', 'Thinking on by default.'],
+    ['2026-09', 'Fable 5.1', 'Top model for long-running agent work.'],
+    ['2026-09', 'Opus 5.5 · Sonnet 5.5', 'Cheaper, stronger agentic coding.'],
+    ['2026-10', 'Haiku 5.5', 'Fast, cheap model for high-volume work.'] ] },
+  { lab: 'OpenAI', sub: 'GPT · o-series', r: [
+    ['2018-06', 'GPT-1', 'Pre-train, then fine-tune.'],
+    ['2019-02', 'GPT-2', 'Staged release.'],
+    ['2020-05', 'GPT-3', 'Few-shot learning; the API era begins.'],
+    ['2021-08', 'Codex', 'The model behind GitHub Copilot.'],
+    ['2022-11', 'ChatGPT', 'GPT-3.5 in a chat window.'],
+    ['2023-03', 'GPT-4', 'Multimodal input, exam-level results.'],
+    ['2023-11', 'GPT-4 Turbo', 'Cheaper, 128K context.'],
+    ['2024-05', 'GPT-4o', 'Real-time voice and vision.'],
+    ['2024-09', 'o1', 'Reasoning before answering.'],
+    ['2025-01', 'o3-mini', 'Cheaper reasoning.'],
+    ['2025-04', 'o3 · o4-mini', 'Reasoning models that use tools.'],
+    ['2025-08', 'gpt-oss', 'Open-weight models from OpenAI.', true],
+    ['2025-08', 'GPT-5', 'Routes between fast and deep thinking.'],
+    ['2025-11', 'GPT-5.1', 'Update to the GPT-5 line.'],
+    ['2025-12', 'GPT-5.2', 'Update to the GPT-5 line.'],
+    ['2026-02', 'GPT-5.3-Codex', 'Coding model for Codex.'],
+    ['2026-03', 'GPT-5.4', 'With mini and nano versions.'],
+    ['2026-04', 'GPT-5.5', 'Became the ChatGPT default in May.'],
+    ['2026-07', 'GPT-5.6 Sol · Terra · Luna', 'First release in named tiers by price and power.'],
+    ['2026-09', 'GPT-6 Astra', 'New flagship for long, multi-step work.'],
+    ['2026-09', 'GPT-6 Sol · Luna', 'Near-Astra quality, and a very cheap tier.'],
+    ['2026-10', 'GPT-6.1 Terra', 'Reported mid tier; confirm with OpenAI.'],
+    ['2026-11', 'GPT-6 Cyber', 'Security research model, rated Critical. Approved Daybreak Red customers only for now.'] ] },
+  { lab: 'Google DeepMind', sub: 'BERT · PaLM · Gemini', r: [
+    ['2018-10', 'BERT', 'Two-way context; powers search.', true],
+    ['2019-10', 'T5', 'Every task as text-to-text.', true],
+    ['2021-05', 'LaMDA', 'Dialogue model.'],
+    ['2022-04', 'PaLM', '540B parameters.'],
+    ['2023-03', 'Bard', 'Google\'s chatbot.'],
+    ['2023-05', 'PaLM 2', 'Powers Bard and Workspace.'],
+    ['2023-12', 'Gemini 1.0', 'Built multimodal from the start.'],
+    ['2024-02', 'Gemini 1.5 · Gemma', '1M-token context; Gemma open weights.'],
+    ['2024-12', 'Gemini 2.0', 'Built for agents.'],
+    ['2025-03', 'Gemini 2.5 Pro', 'Thinking model.'],
+    ['2025-11', 'Gemini 3', 'Next frontier generation.'],
+    ['2026-02', 'Gemini 3.1 Pro', 'Flagship, released as a preview.'],
+    ['2026-05', 'Gemini 3.5 Flash · Omni', 'Agentic Flash model, and video from any input.'],
+    ['2026-08', 'Gemini 3.7 Flash', 'Faster Flash update.'],
+    ['2026-09', 'Gemini 3.8 Flash', 'Third Flash release in about four months.'],
+    ['2026-10', 'Gemini 4 Argon · Carbon', 'Gemini 4 family. Argon for everyone; Carbon limited to cyber defenders for now.'] ] },
+  { lab: 'Meta', sub: 'LLaMA', r: [
+    ['2023-02', 'LLaMA', 'Research release; weights leak and spark local AI.', true],
+    ['2023-07', 'Llama 2', 'Open for commercial use.', true],
+    ['2024-04', 'Llama 3', 'Strong open model.', true],
+    ['2024-07', 'Llama 3.1 405B', 'Open model near the frontier.', true],
+    ['2025-04', 'Llama 4', 'Mixture-of-experts, multimodal.', true] ] },
+  { lab: 'Mistral', sub: 'France', r: [
+    ['2023-09', 'Mistral 7B', 'Small open model that punches up.', true],
+    ['2023-12', 'Mixtral 8x7B', 'Open mixture-of-experts.', true],
+    ['2024-02', 'Mistral Large', 'Flagship API model.'] ] },
+  { lab: 'DeepSeek', sub: 'China', r: [
+    ['2024-05', 'DeepSeek-V2', 'Cheap, efficient open model.', true],
+    ['2024-12', 'DeepSeek-V3', 'Frontier-class open model at low training cost.', true],
+    ['2025-01', 'DeepSeek-R1', 'Open reasoning model; resets AI pricing.', true],
+    ['2026-04', 'DeepSeek V4', 'Pro and Flash versions at low prices.'],
+    ['2026-09', 'V4.1 Flash', 'Faster, cheaper V4 update.'] ] },
+  { lab: 'xAI', sub: 'Grok', r: [
+    ['2023-11', 'Grok', 'Launched on X.'],
+    ['2024-03', 'Grok-1 weights', 'Open-weight release.', true],
+    ['2025-02', 'Grok 3', 'Reasoning modes.'],
+    ['2025-07', 'Grok 4', 'Flagship update.'],
+    ['2026-07', 'Grok 4.5', 'Flagship update.'],
+    ['2026-08', 'Grok 4.6', 'Point update.'],
+    ['2026-09', 'Grok 4.7', 'Point update.'] ] },
+  { lab: 'Alibaba', sub: 'Qwen', r: [
+    ['2023-08', 'Qwen', 'Open model family.', true],
+    ['2024-06', 'Qwen2', 'Multilingual open models.', true],
+    ['2024-09', 'Qwen2.5', 'Coding and maths variants.', true],
+    ['2025-04', 'Qwen3', 'Hybrid thinking, open weights.', true],
+    ['2026-08', 'Qwen3.8-Max', 'Flagship API model.'] ] },
+];
+
+function renderStack() {
+  const svg = document.getElementById('rings'), panel = document.getElementById('stackpanel'), list = document.getElementById('stacklist');
+  const CX = 500, CY = 500, R = [170, 290, 395, 490];
+  // ring band radius for labels, and the display order that keeps short labels on the left/right sides
+  const BAND = [112, 230, 342, 443], ORDER = [[0, 1, 2, 3, 4, 5], [0, 6, 3, 4, 1, 2, 5], [0, 1, 4, 5, 2, 3], [0, 1, 3, 2, 6, 4, 5, 7]];
+  const TITLE_X = [585, 730, 842, 942];
+  let sel = { r: 1, c: -1 };
+  const NS = 'http://www.w3.org/2000/svg';
+  const draw = () => {
+    let h = `<defs><pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle class="dotfill" cx="4.5" cy="4.5" r="1.6"/></pattern></defs>`;
+    const cls = ['r-models', 'r-agents', 'r-systems', 'r-infra'];
+    for (let i = 3; i >= 0; i--) {   // outermost first, each disc covers the middle of the one before
+      h += `<circle class="ring-hit ${cls[i]}" data-r="${i}" cx="${CX}" cy="${CY}" r="${R[i]}"/>`;
+      if (i === 2) h += `<circle class="ring-hit" data-r="2" cx="${CX}" cy="${CY}" r="${R[2]}" fill="url(#dots)"/>`;   // the systems ring prints in halftone
+    }
+    for (let i = 0; i < 4; i++) h += `<circle class="r-line" cx="${CX}" cy="${CY}" r="${R[i]}"/>`;
+    h += `<line class="axis-line" x1="360" y1="${CY}" x2="972" y2="${CY}"/><polygon class="axis-head" points="990,${CY} 962,${CY - 14} 962,${CY + 14}"/>`;
+    RINGS.forEach((g, i) => {
+      const words = g.t.split(' ');
+      h += `<text class="ttl" x="${TITLE_X[i]}" y="${words.length > 1 ? CY - 38 : CY - 14}" text-anchor="middle" pointer-events="none">${words.map((w, k) => `<tspan x="${TITLE_X[i]}" dy="${k ? 24 : 0}">${esc(w)}</tspan>`).join('')}</text>`;
+      h += `<text class="sub" x="${TITLE_X[i]}" y="${CY + 26}" text-anchor="middle" pointer-events="none">${esc(g.sub.toLowerCase())}</text>`;
+      const ord = ORDER[i], n = ord.length;
+      ord.forEach((ci, k) => {
+        const th = (30 + 300 * (k + 0.5) / n) * Math.PI / 180, x = CX + BAND[i] * Math.cos(th), y = CY + BAND[i] * Math.sin(th);
+        const lines = g.c[ci][0].split('\n'), on = sel.r === i && sel.c === ci;
+        h += `<g class="cpt${on ? ' on' : ''}${i === 0 ? ' small' : ''}" tabindex="0" role="button" data-r="${i}" data-c="${ci}" aria-label="${esc(g.t + ': ' + g.c[ci][0].replace('\n', ' '))}">
+          <circle cx="${x.toFixed(1)}" cy="${(y - lines.length * 12 - 10).toFixed(1)}" r="5"/>
+          <text x="${x.toFixed(1)}" y="${(y - (lines.length - 1) * 12 + 7).toFixed(1)}" text-anchor="middle">${lines.map((l, k2) => `<tspan x="${x.toFixed(1)}" dy="${k2 ? 24 : 0}">${esc(l)}</tspan>`).join('')}</text></g>`;
+      });
+    });
+    svg.innerHTML = h;
+    // panel
+    const g = RINGS[sel.r];
+    const c = sel.c >= 0 ? g.c[sel.c] : null;
+    panel.innerHTML = `<div class="ringcard"><span class="label">Ring ${sel.r + 1} of 4 · ${esc(g.sub)}</span><h3>${esc(c ? c[0].replace('\n', ' ') : g.t)}</h3>
+      <p>${esc(c ? c[1] : g.d)}</p>${c ? `<span class="tools"><span>${esc(g.t)}</span></span>` : `<div class="tools">${g.c.map(x => `<span>${esc(x[0].replace('\n', ' '))}</span>`).join('')}</div>`}</div>
+      ${c ? `<div class="cheat"><b>CHEAT CODE</b>${esc(c[2])}</div>` : `<div class="cheat"><b>HOW TO READ IT</b>Each ring needs the one inside it. A great model with no infra is a demo; a safe infra with a weak model is a slow product.</div>`}`;
+    list.innerHTML = RINGS.map((gg, i) => `<div class="grp"><b>${esc(gg.t.toUpperCase())}</b><div>${gg.c.map((x, ci) => `<button type="button" id="stk-${i}-${ci}" data-r="${i}" data-c="${ci}" aria-pressed="${sel.r === i && sel.c === ci}">${esc(x[0].replace('\n', ' '))}</button>`).join('')}</div></div>`).join('');
+  };
+  const pick = el => { const t = el.closest('[data-r]'); if (!t) return; sel = { r: +t.dataset.r, c: t.dataset.c != null ? +t.dataset.c : -1 }; draw(); };
+  svg.addEventListener('click', e => pick(e.target));
+  svg.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.cpt')) { e.preventDefault(); pick(e.target); const f = svg.querySelector(`.cpt[data-r="${sel.r}"][data-c="${sel.c}"]`); if (f) f.focus(); } });
+  list.addEventListener('click', e => { if (e.target.closest('button')) pick(e.target); });
+  draw();
+}
+
+function renderLabs() {
+  // 2018–2022 is compressed into the first 28% so the busy years since 2023 get the room
+  const A0 = 2018, SPLIT = 60, EARLY = 28, mo = (y, m) => (y - A0) * 12 + m;
+  const pos = t => t <= SPLIT ? t / SPLIT * EARLY : EARLY + (t - SPLIT) / 53 * (100 - EARLY);
+  const pct = ym => { const [y, m] = ym.split('-').map(Number); return pos(mo(y, m - 1) + 0.5); };
+  let sel = 'Anthropic|0';
+  const box = document.getElementById('lanes'), det = document.getElementById('reldet');
+  const ticks = Array.from({ length: 9 }, (_, k) => `<span style="left:${pos(k * 12)}%">${A0 + k}</span>`).join('');
+  const draw = () => {
+    box.innerHTML = `<div class="axis"><div></div><div class="ticks">${ticks}</div></div>` + LABS.map(L => { let last = -9; return `<div class="lane"><div class="who"><b>${mark(L.lab)}${esc(L.lab)}</b><span>${esc(L.sub)} · ${L.r.length} releases</span></div><div class="track">${L.r.map((r, k) => {
+      const id = L.lab + '|' + k, x = Math.max(pct(r[0]), last + 1.9); last = x;   // nudge same-month releases apart
+      return `<button type="button" class="rel${L.anth ? ' anth' : ''}${r[3] ? ' open' : ''}" style="left:${x}%" data-id="${esc(id)}" aria-pressed="${id === sel}" aria-label="${esc(L.lab + ' ' + r[1] + ', ' + r[0])}"><span class="nm">${esc(r[1])}</span></button>`; }).join('')}</div></div>`; }).join('');
+    const [lab, k] = sel.split('|'), L = LABS.find(x => x.lab === lab), r = L.r[+k], [y, m] = r[0].split('-');
+    det.innerHTML = `<span class="mono">${esc(lab.toUpperCase())} · ${r[4] ? y : MON[+m - 1] + ' ' + y}${r[3] ? ' · OPEN WEIGHTS' : ''}</span><b>${esc(r[1])}</b><span>${esc(r[2])}</span>`;
+  };
+  box.addEventListener('click', e => { const b = e.target.closest('.rel'); if (!b) return; sel = b.dataset.id; draw(); });
+  draw();
+  const sc = box.parentElement; requestAnimationFrame(() => {   // open with the latest release near the right edge
+    const last = Math.max(...[...box.querySelectorAll('.rel')].map(b => b.getBoundingClientRect().right));
+    sc.scrollLeft += last - sc.getBoundingClientRect().right + 120;
+  });
+}
+
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const mi = m => { const k = MON.indexOf(m); return k < 0 ? -1 : k; };
+TL.sort((a, b) => a.y - b.y || mi(a.m) - mi(b.m));
+
+function renderStairs() {
+  const box = document.getElementById('stairs'), det = document.getElementById('lvl');
+  let cur = +(store.get('lvl') || 5); if (!LEVELS.find(l => l.n === cur)) cur = 5;
+  const draw = () => {
+    box.innerHTML = LEVELS.map(l => `<div class="step l${l.n}" aria-pressed="${l.n === cur}"><button type="button" id="lvl-${l.n}" data-n="${l.n}" aria-label="Level ${l.n}: ${esc(l.t)}">
+      <div class="riser"><div class="lv"><span>LEVEL ${l.n}</span>${l.now ? '<span class="now">NOW</span>' : ''}</div><h3>${esc(l.t)}</h3><span class="yr">${esc(l.yr)}${l.fut ? ' · projected' : ''}</span></div>
+      <div class="block"></div></button></div>`).join('');
+    const l = LEVELS.find(x => x.n === cur);
+    det.innerHTML = `<div><span class="label">Level ${l.n} · ${esc(l.yr)}</span><h3>${esc(l.t)}</h3><p style="margin:0">${esc(l.d)}</p>
+        <div class="tools">${l.tools.map(t => `<span>${mark(t)}${esc(t)}</span>`).join('')}</div></div>
+      <div><span class="label">Milestones</span><ol>${l.ms.map(([w, t]) => `<li><span>${esc(w)}</span>${esc(t)}</li>`).join('')}</ol></div>
+      <div><div class="box give"><b>WHAT TO HAND OFF</b>${esc(l.give)}</div><div class="box risk"><b>WATCH OUT</b>${esc(l.risk)}</div></div>`;
+  };
+  box.addEventListener('click', e => { const b = e.target.closest('button[data-n]'); if (!b) return; cur = +b.dataset.n; store.set('lvl', String(cur)); draw(); });
+  draw();
+}
+
+function renderTL(f) {
+  const rows = TL.filter(i => f === 'all' || i.c === f), years = [...new Set(rows.map(i => i.y))];
+  document.getElementById('tl').innerHTML = years.length ? years.map(y => `<div class="year"><h3>${y}</h3><div class="items">${rows.filter(i => i.y === y).map(i => `
+    <article class="item"><div class="when">${esc(i.m)}</div><div>
+      <h4>${TL_LOGO[i.t] ? logo(TL_LOGO[i.t]) : ''}${esc(i.t)}<span class="tag">${esc(CATS[i.c])}</span></h4><p>${esc(i.d)}</p>
+      ${i.src ? `<div class="src">Reported by ${esc(i.src)}</div>` : ''}
+      ${i.tip ? `<div class="tip"><b>CHEAT CODE</b>${esc(i.tip)}</div>` : ''}
+    </div></article>`).join('')}</div></div>`).join('') : '<p class="empty">Nothing in this category yet.</p>';
+}
+function renderAT(f) {
+  document.getElementById('at').innerHTML = ATLAS.map((a, i) => ({ a, i })).filter(({ a }) => f === 'all' || a.fit.includes(f)).map(({ a, i }) => `
+    <article class="card"><div class="n"><span>${String(i + 1).padStart(2, '0')} / 12</span><span class="fit">${a.fit.map(x => `<span>${esc(FITS[x])}</span>`).join('')}</span></div>
+      <h3>${esc(a.t)}</h3><p>${esc(a.d)}</p>
+      <div class="tools">${a.tools.map(t => `<span>${mark(t)}${esc(t)}</span>`).join('')}</div>
+      <div class="cheat"><b>CHEAT CODE</b>${esc(a.cheat)}</div></article>`).join('');
+}
+// Jobs by era: roles that appeared [year, title, what they do] and roles that faded or shrank
+const JOB_ERAS = [
+  { k: 'classic', t: 'Classic AI', y: '1950–2011', h: 'Computers become a career',
+    born: [['1950s', 'Computer programmer', 'Wrote instructions for room-sized machines, often on punch cards.'],
+      ['1960s', 'Systems analyst', 'Turned business processes into software specs.'],
+      ['1970s', 'Database administrator', 'Kept company records in relational databases.'],
+      ['1990s', 'Webmaster', 'Built and ran a company website single-handed.'],
+      ['2000s', 'SEO specialist', 'Got pages ranked on Google.'],
+      ['2000s', 'Social media manager', 'Ran brand accounts once Facebook and Twitter took off.']],
+    gone: [['1960s', 'Human “computers”', 'People who did calculations by hand, including at NASA.'],
+      ['1980s', 'Keypunch operator', 'Punched data into cards. Gone once terminals arrived.'],
+      ['1990s', 'Typing pool', 'Whole floors of typists. Everyone learned to type.'],
+      ['2000s', 'Switchboard operator', 'Replaced by automatic phone systems.']],
+    lesson: 'Machines took the task, not the need. Typists went away, but typing became everyone’s job.' },
+  { k: 'dl', t: 'Deep learning', y: '2012–2016', h: 'Data becomes a job title',
+    born: [['2012', 'Data scientist', 'Harvard Business Review called it the sexiest job of the century.'],
+      ['2013', 'Machine learning engineer', 'Put trained models into real products.'],
+      ['2014', 'DevOps engineer', 'Merged writing code with running it.'],
+      ['2014', 'Cloud architect', 'Designed systems on AWS, Azure and Google Cloud.'],
+      ['2015', 'Growth marketer', 'Ran experiments on funnels instead of campaigns.']],
+    gone: [['2010s', 'On-premise server admin', 'Shrank as companies moved to the cloud.'],
+      ['2010s', 'Flash developer', 'Faded after the iPhone; Flash was retired in 2020.'],
+      ['2010s', 'Webmaster', 'Split into designers, developers and marketers.']],
+    lesson: 'The new jobs went to people who learned the tool early, not to the people it replaced.' },
+  { k: 'found', t: 'Foundations', y: '2017–2021', h: 'AI needs people to feed it',
+    born: [['2017', 'Data labeler', 'Tagged images and text to train models, often through outsourcing firms.'],
+      ['2018', 'MLOps engineer', 'Kept models trained, versioned and monitored.'],
+      ['2018', 'RPA developer', 'Built software robots for repetitive office work.'],
+      ['2019', 'Conversation designer', 'Wrote the flows for chatbots and voice assistants.'],
+      ['2019', 'AI ethics researcher', 'Checked models for bias and harm.']],
+    gone: [['2017+', 'Routine translation', 'Neural machine translation handled everyday text.'],
+      ['2018+', 'Manual data entry', 'Scanning and automation software did the typing.']],
+    lesson: 'Before AI could do work, people had to teach it. That created a whole new layer of jobs.' },
+  { k: 'chat', t: 'Chat', y: '2022–2023', h: 'Everyone gets an AI assistant',
+    born: [['2023', 'Prompt engineer', 'Wrote instructions that got good answers. Peaked in 2023.'],
+      ['2023', 'AI trainer', 'Experts write and rank answers so models improve.'],
+      ['2023', 'LLM engineer', 'Built apps on top of models through APIs.'],
+      ['2023', 'AI content editor', 'Checks and fixes AI drafts instead of writing from scratch.']],
+    gone: [['2023', 'Freelance writing gigs', 'Studies found fewer jobs and lower pay after ChatGPT launched.'],
+      ['2023', 'Basic illustration and copy', 'Stock images and simple copy now made in seconds.'],
+      ['2023', 'Scripted support replies', 'First-line answers handled by chat.']],
+    lesson: 'The first jobs hit were not factory jobs. They were writing, art and support at a computer.' },
+  { k: 'copilot', t: 'Copilots', y: '2024', h: 'Builders get leverage',
+    born: [['2024', 'AI engineer', 'LinkedIn’s fastest-growing US job title, two years running.'],
+      ['2024', 'Forward-deployed engineer', 'Sits with a customer and builds AI into their workflow.'],
+      ['2024', 'AI product manager', 'Decides what the AI should do and how to measure it.'],
+      ['2024', 'Evals engineer', 'Tests whether AI output is right before it ships.'],
+      ['2024', 'Chief AI officer', 'Required at US federal agencies from 2024, then at companies.']],
+    gone: [['2024', 'Prompt engineer, as a title', 'Prompting became a skill inside every role.'],
+      ['2024', 'Junior developer hiring', 'Fewer entry-level openings as copilots wrote routine code.']],
+    lesson: 'AI made skilled people faster. It made the first job, where people used to learn, harder to get.' },
+  { k: 'agents', t: 'Agents', y: '2025–2026', h: 'AI takes whole tasks',
+    born: [['2025', 'Agent engineer', 'Builds agents that use tools, browse and run code.'],
+      ['2025', 'Context engineer', 'Decides what data, tools and memory an agent sees.'],
+      ['2025', 'AI governance lead', 'Owns AI risk, policy and compliance. One of the fastest-growing newer titles on LinkedIn.'],
+      ['2026', 'Agent operations', 'Runs agents in production: budgets, failures, handoffs to people.']],
+    gone: [['2025', 'Entry-level, AI-exposed roles', 'A 13% relative drop for 22–25 year olds since late 2022.'],
+      ['2025', 'Tier-1 customer support', 'Agents now resolve the common tickets end to end.'],
+      ['2026', 'Bookkeeping and data clerks', 'Among the fastest declining roles in the WEF outlook.']],
+    lesson: 'One person with agents can now do what a small team did. The new job is managing the work, not doing every step.' },
+];
+// Roles projected for 2027–2031: confidence, title, what it is, signal today, what to do now
+const JOBS_NEXT = [
+  { c: 'likely', t: 'Agent fleet manager', d: 'Runs dozens of agents like a team: assigns work, sets spending limits, reviews output.', s: 'Agent platforms shipping budgets, permissions and audit logs in 2025–26.', do: 'Write down which tasks you would hand to an agent tomorrow. That list is the job.' },
+  { c: 'likely', t: 'AI auditor', d: 'Checks AI systems for accuracy, bias and legal compliance, like a financial auditor checks books.', s: 'EU AI Act obligations phasing in from 2025 to 2027.', do: 'Log what your AI features decide and why. You will be asked.' },
+  { c: 'likely', t: 'Domain expert trainer', d: 'Doctors, lawyers and engineers paid to teach and grade models in their field.', s: 'AI labs hiring experts through Scale AI, Mercor and Surge.', do: 'If you have deep expertise, it is now a product you can sell to labs.' },
+  { c: 'plausible', t: 'Human-in-the-loop reviewer', d: 'Approves the high-stakes steps agents should not take alone: payments, contracts, medical calls.', s: 'Agents pausing for human approval on risky actions.', do: 'Mark the actions in your product that must always wait for a person.' },
+  { c: 'plausible', t: 'Solo founder with agent staff', d: 'One-person companies reaching real revenue, with agents doing sales, support and code.', s: 'Small teams with outsized revenue at AI-native startups.', do: 'Hire for judgment and taste. Hand the volume work to agents.' },
+  { c: 'speculative', t: 'Robot fleet technician', d: 'Maintains and supervises humanoid and warehouse robots on site.', s: 'Humanoid robot pilots in factories and warehouses.', do: 'Watch it, do not bet on it yet.' },
+];
+// Career paths: per role, what AI takes over, what keeps its value, and three lanes of [learn now, become, by 2030]
+const PATHS = [
+  { k: 'swe', t: 'Software engineer', risk: 'Routine code: CRUD screens, boilerplate, simple tests, small tickets. Coding agents now write these end to end.',
+    keep: 'Deciding what to build and how it fits together, and being the person who can tell when AI-written code is wrong.',
+    lanes: [
+      { n: 'Build AI products', l: ['Evals, RAG and tool use', 'Ship one feature where a model makes the decisions, and measure it.'], b: ['AI engineer', 'LinkedIn’s fastest-growing US title.'], e: ['Agent platform lead', 'Owns the agents a whole company runs on.'] },
+      { n: 'Get closer to customers', l: ['A domain and its customers', 'Pick an industry, sit with users, learn their workflow.'], b: ['Forward-deployed engineer', 'Builds AI into a customer’s real work.'], e: ['Technical founder', 'Starts the company for the problem they found.'] },
+      { n: 'Own the system', l: ['Security and reliability', 'Review agent code, threat models, monitoring, cost limits.'], b: ['Staff engineer who runs agents', 'Plans the work, agents write most of it.'], e: ['AI reliability and security lead', 'Keeps agent-built systems safe in production.'] },
+    ], skills: ['System design', 'Reviewing AI code', 'Evals', 'Security', 'One deep domain'] },
+  { k: 'pm', t: 'Product manager', risk: 'Writing specs and tickets, status updates, research summaries and roadmap decks. AI drafts all of these in minutes.',
+    keep: 'Judgment on what to build and for whom, getting it in front of customers, and deciding what good enough looks like.',
+    lanes: [
+      { n: 'Lead AI products', l: ['Model limits and evals', 'Learn what models get wrong, cost per task, and how to test quality.'], b: ['AI product manager', 'Decides what the AI should do and how to measure it.'], e: ['Head of AI product', 'Sets where AI goes across the whole product.'] },
+      { n: 'Build it yourself', l: ['Prototyping with AI tools', 'Turn ideas into working demos with Claude Code, Lovable or Cursor.'], b: ['Product builder', 'A PM who ships working software, not documents.'], e: ['Founder or GM', 'Runs a product line or a company with a small team.'] },
+      { n: 'Run the agent workforce', l: ['Workflow design', 'Map a team’s work into steps, budgets and points where a person approves.'], b: ['Agent operations lead', 'Runs agents in production for a business team.'], e: ['Head of an agent-run team (2030)', 'A few people managing many agents.'] },
+    ], skills: ['Customer discovery', 'Evals', 'Prototyping', 'Pricing AI features', 'Distribution'] },
+  { k: 'ux', t: 'UI and UX designer', risk: 'Producing screens, assets and simple mockups on request. Graphic designers are 11th on the WEF declining list for this reason.',
+    keep: 'Understanding users, taste, and design systems. UI and UX designers are 8th on the WEF fastest-growing list because that work is still in demand.',
+    lanes: [
+      { n: 'Design for AI', l: ['Agent and AI interaction patterns', 'Trust, approvals, errors, showing what an agent did and why.'], b: ['AI experience designer', 'Designs how people work with agents.'], e: ['Head of design, AI products', 'Owns the experience of AI-first products.'] },
+      { n: 'Design and ship', l: ['Building in code with AI tools', 'Take designs to working front ends without a handoff.'], b: ['Design engineer', 'Designs and ships the real product.'], e: ['Founding designer or product builder', 'Builds whole products end to end.'] },
+      { n: 'Own the system', l: ['Design systems and brand rules', 'Components, tokens and guidelines that AI tools follow.'], b: ['Design systems lead', 'Sets the rules AI generates designs from.'], e: ['Creative director for AI output (2030)', 'Approves what AI makes, at volume.'] },
+    ], skills: ['User research', 'Taste', 'Design systems', 'Front-end code', 'Writing'] },
+];
+function renderPaths() {
+  const tabs = document.getElementById('pathtabs'), panel = document.getElementById('pathpanel');
+  let cur = store.get('path'); if (!PATHS.some(x => x.k === cur)) cur = 'swe';
+  const node = (x, tk, end) => `<div class="pn${end ? ' end' : ''}"><span class="tk">${tk}</span><h4>${esc(x[0])}</h4><p>${esc(x[1])}</p></div>`;
+  const draw = () => {
+    tabs.innerHTML = PATHS.map(x => `<button type="button" class="brand-tab" role="tab" data-k="${x.k}" aria-selected="${x.k === cur}"><b>${esc(x.t)}</b></button>`).join('');
+    const r = PATHS.find(x => x.k === cur);
+    panel.innerHTML = `<div class="path-top"><div class="risk"><b>WHAT AI TAKES OVER</b>${esc(r.risk)}</div><div class="keep"><b>WHAT KEEPS ITS VALUE</b>${esc(r.keep)}</div></div>
+      <div class="path-grid"><span class="hd">TODAY</span><span class="hd">NEXT 6 MONTHS · LEARN</span><span class="hd">1–2 YEARS · BECOME</span><span class="hd">BY 2030 · LEAD</span>
+        <div class="path-now"><span>You, today</span><b>${esc(r.t)}</b></div>
+        ${r.lanes.map(l => `<div class="plane" data-name="${esc(l.n.toUpperCase())}">${node(l.l, 'LEARN · ' + esc(l.n.toUpperCase()))}${node(l.b, 'BECOME')}${node(l.e, 'BY 2030', true)}</div>`).join('')}</div>
+      <div class="path-skills"><b>SKILLS THAT COMPOUND</b>${r.skills.map(x => `<span>${esc(x)}</span>`).join('')}</div>`;
+  };
+  tabs.addEventListener('click', ev => { const b = ev.target.closest('.brand-tab'); if (!b) return; cur = b.dataset.k; store.set('path', cur); draw(); });
+  draw();
+}
+function renderJobs() {
+  const tabs = document.getElementById('joberas'), panel = document.getElementById('jobpanel');
+  let cur = store.get('jobera'); if (!JOB_ERAS.some(e => e.k === cur)) cur = 'agents';
+  const role = (r, gone) => `<div class="role${gone ? ' gone' : ''}"><span class="yr">${esc(r[0])}</span><div><h4>${esc(r[1])}</h4><p>${esc(r[2])}</p></div></div>`;
+  const draw = () => {
+    tabs.innerHTML = JOB_ERAS.map(e => `<button type="button" class="job-era" role="tab" data-k="${e.k}" aria-selected="${e.k === cur}"><span>${esc(e.y)}</span><b>${esc(e.t)}</b><i>+${e.born.length} new roles</i></button>`).join('');
+    const e = JOB_ERAS.find(x => x.k === cur);
+    panel.innerHTML = `<div><span class="job-k up">▲ ROLES THAT APPEARED</span><h3>${esc(e.h)}</h3><div>${e.born.map(r => role(r)).join('')}</div></div>
+      <div><span class="job-k down">▼ ROLES THAT FADED OR SHRANK</span><div>${e.gone.map(r => role(r, true)).join('')}</div></div>
+      <div class="lesson"><b>THE PATTERN</b>${esc(e.lesson)}</div>`;
+  };
+  tabs.addEventListener('click', ev => { const b = ev.target.closest('.job-era'); if (!b) return; cur = b.dataset.k; store.set('jobera', cur); draw(); });
+  tabs.addEventListener('keydown', ev => { if (ev.key !== 'ArrowRight' && ev.key !== 'ArrowLeft') return; const i = JOB_ERAS.findIndex(x => x.k === cur);
+    cur = JOB_ERAS[(i + (ev.key === 'ArrowRight' ? 1 : JOB_ERAS.length - 1)) % JOB_ERAS.length].k; store.set('jobera', cur); draw(); tabs.querySelector('[aria-selected="true"]').focus(); });
+  draw();
+  document.getElementById('jobsnext').innerHTML = JOBS_NEXT.map(p => `<div class="pred"><span class="conf ${p.c}">${p.c.toUpperCase()}</span><h4>${esc(p.t)}</h4><p>${esc(p.d)}</p>
+    <p class="src">Signal: ${esc(p.s)}</p><div class="do"><b>DO NOW</b>${esc(p.do)}</div></div>`).join('');
+}
+function renderFU() {
+  document.getElementById('fu').innerHTML = FUTURE.map(f => `<div class="fy"><h3>${esc(f.y)}</h3>${f.p.map(p => `
+    <div class="pred"><span class="conf ${p.c}">${p.c.toUpperCase()}</span><h4>${esc(p.t)}</h4><p>${esc(p.d)}</p>
+      <p class="src">Signal: ${esc(p.s)}</p><div class="do"><b>DO NOW</b>${esc(p.do)}</div></div>`).join('')}</div>`).join('');
+}
+
+chips(document.getElementById('tl-filters'), CATS, 'tl', renderTL);
+chips(document.getElementById('at-filters'), FITS, 'at', renderAT);
+// Inside the labs: one ring diagram per lab. Rings inside out: models, agents, products, coming next (dotted).
+// Each item: [label (\n = line break), date, status (live | preview | soon | reported), what it is]
+const LAB_RINGS = [
+  { t: 'Models', sub: 'the brains' }, { t: 'Agents', sub: 'do the work' },
+  { t: 'Products', sub: '& platform' }, { t: 'Coming next', sub: 'not out yet' }
+];
+const STATUS = { live: 'Live', preview: 'Preview / beta', soon: 'Announced', reported: 'Reported' };
+const BRANDS = [
+  { id: 'openai', name: 'OpenAI', logo: 'openai', sub: 'ChatGPT · Codex · GPT-6',
+    d: 'The consumer giant. Ships the most products, fastest, and is moving into browsers, shopping and hardware.',
+    cheat: 'Give the team ChatGPT, give engineers Codex, and in your product route most calls to Sol and the bulk work to Luna. Save Astra for the hardest step.',
+    r: [
+      [["GPT-6\nAstra", 'Sep 2026', 'live', 'Flagship model for long, multi-step work: computer use, coding, research. $10 / $50 per million tokens.'],
+       ["GPT-6.1\nSol", 'Sep 2026', 'live', 'Close to Astra quality at a fifth of the price. The default for most products. $2 / $10. GPT-6 Sol launched 22 Sep, since updated to 6.1.'],
+       ["GPT-6\nLuna", 'Sep 2026', 'live', 'Fast and very cheap, for high-volume tasks like tagging, extraction and chat. $0.10 / $0.50.'],
+       ["GPT-6.1\nTerra", 'Oct 2026', 'reported', 'Reported as a new mid tier in the API, ChatGPT Work and Codex. Confirm on OpenAI’s release notes.'],
+       ["GPT-6\nCyber", 'Nov 2026', 'preview', 'Security research model, rated Critical under OpenAI’s risk framework. Limited to approved Daybreak Red customers through the API and Codex for now.'],
+       ['gpt-oss', 'Aug 2025', 'live', 'Open-weight models you can download and run on your own servers.'],
+       ['Sora 2', 'Sep 2025', 'live', 'Video and audio generation model, also behind the Sora app.']],
+      [['Codex', '2025', 'live', 'Coding agent in your terminal, IDE, desktop app and the cloud. Writes code and opens pull requests.'],
+       ["ChatGPT\nagent", 'Jul 2025', 'live', 'Works on its own virtual computer: browses, fills forms, builds files. Absorbed Operator.'],
+       ["Deep\nResearch", 'Feb 2025', 'live', 'Researches the web for 5 to 30 minutes and writes a cited report.'],
+       ['dots', 'Sep 2026', 'preview', 'Always-on agents that keep working in the background. Pro and Business Premium first.'],
+       ['Aardvark', 'Oct 2025', 'preview', 'Security agent that finds and patches vulnerabilities in your code. Private beta.'],
+       ["Atlas\nagent mode", 'Oct 2025', 'live', 'The agent inside the ChatGPT Atlas browser. It acts on the page you are on.']],
+      [['ChatGPT', 'Nov 2022', 'live', 'The assistant: chat, voice, search, files, memory and projects. Plans from Free to Pro.'],
+       ["Atlas\nbrowser", 'Oct 2025', 'live', 'A web browser with ChatGPT built in.'],
+       ["Sora\napp", 'Sep 2025', 'live', 'Social app for making and remixing AI video.'],
+       ['Pulse', 'Sep 2025', 'live', 'A daily brief built from your chats and connected apps.'],
+       ["Apps in\nChatGPT", 'Oct 2025', 'live', 'Apps like Canva and Zillow running inside the chat, built with the Apps SDK.'],
+       ["Instant\nCheckout", 'Sep 2025', 'live', 'Buy from merchants inside ChatGPT, through the Agentic Commerce Protocol.'],
+       ["Space &\nPages", 'Sep 2026', 'live', 'Shared workspaces and documents for teams, shown at DevDay 2026.'],
+       ['AgentKit', 'Oct 2025', 'live', 'Agent Builder, ChatKit and evals for putting agents into your product.'],
+       ["Agents\nSDK", 'Mar 2025', 'live', 'Open-source framework, with the Responses API, for building agents in code.'],
+       ["Agents\nAPI", 'Sep 2026', 'preview', 'A dedicated API for agents, reported in public beta.']],
+      [["io\ndevice", '2027', 'soon', 'First hardware device, designed with Jony Ive. A sworn court filing says it will not ship before the end of February 2027.'],
+       ["Smart\nspeaker", '2027', 'reported', 'Reported for early 2027. Not confirmed by OpenAI.'],
+       ["Glasses\n& lamp", 'TBA', 'reported', 'Reported as in development or under consideration.'],
+       ["Private\nIntelligence", 'Preview', 'soon', 'Previewed at DevDay 2026: tighter control over company data.'],
+       ["dots for\neveryone", 'TBA', 'soon', 'Always-on agents to expand beyond Pro and Business Premium.'],
+       ["On Google\nCloud", 'Weeks', 'reported', 'OpenAI models and Codex in Google Cloud Model Garden, with general availability reported as weeks away.'],
+       ['Stargate', '2025–29', 'soon', 'Data-centre build-out with Oracle and SoftBank, worth hundreds of billions of dollars.']]
+    ] },
+  { id: 'anthropic', name: 'Anthropic', logo: 'anthropic', sub: 'Claude · Claude Code · Cowork',
+    d: 'The work and coding lab. Fewer consumer products, deeper agents for engineers, teams and regulated companies.',
+    cheat: 'Ship with Claude Code, or Cowork if you do not code. Save your team’s processes as Skills, and use Haiku for high-volume calls.',
+    r: [
+      [["Fable\n5.1", 'Sep 2026', 'live', 'Top model for long-running agentic coding, knowledge work and research.'],
+       ["Opus\n5.5", 'Sep 2026', 'live', 'Long agentic coding and knowledge work. 1M-token context, $4 / $20 per million tokens.'],
+       ["Sonnet\n5.5", 'Sep 2026', 'live', 'The balanced default: strong, and cheaper than Opus.'],
+       ["Haiku\n5.5", 'Oct 2026', 'live', 'Fastest and cheapest. Built for high-volume work, subagents and browser use.'],
+       ["Mythos\n5.1", 'Sep 2026', 'preview', 'Restricted cyber-capable model, for Project Glasswing partners only.']],
+      [["Claude\nCode", 'Feb 2025', 'live', 'Coding agent in your terminal, IDE, desktop and web. Runs parallel sessions, routines and workflows.'],
+       ['Cowork', 'Jan 2026', 'live', 'Claude Code for non-engineers: works on folders of files on your computer. Generally available since April 2026.'],
+       ["Claude in\nChrome", 'Aug 2025', 'live', 'Browser agent that navigates sites, fills forms and finishes tasks. Started as a research preview.'],
+       ['Duet', 'Oct 2026', 'preview', 'Proactive agent: watches your connected apps, works in the background and asks before big actions. US Pro and Max, waitlist.'],
+       ["Claude\nScience", 'Jun 2026', 'preview', 'Research agent for biology and drug discovery. Public beta on paid plans.'],
+       ["Managed\nAgents", 'Apr 2026', 'preview', 'Hosted agents with memory, schedules and multi-agent orchestration. Public beta.'],
+       ["Claude\nSecurity", '2026', 'preview', 'Continuous code scanning and fix tracking for Enterprise. Public beta.']],
+      [["Claude\napp", 'Mar 2023', 'live', 'Web, desktop and mobile assistant, now merged with Cowork on Pro and Max.'],
+       ['Artifacts', 'Jun 2024', 'live', 'Pages, apps and documents Claude builds and publishes from the chat.'],
+       ['Memory', '2025', 'live', 'Remembers your projects and preferences. Free users too since March 2026.'],
+       ['Skills', 'Oct 2025', 'live', 'Packaged instructions and scripts Claude loads when needed. Marketplace since May 2026.'],
+       ['MCP', 'Nov 2024', 'live', 'Model Context Protocol: the open standard for connecting AI to tools and data.'],
+       ['Connectors', 'Jan 2026', 'live', 'Slack, Figma, Canva, Google Workspace and more, inside Claude.'],
+       ["Claude\nDesign", 'Apr 2026', 'live', 'Design tool from Anthropic Labs, out of beta since October 2026.'],
+       ["Docs &\nSlides", 'Oct 2026', 'live', 'Documents and decks made in Claude, out of beta on all plans. Dashboards in beta.'],
+       ["Agent\nSDK", '2025', 'live', 'The harness behind Claude Code, for building your own agents.'],
+       ["Code\nReview", 'Oct 2026', 'live', 'Automated pull-request review, generally available for Team and Enterprise.']],
+      [["Mythos\nfor all", 'TBA', 'soon', 'Wider access to Mythos-class models was said to be coming. Still partners-only as of October 2026.'],
+       ["Duet\nrollout", 'TBA', 'soon', 'Duet beyond the US waitlist preview.'],
+       ["Claude in\nOutlook", 'Soon', 'soon', 'Announced as coming soon.'],
+       ["Salesforce\nconnector", 'Soon', 'soon', 'Listed as coming soon.'],
+       ["Cheaper\nfrontier", 'TBA', 'reported', 'Lower-cost models at today’s top-tier level, reported as in development.'],
+       ["Claude\nin Slack", 'Beta', 'soon', 'Claude Tag for Slack channels, in beta for Enterprise.']]
+    ] },
+  { id: 'google', name: 'Google', logo: 'google', sub: 'Gemini · Antigravity · AI Mode',
+    d: 'The distribution giant. Puts agents inside Search, Gmail, Chrome and Android, where billions of people already are.',
+    cheat: 'Prototype free in AI Studio, use Gemini Flash for cheap volume, and check AI Mode to see how customers now find you in Search.',
+    r: [
+      [["4\nArgon", 'Oct 2026', 'live', 'Gemini 4 Argon: the first Gemini 4 model, out 13 October for developers, enterprises and AI Pro and Ultra subscribers. Built for software engineering, enterprise knowledge work and cyber defence, with a 1M-token limit.'],
+       ["4\nCarbon", 'Oct 2026', 'preview', 'Gemini 4 Carbon: Google’s strongest model, announced 28 October, for long-running agent work and cybersecurity. Limited to vetted cyber defenders through the Fairwind program while Google tunes its guardrails.'],
+       ["3.8\nFlash", 'Sep 2026', 'live', 'Gemini 3.8 Flash: Google\'s newest fast model. Flash versions have shipped every few weeks since May (3.5, 3.7, 3.8).'],
+       ["3.1\nPro", 'Feb 2026', 'preview', 'Gemini 3.1 Pro: the current Pro model, still labelled preview.'],
+       ['Omni', 'May 2026', 'live', 'Gemini Omni: makes video from any input. In the Gemini app, Flow and YouTube Shorts.'],
+       ["Gemma\n4", '2026', 'live', 'Open-weight models you can run yourself.'],
+       ["Veo\n3", 'May 2025', 'live', 'Video generation with sound.'],
+       ["Genie\n3", 'Aug 2025', 'preview', 'World model that generates playable 3D environments. Research preview.']],
+      [['Antigravity', 'Nov 2025', 'live', 'Agent-first coding platform. Version 2.0 (May 2026) adds a desktop app, CLI and SDK.'],
+       ['Jules', '2025', 'live', 'Asynchronous coding agent that works on your GitHub repo.'],
+       ["Managed\nAgents", 'May 2026', 'preview', 'One API call starts an agent in its own Linux sandbox.'],
+       ["Gemini\nSpark", 'May 2026', 'preview', 'Always-on background agent. Trusted testers, then a beta for US AI Ultra.'],
+       ["Daily\nBrief", 'May 2026', 'live', 'Gemini app agent that prepares your day. US first.'],
+       ["Flow\nAgent", 'May 2026', 'live', 'Agent inside Google Flow, the AI filmmaking tool.'],
+       ["Deep\nResearch", 'Dec 2024', 'live', 'Gemini’s multi-step research reports.']],
+      [["Gemini\napp", '2024', 'live', 'Google’s assistant on web, Android and iOS, redesigned at I/O 2026.'],
+       ["AI\nMode", '2025', 'live', 'AI answers in Google Search, with over 1 billion monthly users.'],
+       ['NotebookLM', '2023', 'live', 'Research notebook over your own sources, with audio overviews.'],
+       ["AI\nStudio", '2023', 'live', 'Free place to prototype with Gemini. Now builds and deploys apps too.'],
+       ['Flow', 'May 2025', 'live', 'AI filmmaking tool built on Veo and Omni.'],
+       ["AI\nInbox", 'May 2026', 'live', 'Gmail that sorts and acts on your email. Ultra first, then Plus and Pro in the US.'],
+       ["Gemini in\nChrome", '2025', 'live', 'Gemini built into the Chrome browser.'],
+       ["Gemini\nEnterprise", 'Oct 2025', 'live', 'Google’s agent platform for companies.'],
+       ["Gemini\nAPI", '2023', 'live', 'The developer API, through AI Studio and Vertex AI.']],
+      [["XR\nglasses", 'Fall 2026', 'soon', 'Android XR audio glasses with Gentle Monster, Warby Parker and Samsung.'],
+       ["Universal\nCart", '2026', 'soon', 'One shopping cart across Search and Gemini, then YouTube and Gmail.'],
+       ["Info\nagents", '2026', 'soon', 'Agents in Search that keep tracking a topic for you. Pro and Ultra first.'],
+       ["Gmail &\nDocs Live", '2026', 'soon', 'Live voice help inside Gmail and Docs.'],
+       ['WebMCP', 'Trial', 'soon', 'Proposed web standard that lets sites offer tools to agents. Chrome origin trial.'],
+       ["Spark\npayments", '2026', 'soon', 'Spark agents that can pay, within budget and merchant limits.'],
+       ["Antigravity\nEnterprise", 'Soon', 'soon', 'Antigravity inside Gemini Enterprise.'],
+       ["Rest of\nGemini 4", 'TBA', 'soon', 'Google calls Argon the start of the Gemini 4 family. Carbon opens to developers, businesses and consumers once its guardrails are tuned; no date given.']]
+    ] }
+];
+
+function renderBrands() {
+  const tabs = document.getElementById('brandtabs'), svg = document.getElementById('brandrings'),
+    panel = document.getElementById('brandpanel'), list = document.getElementById('brandlist');
+  const CX = 500, CY = 500, R = [170, 290, 395, 490], BAND = [110, 230, 342, 443], TITLE_X = [585, 730, 842, 942];
+  let b = BRANDS[0], sel = { r: -1, c: -1 };
+  const label = s => s.replace('\n', ' ');
+  const draw = () => {
+    tabs.innerHTML = BRANDS.map(x => `<button type="button" role="tab" class="brand-tab" aria-selected="${x === b}" data-b="${x.id}">${logo(x.logo)}<span><b>${esc(x.name)}</b><span>${esc(x.sub)}</span></span></button>`).join('');
+    let h = `<defs><pattern id="bdots" width="9" height="9" patternUnits="userSpaceOnUse"><circle class="dotfill" cx="4.5" cy="4.5" r="1.6"/></pattern></defs>`;
+    const cls = ['r-models', 'r-agents', 'r-systems', 'r-infra'];
+    for (let i = 3; i >= 0; i--) {
+      h += `<circle class="ring-hit ${cls[i]}" data-r="${i}" cx="${CX}" cy="${CY}" r="${R[i]}"/>`;
+      if (i === 3) h += `<circle class="ring-hit" data-r="3" cx="${CX}" cy="${CY}" r="${R[3]}" fill="url(#bdots)"/>`;   // the future prints in halftone
+    }
+    for (let i = 0; i < 4; i++) h += `<circle class="r-line${i === 3 ? ' dash' : ''}" cx="${CX}" cy="${CY}" r="${R[i]}"/>`;
+    h += `<line class="axis-line" x1="360" y1="${CY}" x2="972" y2="${CY}"/><polygon class="axis-head" points="990,${CY} 962,${CY - 14} 962,${CY + 14}"/>`;
+    LAB_RINGS.forEach((g, i) => {
+      const words = g.t.split(' ');
+      h += `<text class="ttl" x="${TITLE_X[i]}" y="${words.length > 1 ? CY - 38 : CY - 14}" text-anchor="middle" pointer-events="none">${words.map((w, k) => `<tspan x="${TITLE_X[i]}" dy="${k ? 24 : 0}">${esc(w)}</tspan>`).join('')}</text>`;
+      h += `<text class="sub" x="${TITLE_X[i]}" y="${CY + 26}" text-anchor="middle" pointer-events="none">${esc(g.sub)}</text>`;
+      const items = b.r[i], n = items.length;
+      items.forEach((it, ci) => {
+        const th = (30 + 300 * (ci + 0.5) / n) * Math.PI / 180, x = CX + BAND[i] * Math.cos(th), y = CY + BAND[i] * Math.sin(th);
+        const lines = it[0].split('\n'), on = sel.r === i && sel.c === ci, open = it[2] !== 'live';
+        h += `<g class="cpt${on ? ' on' : ''}${i === 0 ? ' small' : ''}${open ? ' pv' : ''}" tabindex="0" role="button" data-r="${i}" data-c="${ci}" aria-label="${esc(b.name + ' ' + g.t + ': ' + label(it[0]) + ', ' + STATUS[it[2]])}">
+          <circle cx="${x.toFixed(1)}" cy="${(y - lines.length * 12 - 10).toFixed(1)}" r="5"/>
+          <text x="${x.toFixed(1)}" y="${(y - (lines.length - 1) * 12 + 7).toFixed(1)}" text-anchor="middle">${lines.map((l, k2) => `<tspan x="${x.toFixed(1)}" dy="${k2 ? 24 : 0}">${esc(l)}</tspan>`).join('')}</text></g>`;
+      });
+    });
+    svg.innerHTML = h;
+    svg.setAttribute('aria-label', `${b.name}: models, agents, products and what is coming, as nested rings`);
+    const it = sel.r >= 0 && sel.c >= 0 ? b.r[sel.r][sel.c] : null, g = sel.r >= 0 ? LAB_RINGS[sel.r] : null;
+    panel.innerHTML = it
+      ? `<div class="ringcard"><span class="label">${esc(b.name)} · ${esc(g.t)} · ${esc(it[1])}</span><h3>${esc(label(it[0]))}</h3><p>${esc(it[2] === 'live' ? it[3] : it[3])}</p><span><span class="stat ${it[2]}">${STATUS[it[2]]}</span></span></div>`
+      : g ? `<div class="ringcard"><span class="label">${esc(b.name)} · ring ${sel.r + 1} of 4</span><h3>${esc(g.t)}</h3><div class="tools">${b.r[sel.r].map(x => `<span>${esc(label(x[0]))}</span>`).join('')}</div></div>`
+      : `<div class="ringcard"><span class="label">${esc(b.sub)}</span><h3>${logo(b.logo)} ${esc(b.name)}</h3><p>${esc(b.d)}</p><p class="mono" style="font-size:13px;color:var(--muted)">${b.r.slice(0, 3).reduce((a, x) => a + x.length, 0)} shipped or in beta · ${b.r[3].length} coming. Select any name for details.</p></div>`;
+    panel.innerHTML += `<div class="cheat"><b>CHEAT CODE</b>${esc(b.cheat)}</div>`;
+    list.innerHTML = LAB_RINGS.map((gg, i) => `<div class="grp"><b>${esc(gg.t.toUpperCase())}</b><div>${b.r[i].map((x, ci) => `<button type="button" class="${x[2] !== 'live' ? 'pv' : ''}" data-r="${i}" data-c="${ci}" aria-pressed="${sel.r === i && sel.c === ci}">${esc(label(x[0]))}</button>`).join('')}</div></div>`).join('');
+  };
+  const setBrand = id => { const x = BRANDS.find(y => y.id === id); if (!x) return false; b = x; sel = { r: -1, c: -1 }; draw(); return true; };
+  const pick = el => { const t = el.closest('[data-r]'); if (!t) return; sel = { r: +t.dataset.r, c: t.dataset.c != null ? +t.dataset.c : -1 }; draw(); };
+  tabs.addEventListener('click', e => { const t = e.target.closest('[data-b]'); if (t) setBrand(t.dataset.b); });
+  svg.addEventListener('click', e => pick(e.target));
+  svg.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.cpt')) { e.preventDefault(); pick(e.target); const f = svg.querySelector(`.cpt[data-r="${sel.r}"][data-c="${sel.c}"]`); if (f) f.focus(); } });
+  list.addEventListener('click', e => { const t = e.target.closest('button'); if (t) pick(t); });
+  const fromHash = () => setBrand(location.hash.slice(1));
+  window.addEventListener('hashchange', fromHash);
+  if (!fromHash()) draw();
+}
+
+// Where the money sits: the AI economy as a stack. Values in $B, approximate, late October 2026.
+// Public companies: market cap. Private: last funding round or deal. Each company counts once, in its main layer.
+// Company: { n: name, v: value or null (not public), l: logo slug, d: note, nw: year it entered this layer (2024+),
+//   est: figure is an estimate or older snapshot, rep: from news reports only, nc: shown but left out of the total, g: 'open' for open-weight labs }
+const STACK = [
+  { k: 'Apps', sub: 'What you build on top', co: [
+    { n: 'Cursor', v: 60, d: 'AI code editor. Acquired by SpaceX for about $60B in stock (Jun 2026)', rep: 1 },
+    { n: 'Cognition', v: 48, d: 'Devin and Windsurf. Round at about $48B (2026)', rep: 1 },
+    { n: 'Perplexity', v: 20, l: 'perplexity', d: 'AI search. Last round about $20B; a round above $30B reported in talks', est: 1 },
+    { n: 'Sierra', v: 15.8, d: 'Customer-service agents. $950M round, May 2026' },
+    { n: 'Lovable', v: 13.3, d: 'App builder for non-engineers. $400M round, Aug 2026', nw: 2024 },
+    { n: 'Harvey', v: 11, d: 'Legal AI. $11B round, Mar 2026; a later round at $15.5B reported' },
+    { n: 'ElevenLabs', v: 11, l: 'elevenlabs', d: 'Voice AI. $11B round, Feb 2026' },
+    { n: 'Replit', v: 9, l: 'replit', d: 'App builder. $9B round, Mar 2026' },
+    { n: 'Legora', v: 8.8, d: 'Legal AI. $550M round, Oct 2026' },
+    { n: 'Glean', v: 7.2, d: 'Work search and agents. $7.2B round' },
+    { n: 'Abridge', v: 7, d: 'Medical note-taking. Estimate, no confirmed 2026 round', est: 1 },
+    { n: 'Poolside', v: null, d: 'Coding models and agents. No 2026 valuation found' }],
+    cheat: 'The smallest layer by value, and the only one a small team can win. Pick one narrow job for one kind of customer and do it better than a general tool. Lovable got there in about two years.' },
+  { k: 'Models', sub: 'The labs that train the brains', co: [
+    { n: 'Anthropic', v: 965, l: 'anthropic', d: 'Claude. Last round about $965B, mid-2026; about $1.5T discussed for an IPO' },
+    { n: 'OpenAI', v: 852, l: 'openai', d: 'GPT and ChatGPT. Last closed round $852B; raising about $30B at $1.25T (Oct 2026)' },
+    { n: 'xAI', v: 1250, l: 'x', d: 'Grok. Merged into SpaceX, about $1.25T combined (Feb 2026). Left out of the total because it includes rockets and Starlink', nc: 1 },
+    { n: 'Safe Superintelligence', v: 32, d: 'Ilya Sutskever’s lab. $32B round, no product yet', nw: 2024 },
+    { n: 'Reflection AI', v: 25, d: 'Building open frontier models. About $25B (Apr 2026)', nw: 2025, g: 'open' },
+    { n: 'Mistral', v: 24.4, d: 'Europe’s leading lab. Round at about €21B' },
+    { n: 'Cohere', v: 19, d: 'Models for enterprises. About $18–20B in its latest raise', est: 1 },
+    { n: 'Thinking Machines', v: 12, d: 'Mira Murati’s lab. $12B at launch; talks near $40B reported', nw: 2025, est: 1 },
+    { n: 'Zhipu (Z.ai)', v: 44, d: 'GLM models. Public in Hong Kong; estimates range widely', est: 1, g: 'open' },
+    { n: 'Moonshot (Kimi)', v: 35, d: 'Kimi models. About $35B (Jul 2026); Hong Kong IPO filing reported near $50B', est: 1, g: 'open' },
+    { n: 'MiniMax', v: 10.8, d: 'Public in Hong Kong since Jan 2026', g: 'open' },
+    { n: 'DeepSeek', v: null, d: 'Owned by a Chinese hedge fund. No outside valuation', g: 'open' }],
+    cheat: 'Do not marry one lab. Keep the model behind one function in your code so you can switch when prices drop. Open-weight models from China now match last year’s frontier at a fraction of the cost.' },
+  { k: 'Cloud', sub: 'Where models run', co: [
+    { n: 'Microsoft', v: 3900, d: 'Azure. Also OpenAI’s biggest backer' },
+    { n: 'Alphabet', v: 3900, l: 'google', d: 'Google Cloud. Also makes TPU chips and Gemini models' },
+    { n: 'Amazon', v: 2700, d: 'AWS. Also makes Trainium chips; Anthropic’s biggest backer' },
+    { n: 'Meta', v: 1500, l: 'meta', d: 'Meta Compute: rents GPUs and hosts Llama, reported launch Jul 2026. Also makes Llama and Muse Spark models. Market cap from mid-2026', nw: 2026, est: 1, rep: 1 },
+    { n: 'Oracle', v: 395, d: 'Oracle Cloud and the Stargate data centres' },
+    { n: 'Alibaba', v: 270, l: 'alibabacloud', d: 'Alibaba Cloud. Also makes the open Qwen models. Market cap from mid-2026', est: 1 },
+    { n: 'Nebius', v: 64, d: 'GPU cloud, spun out of Yandex', nw: 2024 },
+    { n: 'CoreWeave', v: 33, d: 'GPU cloud built for AI. Share price swings widely' },
+    { n: 'Crusoe', v: 30.9, d: 'AI data centres and cloud. $3.9B round, Sep 2026' },
+    { n: 'Lambda', v: 12, d: 'GPU cloud. Reported raising at $12B+ before an IPO', rep: 1 },
+    { n: 'Together AI', v: null, d: 'Hosts open models. Raised $800M, Jul 2026; valuation not disclosed' }],
+    cheat: 'Apply for startup credits first: AWS, Google Cloud and Microsoft each give AI startups free credits. Newer GPU clouds and Meta Compute are pushing prices down, so compare before you sign anything long.' },
+  { k: 'Chips', sub: 'The hardware', co: [
+    { n: 'Nvidia', v: 5200, d: 'GPUs that train and run most models. Also makes open Nemotron models' },
+    { n: 'TSMC', v: 2300, d: 'Manufactures chips for Nvidia, AMD, Apple and Google' },
+    { n: 'Broadcom', v: 1600, d: 'Custom AI chips and networking for the big clouds' },
+    { n: 'Samsung', v: 1125, d: 'Memory chips and manufacturing' },
+    { n: 'Micron', v: 1110, d: 'High-bandwidth memory for AI chips' },
+    { n: 'SK hynix', v: 1000, d: 'Leading high-bandwidth memory maker. Estimates vary by source', est: 1 },
+    { n: 'AMD', v: 915, d: 'The main GPU alternative to Nvidia' },
+    { n: 'Marvell', v: 142, d: 'Custom chips and networking. Figure from Jul 2026', est: 1 },
+    { n: 'Cerebras', v: 95, d: 'Wafer-sized chips for fast inference. Value at its May 2026 IPO', est: 1 },
+    { n: 'Etched', v: 10.3, d: 'Chips built only for transformers. $10.3B round (Jul 2026); offers at $40B+ reported', nw: 2026 },
+    { n: 'Tenstorrent', v: 6.2, d: 'Open-architecture AI chips. $6.2B round, Oct 2026' },
+    { n: 'Groq', v: null, d: 'Fast inference chips; also runs GroqCloud. No 2026 valuation found' }],
+    cheat: 'You will never buy a chip, but chip supply sets what AI costs you. The price of the same model quality keeps falling, so plan features that become affordable next year.' },
+  { k: 'Power', sub: 'The electricity', co: [
+    { n: 'GE Vernova', v: 230, d: 'Gas turbines and grid equipment for data centres. Estimates vary', est: 1 },
+    { n: 'NextEra', v: 172, d: 'Largest US renewable power producer' },
+    { n: 'Constellation', v: 92, d: 'Largest US nuclear fleet. 20-year deal with Meta' },
+    { n: 'Bloom Energy', v: 66, d: 'Fuel cells that power data centres on site' },
+    { n: 'Vistra', v: 48, d: 'Power for AI data centres, including a 20-year Meta deal' },
+    { n: 'PSEG', v: 37, d: 'New Jersey utility with nuclear plants. Approximate', est: 1 },
+    { n: 'Talen', v: 18, d: 'Nuclear power next to an AWS data centre. Older figure', est: 1 },
+    { n: 'Oklo', v: 6, d: 'Small nuclear reactors for data centres. None running yet', nw: 2024, est: 1 }],
+    cheat: 'Power is now the bottleneck for new data centres. Expect rate limits and busy hours from every AI provider, and build retries and a fallback model into your product.' }
+];
+
+function renderMoney() {
+  const box = document.getElementById('money'), det = document.getElementById('moneydet');
+  const fmt = v => v >= 1000 ? `$${(v / 1000).toFixed(1)}T` : `$${v >= 100 || !(v % 1) ? Math.round(v) : v.toFixed(1)}B`;
+  const counted = l => l.co.filter(c => c.v != null && !c.nc), total = l => counted(l).reduce((a, c) => a + c.v, 0);
+  const max = Math.max(...STACK.map(total));
+  const mk = c => c.l ? logo(c.l) : mono(c.n);
+  let sel = 0;
+  const row = c => `<div><span class="mn">${mk(c)}<b>${esc(c.n)}</b>${c.nw ? `<span class="mtag new">New ${c.nw}</span>` : ''}${c.rep ? '<span class="mtag">Reported</span>' : c.est ? '<span class="mtag">Est.</span>' : ''}</span>
+    <span class="mv">${c.v == null ? 'Not public' : (c.est || c.rep ? '~' : '') + fmt(c.v)}${c.nc ? '<small>not in total</small>' : ''}</span><span class="mt">${esc(c.d)}</span></div>`;
+  const draw = () => {
+    box.innerHTML = STACK.map((l, i) => {
+      const t = total(l), w = Math.max(t / max * 72, 2.5), nw = l.co.filter(c => c.nw).length;
+      return `<button type="button" class="mrow" data-i="${i}" aria-pressed="${i === sel}">
+        <span class="mk"><b>${esc(l.k)}</b><span>${esc(l.sub)}</span></span>
+        <span class="mbar"><i style="width:${w.toFixed(1)}%"></i><em>~${fmt(t)}</em></span>
+        <span class="mco">${l.co.map(c => `<span>${mk(c)}${esc(c.n)}${c.nw ? '<sup>new</sup>' : ''}</span>`).join('')}</span></button>`;
+    }).join('');
+    const l = STACK[sel], hidden = l.co.filter(c => c.v == null || c.nc).length;
+    const groups = l.k === 'Models' ? [['Closed models', l.co.filter(c => !c.g)], ['Open weights', l.co.filter(c => c.g)]] : [[null, l.co]];
+    det.innerHTML = `<div class="ringcard"><span class="label">${esc(l.k)} · ~${fmt(total(l))} across ${counted(l).length} companies${hidden ? ` · ${hidden} more not counted` : ''}</span>
+      ${groups.map(([h, cs]) => `${h ? `<span class="mgrp">${h}</span>` : ''}<div class="mlist">${[...cs].sort((a, b) => (a.nc || 0) - (b.nc || 0) || (b.v || 0) - (a.v || 0)).map(row).join('')}</div>`).join('')}</div>
+      <div class="cheat"><b>CHEAT CODE</b>${esc(l.cheat)}</div>`;
+  };
+  box.addEventListener('click', e => { const b = e.target.closest('.mrow'); if (b) { sel = +b.dataset.i; draw(); } });
+  draw();
+}
+
+renderFU();
+renderJobs();
+renderPaths();
+renderStairs();
+renderLabs();
+renderStack();
+renderBrands();
+renderMoney();
+document.querySelectorAll('.nav-lab').forEach(a => a.insertAdjacentHTML('afterbegin', logo(a.dataset.logo)));
+if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
+</script>
+
+</body>
+</html>
