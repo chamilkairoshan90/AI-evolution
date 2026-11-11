@@ -1,27 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Evolution of AI, 1950–2031 · AI Cheat Code Atlas</title>
-<meta name="description" content="It took 76 years, two winters, and people who refused to quit. Here’s how AI evolved, and what will happen in the next five years.">
-<meta name="theme-color" content="#F6F5F1" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#151519" media="(prefers-color-scheme: dark)">
-<link rel="canonical" href="https://jocular-unicorn-a37f95.netlify.app/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌌%3C/text%3E%3C/svg%3E">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="AI Cheat Code Atlas">
-<meta property="og:url" content="https://jocular-unicorn-a37f95.netlify.app/">
-<meta property="og:title" content="AI wasn&#x27;t born in 2022 🌌">
-<meta property="og:description" content="It took 76 years, two winters, and people who refused to quit. Here’s how AI evolved, and what will happen in the next five years.">
-<meta property="og:image" content="https://jocular-unicorn-a37f95.netlify.app/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="AI wasn't born in 2022. A timeline of AI from 1950 to 2031.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI wasn&#x27;t born in 2022 🌌">
-<meta name="twitter:description" content="It took 76 years, two winters, and people who refused to quit. Here’s how AI evolved, and what will happen in the next five years.">
-<meta name="twitter:image" content="https://jocular-unicorn-a37f95.netlify.app/og.png">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>AI Cheat Code Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <script>try { const t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch {}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -309,6 +288,77 @@ section { padding-block: 48px; border-top: 1px solid var(--hair); }
 .key { display: flex; gap: 16px; flex-wrap: wrap; font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-top: 10px; align-items: center; }
 .key i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--ink); vertical-align: -2px; margin-right: 6px; }
 
+/* how the newest models score: dumbbell rows (new vs best other) and harness bars */
+.scores { margin-top: 34px; display: grid; gap: 14px; }
+.scores-h { display: grid; gap: 4px; }
+.scores-h h3 { font-size: 28px; }
+.scores-h p { margin: 0; color: var(--muted); max-width: 66ch; }
+.sc-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.sc-card { position: relative; background: var(--card); border: 2px solid var(--ink); border-radius: 16px; padding: 18px; display: grid; gap: 12px; min-width: 0;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; }
+:root[data-theme="dark"] .sc-card { --s1: #3987e5; --s2: #d95926; --s3: #199e70; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sc-card { --s1: #3987e5; --s2: #d95926; --s3: #199e70; } }
+.sc-card h4 { margin: 0; font-size: 20px; }
+.sc-card .sub { margin: 0; font-size: 14px; color: var(--muted); }
+.sc-legend { display: flex; gap: 6px 16px; flex-wrap: wrap; font-family: var(--f-mono); font-size: 12px; color: var(--muted); align-items: center; }
+.sc-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sc-legend i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; flex: none; }
+.sc-legend i.sq { border-radius: 3px; }
+.k-new { background: var(--accent); } .k-best { background: var(--ink); } .k-prev { border: 2px solid var(--muted); background: var(--card); }
+.sc-axis, .sc-row { display: grid; grid-template-columns: 230px minmax(0, 1fr) 190px; gap: 14px; align-items: center; }
+.sc-axis { font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.sc-axis .ticks { position: relative; height: 16px; }
+.sc-axis .ticks span { position: absolute; transform: translateX(-50%); }
+.sc-axis .ticks span:first-child { transform: none; } .sc-axis .ticks span:last-child { transform: translateX(-100%); }
+.sc-rows { display: grid; gap: 0; }
+.sc-row { padding: 9px 0; border-top: 1px solid var(--hair); }
+.sc-row .nm b { display: block; font-size: 15px; line-height: 1.2; }
+.sc-row .nm span { font-size: 12.5px; color: var(--muted); line-height: 1.3; display: block; }
+.sc-track { position: relative; height: 30px; background-image: linear-gradient(to right, var(--hair) 1px, transparent 1px); background-size: 25% 100%; background-position: -1px 0; border-right: 1px solid var(--hair); }
+.sc-track .gap { position: absolute; top: 14px; height: 2px; background: var(--muted); }
+.sc-dot { position: absolute; top: 15px; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; padding: 0; border: 0; cursor: pointer; box-shadow: 0 0 0 2px var(--card); }
+.sc-dot::after { content: ""; position: absolute; inset: -9px; }
+.sc-dot.new { background: var(--accent); z-index: 3; } .sc-dot.best { background: var(--ink); z-index: 2; }
+.sc-dot.prev { background: var(--card); border: 2px solid var(--muted); width: 12px; height: 12px; margin: -6px 0 0 -6px; z-index: 1; }
+.sc-dot:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.sc-val { font-family: var(--f-mono); font-size: 12px; display: grid; gap: 1px; }
+.sc-val .n { font-weight: 700; }
+.sc-val .o { color: var(--muted); }
+.sc-val .lead { font-weight: 700; color: var(--ink); }
+.sc-note { font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); line-height: 1.5; margin: 0; }
+.sc-tip { position: absolute; z-index: 6; pointer-events: none; background: var(--device); color: var(--device-ink); border-radius: 10px; padding: 8px 11px; font-size: 13px; line-height: 1.35; max-width: 260px; box-shadow: 0 8px 24px -8px rgba(0,0,0,.45); }
+.sc-tip b { display: block; font-size: 14px; }
+.sc-tip span { font-family: var(--f-mono); font-size: 11.5px; opacity: .8; }
+.hb-row { display: grid; grid-template-columns: 230px minmax(0, 1fr) 150px; gap: 14px; align-items: center; padding: 7px 0; border-top: 1px solid var(--hair); }
+.hb-row .nm b { display: block; font-size: 15px; line-height: 1.2; }
+.hb-row .nm span { font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+.hb-row .nm span i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.hb-track { position: relative; height: 22px; background-image: linear-gradient(to right, var(--hair) 1px, transparent 1px); background-size: 25% 100%; background-position: -1px 0; border-right: 1px solid var(--hair); }
+.hb-bar { position: absolute; left: 0; top: 3px; height: 16px; border-radius: 0 4px 4px 0; padding: 0; border: 0; cursor: pointer; }
+.hb-bar::after { content: ""; position: absolute; inset: -4px -6px; }
+.hb-bar:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.hb-ci { position: absolute; top: 9px; height: 0; border-top: 1.5px solid var(--ink); pointer-events: none; }
+.hb-ci::before, .hb-ci::after { content: ""; position: absolute; top: -5px; height: 8px; border-left: 1.5px solid var(--ink); }
+.hb-ci::before { left: 0; } .hb-ci::after { right: 0; }
+.h-cc { background: var(--s1); } .h-cx { background: var(--s2); } .h-mc { background: var(--s3); }
+.hb-val { font-family: var(--f-mono); font-size: 12px; display: grid; gap: 1px; }
+.hb-val b { font-size: 13px; } .hb-val span { color: var(--muted); }
+.sc-table summary { cursor: pointer; font-family: var(--f-mono); font-size: 12px; font-weight: 700; }
+.sc-table .tw { overflow-x: auto; margin-top: 8px; }
+.sc-table table { border-collapse: collapse; font-size: 13px; min-width: 560px; width: 100%; }
+.sc-table th, .sc-table td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--hair); white-space: nowrap; }
+.sc-table th { font-family: var(--f-mono); font-size: 11px; color: var(--muted); font-weight: 700; }
+.sc-table td.num { font-family: var(--f-mono); text-align: right; } .sc-table th.num { text-align: right; }
+.sc-insight { background: var(--device); color: var(--device-ink); border-radius: 12px; padding: 12px 14px; font-size: 14px; }
+.sc-insight b { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; color: var(--accent); margin-bottom: 2px; }
+@media (max-width: 860px) { .sc-axis, .sc-row { grid-template-columns: 170px minmax(0, 1fr) 150px; } .hb-row { grid-template-columns: 170px minmax(0, 1fr) 120px; } }
+@media (max-width: 640px) {
+  .sc-card { padding: 14px; }
+  .sc-axis { grid-template-columns: minmax(0, 1fr); } .sc-axis > :not(.ticks) { display: none; }
+  .sc-row, .hb-row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .sc-val, .hb-val { display: flex; flex-wrap: wrap; gap: 2px 12px; }
+}
+
 /* brand marks */
 .lg { width: 1.05em; height: 1.05em; fill: currentColor; flex: none; vertical-align: -.17em; }
 .mg { width: 1.25em; height: 1.25em; border-radius: 50%; border: 1.5px solid currentColor; display: inline-grid; place-items: center; font-family: var(--f-mono); font-size: .62em; font-weight: 700; flex: none; vertical-align: -.2em; }
@@ -491,7 +541,7 @@ footer li { word-break: break-word; }
     <span class="label">For founders shipping without a big engineering team</span>
     <h1>AI wasn't born in <em class="s">2022</em> 🌌</h1>
     <p>It took 76 years, two winters, and people who refused to quit. This space maps how AI got here, who builds and funds it, what it changes for your product and your career, and what the next five years bring.</p>
-    <nav class="inside" aria-label="What this space covers"><a href="#timeline"><span>01</span><b>Timeline</b><small>Every breakthrough since 1950, and what each one means for you today</small></a><a href="#agents"><span>02</span><b>Agent map</b><small>The six levels of AI agents, and what you can hand off at each one</small></a><a href="#stack"><span>03</span><b>Agentic stack</b><small>How models, agents and the infrastructure around them fit together</small></a><a href="#labs"><span>04</span><b>Frontier labs</b><small>Every major model release since 2018, lab by lab</small></a><a href="#inside"><span>05</span><b>Inside the labs</b><small>What OpenAI, Anthropic and Google have shipped, and what is coming</small></a><a href="#money-sec"><span>06</span><b>Where the money sits</b><small>The AI economy in five layers, with every major player valued</small></a><a href="#atlas"><span>07</span><b>Product atlas</b><small>12 product categories and how to use them without an engineering team</small></a><a href="#jobs"><span>08</span><b>Jobs</b><small>The roles AI ended and created, and career paths to 2030</small></a><a href="#future"><span>09</span><b>Next 5 years</b><small>Where this goes, with each prediction tied to a signal you can check</small></a></nav>
+    <nav class="inside" aria-label="What this space covers"><a href="#timeline"><span>01</span><b>Timeline</b><small>Every breakthrough since 1950, and what each one means for you today</small></a><a href="#agents"><span>02</span><b>Agent map</b><small>The six levels of AI agents, and what you can hand off at each one</small></a><a href="#stack"><span>03</span><b>Agentic stack</b><small>How models, agents and the infrastructure around them fit together</small></a><a href="#labs"><span>04</span><b>Frontier labs</b><small>Every major model release since 2018, and how the newest ones score</small></a><a href="#inside"><span>05</span><b>Inside the labs</b><small>What OpenAI, Anthropic and Google have shipped, and what is coming</small></a><a href="#money-sec"><span>06</span><b>Where the money sits</b><small>The AI economy in five layers, with every major player valued</small></a><a href="#atlas"><span>07</span><b>Product atlas</b><small>12 product categories and how to use them without an engineering team</small></a><a href="#jobs"><span>08</span><b>Jobs</b><small>The roles AI ended and created, and career paths to 2030</small></a><a href="#future"><span>09</span><b>Next 5 years</b><small>Where this goes, with each prediction tied to a signal you can check</small></a></nav>
     <div class="ribbon" aria-label="Timeline from 1950 to 2031, with today marked in November 2026">
       <div class="bar" id="ribbon"><div class="now"><span>NOW · NOV 2026</span></div></div>
       <div class="ribbon-m" aria-hidden="true"><div class="row" id="ribbonm"></div><span class="nowm"><b>NOW · NOV 2026</b></span><div class="ends"><span>1950</span><span>2012</span><span>2017</span><span>2022</span><span>2024</span><span>2025</span><span>2027+</span></div><div class="key">Solid = happened · Dotted = projected</div></div>
@@ -552,6 +602,12 @@ footer li { word-break: break-word; }
       <div class="lanes-scroll" tabindex="0" aria-label="Model releases by lab, scrolls sideways"><div class="lanes" id="lanes"></div></div>
       <div class="key"><span><i style="background:var(--accent);border-color:var(--accent)"></i>Anthropic</span><span><i style="background:var(--ink)"></i>Closed model</span><span><i style="background:var(--card)"></i>Open weights</span><span>2018–2022 is compressed · scroll sideways for the early years</span></div>
       <div class="rel-detail" id="reldet" aria-live="polite"></div>
+      <div class="scores" id="scores">
+        <div class="scores-h"><h3>How the newest models score</h3><p>Two views you can check: what a lab reports for its newest model against the best rival in the same tests, and an open leaderboard of agent and model pairs. Select a dot or bar for the numbers.</p></div>
+        <div class="sc-tabs" role="tablist" aria-label="Choose a chart"><button type="button" class="chip" role="tab" id="sct-new" aria-controls="scp-new">New vs best</button><button type="button" class="chip" role="tab" id="sct-har" aria-controls="scp-har">Agent + model</button></div>
+        <div id="scp-new" role="tabpanel" aria-labelledby="sct-new"></div>
+        <div id="scp-har" role="tabpanel" aria-labelledby="sct-har" hidden></div>
+      </div>
     </div>
   </section>
 
@@ -569,7 +625,7 @@ footer li { word-break: break-word; }
         </div>
         <div class="stack-panel" id="brandpanel" aria-live="polite"></div>
       </div>
-      <p class="key" style="margin-top:14px">Status as of October 2026, plus November's GPT-6 Cyber, from each lab's release notes and announcements. Items marked Reported come from news coverage only.</p>
+      <p class="key" style="margin-top:14px">Status as of October 2026, with November updates for GPT-6 Cyber, Gemini 4 Carbon and Claude Fable and Mythos 5.2, from each lab's release notes and announcements. Items marked Reported come from news coverage only.</p>
     </div>
   </section>
 
@@ -664,6 +720,13 @@ footer li { word-break: break-word; }
         <li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic newsroom</a></li>
         <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/" target="_blank" rel="noopener">Google: Gemini 4 Argon (13 Oct 2026)</a></li>
         <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/" target="_blank" rel="noopener">Google: Gemini 4 Carbon (28 Oct 2026)</a></li>
+        <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">Google: Gemini 4 Carbon is now available (10 Nov 2026)</a></li>
+        <li><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic: Claude Fable 5.2 and Mythos 5.2 (9 Nov 2026)</a></li>
+        <li><a href="https://github.com/harbor-framework/terminal-bench/tree/main/leaderboard/submissions" target="_blank" rel="noopener">Terminal-Bench 4.0 leaderboard submissions (Apache-2.0, read 11 Nov 2026)</a></li>
+        <li><a href="https://www.anthropic.com/news/roadshow-launch" target="_blank" rel="noopener">Anthropic: IPO roadshow (10 Nov 2026)</a></li>
+        <li><a href="https://techcrunch.com/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo" target="_blank" rel="noopener">TechCrunch: Anthropic IPO price range (10 Nov 2026)</a></li>
+        <li><a href="https://finance.yahoo.com/markets/article/anthropic-seeks-14-trillion-valuation-in-ipo-130300928.html" target="_blank" rel="noopener">Yahoo Finance: Anthropic seeks $1.4T valuation (10 Nov 2026)</a></li>
+        <li><a href="https://digit.in/news/general/meta-introduces-muse-ember-ai-model-says-it-performs-better-than-claude-haiku-55-and-gpt-6-luna.html" target="_blank" rel="noopener">Digit: Meta introduces Muse Ember (10 Nov 2026)</a></li>
         <li><a href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" target="_blank" rel="noopener">Google: 100 things announced at I/O 2026</a></li>
         <li><a href="https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/" target="_blank" rel="noopener">Google Developers: I/O 2026 developer keynote</a></li>
         <li><a href="https://www.fool.com/research/largest-companies-by-market-cap/" target="_blank" rel="noopener">Motley Fool: largest companies by market cap, October 2026</a></li>
@@ -785,10 +848,12 @@ const TL = [
   { y: 2026, m: 'Sep', c: 'models', t: 'GPT-6 Astra', d: 'OpenAI\'s new flagship for long, multi-step work. GPT-6 Sol and Luna follow three weeks later at a fraction of the price.', tip: 'Route most calls to a cheap model and keep the flagship for the hardest step.' },
   { y: 2026, m: 'Sep', c: 'models', t: 'Fable 5.1, Opus 5.5 and Sonnet 5.5', d: 'Anthropic\'s September releases target long-running agent work. Opus 5.5 lands the same day as GPT-6 Sol.' },
   { y: 2026, m: 'Sep', c: 'models', t: 'Gemini 3.8 Flash', d: 'Google\'s third Flash release in about four months. Fast models now improve every few weeks.' },
-  { y: 2026, m: 'Oct', c: 'models', t: 'Gemini 4 Argon and Gemini 4 Carbon', d: 'Google starts the Gemini 4 family with named models. Argon is available to everyone from 13 October. Carbon, its strongest model for long agent runs and cyber defence, follows on 28 October, for vetted cyber defenders only at first.', tip: 'Both cost $2 in and $10 out per million tokens until 30 November, then double. Build on Argon now and move up when Carbon opens to developers.' },
+  { y: 2026, m: 'Oct', c: 'models', t: 'Gemini 4 Argon and Gemini 4 Carbon', d: 'Google starts the Gemini 4 family with named models. Argon is available to everyone from 13 October. Carbon, its strongest model for long agent runs and cyber defence, follows on 28 October, for vetted cyber defenders only at first.', tip: 'Carbon opened to all paying developers and AI Ultra subscribers on 10 November. Both cost $2 in and $10 out per million tokens until 30 November, then $4 and $20, so test Carbon on your hardest tasks before the price doubles.' },
   { y: 2026, m: 'Oct', c: 'agents', t: 'Proactive agents arrive', d: 'Google\'s Gemini Spark (beta from May), OpenAI\'s dots (shown in September) and Claude Duet (October) work in the background and ask before acting.', tip: 'The question shifts from what to ask AI to what to let it watch.' },
   { y: 2026, m: 'Oct', c: 'security', t: 'Vibe-coding hosts breached', d: 'Zeabur announces it will shut down after two breaches; Railway reports customer secrets were exposed and asks users to rotate keys.', src: 'Cybernews · This Week in Security', tip: 'Rotate keys now, store secrets in your host\'s secret manager, and never in the browser.' },
   { y: 2026, m: 'Oct', c: 'coding', t: 'Entire launches', d: 'GitHub\'s former CEO launches a code platform built for agents, replacing the pull request with "Trails". Waitlist now, wider release expected early 2027.', src: 'GeekWire', tip: 'Code review is becoming the founder\'s job. Learn to review outcomes, not lines.' },
+  { y: 2026, m: 'Nov', c: 'models', t: 'Claude Fable 5.2 and Mythos 5.2', d: 'Anthropic upgrades its top models and cuts the price to $8 in and $40 out per million tokens. Fable 5.2 is available to everyone; Mythos 5.2 goes to vetted cybersecurity and life-science organisations.', tip: 'Anthropic still recommends Opus 5.5 as the daily default. Keep Fable 5.2 for the hardest, longest tasks.' },
+  { y: 2026, m: 'Nov', c: 'models', t: 'Meta Muse Ember', d: 'Meta\'s smallest model, built for agent work like reading files, writing code and calling tools. 1M-token context at $0.10 in and $0.50 out per million tokens.', src: 'Digit', tip: 'Meta says it beats Haiku 5.5 and GPT-6 Luna on cost for the same quality. That is Meta\'s claim; test it on your own sub-tasks.' },
   { y: 2026, m: 'Nov', c: 'security', t: 'GPT-6 Cyber', d: 'OpenAI releases its security research model, rated Critical under its own risk framework. It\'s limited to approved Daybreak Red customers for now. OpenAI says it found 81 serious Firefox flaws and built exploits for 948 Linux kernel bugs.', src: 'The Register · CyberScoop' },
   { y: 2026, m: 'Nov', c: 'coding', t: 'Meta buys Conductor', d: 'Meta buys the startup behind a tool for running several coding agents in parallel. Conductor\'s cloud service shuts down on 20 November, and user cloud data starts being deleted after that.', src: 'TechCrunch', tip: 'If you use Conductor\'s cloud service, move your work out before 20 November.' },
 ];
@@ -979,7 +1044,8 @@ const LABS = [
     ['2026-07', 'Opus 5', 'Thinking on by default.'],
     ['2026-09', 'Fable 5.1', 'Top model for long-running agent work.'],
     ['2026-09', 'Opus 5.5 · Sonnet 5.5', 'Cheaper, stronger agentic coding.'],
-    ['2026-10', 'Haiku 5.5', 'Fast, cheap model for high-volume work.'] ] },
+    ['2026-10', 'Haiku 5.5', 'Fast, cheap model for high-volume work.'],
+    ['2026-11', 'Fable 5.2 · Mythos 5.2', 'Fable 5.2 for everyone at a lower price; Mythos 5.2 for vetted organisations.'] ] },
   { lab: 'OpenAI', sub: 'GPT · o-series', r: [
     ['2018-06', 'GPT-1', 'Pre-train, then fine-tune.'],
     ['2019-02', 'GPT-2', 'Staged release.'],
@@ -1020,7 +1086,7 @@ const LABS = [
     ['2026-05', 'Gemini 3.5 Flash · Omni', 'Agentic Flash model, and video from any input.'],
     ['2026-08', 'Gemini 3.7 Flash', 'Faster Flash update.'],
     ['2026-09', 'Gemini 3.8 Flash', 'Third Flash release in about four months.'],
-    ['2026-10', 'Gemini 4 Argon · Carbon', 'Gemini 4 family. Argon for everyone; Carbon limited to cyber defenders for now.'] ] },
+    ['2026-10', 'Gemini 4 Argon · Carbon', 'Gemini 4 family. Argon for everyone; Carbon opened to paying developers on 10 November.'] ] },
   { lab: 'Meta', sub: 'LLaMA', r: [
     ['2023-02', 'LLaMA', 'Research release; weights leak and spark local AI.', true],
     ['2023-07', 'Llama 2', 'Open for commercial use.', true],
@@ -1342,11 +1408,11 @@ const BRANDS = [
     d: 'The work and coding lab. Fewer consumer products, deeper agents for engineers, teams and regulated companies.',
     cheat: 'Ship with Claude Code, or Cowork if you do not code. Save your team’s processes as Skills, and use Haiku for high-volume calls.',
     r: [
-      [["Fable\n5.1", 'Sep 2026', 'live', 'Top model for long-running agentic coding, knowledge work and research.'],
+      [["Fable\n5.2", 'Nov 2026', 'live', 'Top model for the most ambitious technical work: long agentic coding, research and engineering. $8 / $40 per million tokens, on all platforms including AWS, Google Cloud and Azure. Anthropic still suggests starting with Opus 5.5 for most tasks.'],
        ["Opus\n5.5", 'Sep 2026', 'live', 'Long agentic coding and knowledge work. 1M-token context, $4 / $20 per million tokens.'],
        ["Sonnet\n5.5", 'Sep 2026', 'live', 'The balanced default: strong, and cheaper than Opus.'],
        ["Haiku\n5.5", 'Oct 2026', 'live', 'Fastest and cheapest. Built for high-volume work, subagents and browser use.'],
-       ["Mythos\n5.1", 'Sep 2026', 'preview', 'Restricted cyber-capable model, for Project Glasswing partners only.']],
+       ["Mythos\n5.2", 'Nov 2026', 'preview', 'Restricted model for cybersecurity and life sciences. Vetted organisations apply through Anthropic’s verification programs; Claude Enterprise gets it through Claude Security. $8 / $40.']],
       [["Claude\nCode", 'Feb 2025', 'live', 'Coding agent in your terminal, IDE, desktop and web. Runs parallel sessions, routines and workflows.'],
        ['Cowork', 'Jan 2026', 'live', 'Claude Code for non-engineers: works on folders of files on your computer. Generally available since April 2026.'],
        ["Claude in\nChrome", 'Aug 2025', 'live', 'Browser agent that navigates sites, fills forms and finishes tasks. Started as a research preview.'],
@@ -1364,7 +1430,7 @@ const BRANDS = [
        ["Docs &\nSlides", 'Oct 2026', 'live', 'Documents and decks made in Claude, out of beta on all plans. Dashboards in beta.'],
        ["Agent\nSDK", '2025', 'live', 'The harness behind Claude Code, for building your own agents.'],
        ["Code\nReview", 'Oct 2026', 'live', 'Automated pull-request review, generally available for Team and Enterprise.']],
-      [["Mythos\nfor all", 'TBA', 'soon', 'Wider access to Mythos-class models was said to be coming. Still partners-only as of October 2026.'],
+      [["Mythos\nfor all", 'TBA', 'soon', 'Mythos 5.2 widened access to vetted organisations in November. General access to Mythos-class models: no date given.'],
        ["Duet\nrollout", 'TBA', 'soon', 'Duet beyond the US waitlist preview.'],
        ["Claude in\nOutlook", 'Soon', 'soon', 'Announced as coming soon.'],
        ["Salesforce\nconnector", 'Soon', 'soon', 'Listed as coming soon.'],
@@ -1376,7 +1442,7 @@ const BRANDS = [
     cheat: 'Prototype free in AI Studio, use Gemini Flash for cheap volume, and check AI Mode to see how customers now find you in Search.',
     r: [
       [["4\nArgon", 'Oct 2026', 'live', 'Gemini 4 Argon: the first Gemini 4 model, out 13 October for developers, enterprises and AI Pro and Ultra subscribers. Built for software engineering, enterprise knowledge work and cyber defence, with a 1M-token limit.'],
-       ["4\nCarbon", 'Oct 2026', 'preview', 'Gemini 4 Carbon: Google’s strongest model, announced 28 October, for long-running agent work and cybersecurity. Limited to vetted cyber defenders through the Fairwind program while Google tunes its guardrails.'],
+       ["4\nCarbon", 'Nov 2026', 'live', 'Gemini 4 Carbon: Google’s strongest model, for long-running agent work and cybersecurity. Announced 28 October for cyber defenders only; since 10 November it is in the API for all paying developers and businesses, and in the Gemini app, AI Mode and Antigravity for AI Ultra subscribers.'],
        ["3.8\nFlash", 'Sep 2026', 'live', 'Gemini 3.8 Flash: Google\'s newest fast model. Flash versions have shipped every few weeks since May (3.5, 3.7, 3.8).'],
        ["3.1\nPro", 'Feb 2026', 'preview', 'Gemini 3.1 Pro: the current Pro model, still labelled preview.'],
        ['Omni', 'May 2026', 'live', 'Gemini Omni: makes video from any input. In the Gemini app, Flow and YouTube Shorts.'],
@@ -1406,7 +1472,7 @@ const BRANDS = [
        ['WebMCP', 'Trial', 'soon', 'Proposed web standard that lets sites offer tools to agents. Chrome origin trial.'],
        ["Spark\npayments", '2026', 'soon', 'Spark agents that can pay, within budget and merchant limits.'],
        ["Antigravity\nEnterprise", 'Soon', 'soon', 'Antigravity inside Gemini Enterprise.'],
-       ["Rest of\nGemini 4", 'TBA', 'soon', 'Google calls Argon the start of the Gemini 4 family. Carbon opens to developers, businesses and consumers once its guardrails are tuned; no date given.']]
+       ["Rest of\nGemini 4", 'TBA', 'soon', 'Google calls Argon and Carbon the start of the Gemini 4 family. It has given no names or dates for the next models.']]
     ] }
 ];
 
@@ -1480,7 +1546,7 @@ const STACK = [
     { n: 'Poolside', v: null, d: 'Coding models and agents. No 2026 valuation found' }],
     cheat: 'The smallest layer by value, and the only one a small team can win. Pick one narrow job for one kind of customer and do it better than a general tool. Lovable got there in about two years.' },
   { k: 'Models', sub: 'The labs that train the brains', co: [
-    { n: 'Anthropic', v: 965, l: 'anthropic', d: 'Claude. Last round about $965B, mid-2026; about $1.5T discussed for an IPO' },
+    { n: 'Anthropic', v: 965, l: 'anthropic', d: 'Claude. Last round about $965B, mid-2026. IPO price range values it at about $1.4T, listing expected around 19–20 Nov 2026' },
     { n: 'OpenAI', v: 852, l: 'openai', d: 'GPT and ChatGPT. Last closed round $852B; raising about $30B at $1.25T (Oct 2026)' },
     { n: 'xAI', v: 1250, l: 'x', d: 'Grok. Merged into SpaceX, about $1.25T combined (Feb 2026). Left out of the total because it includes rockets and Starlink', nc: 1 },
     { n: 'Safe Superintelligence', v: 32, d: 'Ilya Sutskever’s lab. $32B round, no product yet', nw: 2024 },
@@ -1559,6 +1625,116 @@ function renderMoney() {
   draw();
 }
 
+// Newest model vs best rival, from Anthropic's Fable 5.2 launch table (9 Nov 2026). Scores are Anthropic's own runs.
+// Each row: test, plain meaning, then Fable 5.2, Fable 5.1, Opus 5.5, GPT-6 Astra, Gemini 4 Carbon (null = not reported), note
+const NEWVS = {
+  model: 'Claude Fable 5.2', prev: 'Fable 5.1', lab: 'Anthropic', date: '9 Nov 2026',
+  src: 'https://www.anthropic.com/claude-fable-and-mythos-5-2',
+  rivals: ['Opus 5.5', 'GPT-6 Astra', 'Gemini 4 Carbon'],
+  rows: [
+    ['FrontierSWE v2', 'Real software-engineering tasks', 69.9, 56.3, [62.3, 65.5, 61.2]],
+    ['FrontierCode 2.0', 'Hard agentic coding', 49.1, 32.4, [45.5, 42.8, 41.1], 'Fable 5.2 and 5.1 at Xhigh effort; Carbon at Medium'],
+    ['Terminal-Bench-Science 0.1', 'Research tasks in a terminal', 74.6, 52.6, [58.7, 68.1, 64.8]],
+    ['OSWorld 2.1', 'Using a computer (partial offline set)', 89.3, 83.5, [87.2, 79.5, 81.5]],
+    ['AutomationBench', 'Business workflows', 51.4, 31.4, [42.5, 41.4, 53.9]],
+    ['Remote Labor Index', 'Real remote-work projects', 41.3, 17.9, [21.3, 20.8, null], 'Fable 5.2 at High effort'],
+    ["Humanity's Last Exam", 'Expert questions, with tools', 74.2, 65.6, [67.7, 57.2, null]],
+    ['AA-Briefcase v1.1', 'Knowledge-work deliverables (rubric)', 66.1, 61.5, [61.2, 52.0, 61.8]],
+    ['Chartography', 'Reading charts, no tools', 73.4, 44.8, [64.4, 71.0, 72.5]],
+    ['RoboDojo Sim', 'Robot control in simulation', 64.9, 27.6, [39.4, 29.8, null], 'Run internally by Anthropic'] ]
+};
+// Terminal-Bench 4.0 leaderboard submissions (Apache-2.0, github.com/harbor-framework/terminal-bench), read 11 Nov 2026.
+// model, maker, harness, accuracy %, 95% CI half-width, total cost USD for 330 attempts, effort
+const HARNESS = { 'Claude Code': 'cc', Codex: 'cx', 'Muse Code': 'mc' };
+const TBENCH = [
+  ['Opus 5.5', 'Anthropic', 'Claude Code', 64.85, 3.11, 4718.65, 'max'],
+  ['Sonnet 5.5', 'Anthropic', 'Claude Code', 61.82, 2.94, 7333.64, 'max'],
+  ['Kimi K3.1 Pro', 'Moonshot AI', 'Claude Code', 60.91, 4.11, 1086.66, 'max'],
+  ['GPT-6.1 Sol', 'OpenAI', 'Codex', 58.18, 3.11, 634.24, 'max'],
+  ['Fable 5.1', 'Anthropic', 'Claude Code', 57.88, 3.76, 6243.5, 'max'],
+  ['Opus 5', 'Anthropic', 'Claude Code', 51.82, 3.39, 5969.11, 'max'],
+  ['GPT-6.1 Terra', 'OpenAI', 'Codex', 51.82, 2.82, 874.44, 'max'],
+  ['GPT-6 Sol', 'OpenAI', 'Codex', 49.39, 3.23, 1451.32, 'max'],
+  ['Muse Wonder', 'Meta', 'Muse Code', 46.97, 3.78, 2452.31, 'xhigh'],
+  ['Fable 5', 'Anthropic', 'Claude Code', 44.55, 3.85, 7265.01, 'max'],
+  ['GLM-5.3', 'Z.ai', 'Claude Code', 41.82, 3.23, 2727.63, 'max'],
+  ['Haiku 5.5', 'Anthropic', 'Claude Code', 40.0, 3.69, 952.47, 'max'],
+  ['DeepSeek V4.1 Flash', 'DeepSeek', 'Claude Code', 40.0, 3.73, 184.89, 'max'] ];
+
+function renderScores() {
+  const tabs = { new: document.getElementById('sct-new'), har: document.getElementById('sct-har') };
+  const panels = { new: document.getElementById('scp-new'), har: document.getElementById('scp-har') };
+  const ticks = '<span>0</span><span style="left:25%">25</span><span style="left:50%">50</span><span style="left:75%">75</span><span style="left:100%">100%</span>';
+  const f1 = v => v == null ? '—' : v.toFixed(1);
+  const usd = v => '$' + (v < 10 ? v.toFixed(2) : v.toFixed(1));
+
+  // New vs best
+  const N = NEWVS;
+  const rows = N.rows.map(([t, d, nv, pv, rv, note]) => {
+    let bi = -1; rv.forEach((v, i) => { if (v != null && (bi < 0 || v > rv[bi])) bi = i; });
+    return { t, d, nv, pv, rv, note, best: rv[bi], bestName: N.rivals[bi], lead: nv - rv[bi] };
+  }).sort((a, b) => b.lead - a.lead);
+  const leads = rows.filter(r => r.lead > 0).length;
+  panels.new.innerHTML = `<div class="sc-card">
+    <div><h4>${esc(N.model)} vs the best rival in each test</h4><p class="sub">From ${esc(N.lab)}'s launch page, ${esc(N.date)}. These are the lab's own tests, not independent results. Each row compares Fable 5.2 with the top score among ${N.rivals.map(esc).join(', ')}.</p></div>
+    <div class="sc-legend"><span><i class="k-new"></i>${esc(N.model)}</span><span><i class="k-best"></i>Best rival in that test</span><span><i class="k-prev"></i>${esc(N.prev)} (previous version)</span></div>
+    <div class="sc-axis"><span>Test</span><div class="ticks">${ticks}</div><span>Score</span></div>
+    <div class="sc-rows">${rows.map((r, i) => {
+      const lo = Math.min(r.nv, r.best), hi = Math.max(r.nv, r.best);
+      return `<div class="sc-row"><div class="nm"><b>${esc(r.t)}</b><span>${esc(r.d)}</span></div>
+        <div class="sc-track"><i class="gap" style="left:${lo}%;width:${hi - lo}%"></i>
+          <button type="button" class="sc-dot prev" style="left:${r.pv}%" data-tip="${i}|prev" aria-label="${esc(r.t)}: ${esc(N.prev)} ${f1(r.pv)}%"></button>
+          <button type="button" class="sc-dot best" style="left:${r.best}%" data-tip="${i}|best" aria-label="${esc(r.t)}: best rival ${esc(r.bestName)} ${f1(r.best)}%"></button>
+          <button type="button" class="sc-dot new" style="left:${r.nv}%" data-tip="${i}|new" aria-label="${esc(r.t)}: ${esc(N.model)} ${f1(r.nv)}%"></button></div>
+        <div class="sc-val"><span class="n">Fable 5.2 · ${f1(r.nv)}%</span><span class="o">${esc(r.bestName)} · ${f1(r.best)}%</span><span class="${r.lead > 0 ? 'lead' : 'o'}">${r.lead > 0 ? '+' : ''}${r.lead.toFixed(1)} pts</span></div></div>`; }).join('')}</div>
+    <div class="sc-insight"><b>WHAT IT MEANS</b>By ${esc(N.lab)}'s numbers, Fable 5.2 leads in ${leads} of ${rows.length} tests, by the most on real remote work and robotics. Gemini 4 Carbon still wins on business workflows. Anthropic itself suggests Opus 5.5 for everyday work, at half the price.</div>
+    <p class="sc-note">Highest effort setting unless noted. ${rows.filter(r => r.note).map(r => `${esc(r.t)}: ${esc(r.note)}.`).join(' ')} Gemini 4 Carbon and Muse Ember aren't shown on their own: Google published its comparison table as an image, and Meta published no scores we could read. <a href="${N.src}" target="_blank" rel="noopener">Source: Anthropic</a> · checked 11 Nov 2026.</p>
+    <details class="sc-table"><summary>See all the numbers</summary><div class="tw"><table><thead><tr><th>Test</th><th class="num">Fable 5.2</th><th class="num">Fable 5.1</th>${N.rivals.map(r => `<th class="num">${esc(r)}</th>`).join('')}</tr></thead><tbody>${N.rows.map(([t, , nv, pv, rv]) => `<tr><td>${esc(t)}</td><td class="num">${f1(nv)}</td><td class="num">${f1(pv)}</td>${rv.map(v => `<td class="num">${f1(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></details>
+  </div>`;
+
+  // Agent + model (harness)
+  const top = TBENCH[0];
+  panels.har.innerHTML = `<div class="sc-card">
+    <div><h4>Terminal-Bench 4.0: agent + model on real terminal tasks</h4><p class="sub">An open benchmark. Each entry is a model running inside an agent harness, scored on finishing tasks like building, debugging and configuring software in a sandbox. Bars show the share of 330 attempts solved, with the 95% range.</p></div>
+    <div class="sc-legend">${Object.keys(HARNESS).map(h => `<span><i class="sq h-${HARNESS[h]}"></i>${esc(h)}</span>`).join('')}<span>│ 95% range</span></div>
+    <div class="sc-axis"><span>Model · harness</span><div class="ticks">${ticks}</div><span>Solved · cost per try</span></div>
+    <div class="sc-rows">${TBENCH.map(([m, org, h, a, ci, cost], i) => `<div class="hb-row"><div class="nm"><b>${esc(m)}</b><span><i class="h-${HARNESS[h]}"></i>${esc(h)} · ${esc(org)}</span></div>
+      <div class="hb-track"><button type="button" class="hb-bar h-${HARNESS[h]}" style="width:${a}%" data-tip="${i}|bar" aria-label="${esc(m)} in ${esc(h)}: ${a.toFixed(1)}% solved, about ${usd(cost / 330)} per attempt"></button><i class="hb-ci" style="left:${a - ci}%;width:${ci * 2}%"></i></div>
+      <div class="hb-val"><b>${a.toFixed(1)}%</b><span>${usd(cost / 330)} / try</span></div></div>`).join('')}</div>
+    <div class="sc-insight"><b>WHAT IT MEANS</b>Claude Code is the harness behind most top entries, including other labs' models: Kimi K3.1 Pro runs in it and lands third, at about a quarter of ${esc(top[0])}'s cost per try. GPT-6.1 Sol in Codex is close behind at the lowest cost in the top five. The harness you pick is part of the result.</div>
+    <p class="sc-note">Top 13 of 33 entries. Not yet submitted: Fable 5.2, GPT-6 Astra, Gemini 4 Argon and Carbon. Costs are the run's total API cost divided by 330 attempts. Kimi K3.1 Pro and DeepSeek V4.1 Flash each had a trial disqualified. <a href="https://github.com/harbor-framework/terminal-bench/tree/main/leaderboard/submissions" target="_blank" rel="noopener">Source: Terminal-Bench, Apache-2.0</a> · read 11 Nov 2026.</p>
+    <details class="sc-table"><summary>See all the numbers</summary><div class="tw"><table><thead><tr><th>Model</th><th>Maker</th><th>Harness</th><th class="num">Solved</th><th class="num">± 95%</th><th class="num">Cost per try</th><th>Effort</th></tr></thead><tbody>${TBENCH.map(([m, org, h, a, ci, cost, e]) => `<tr><td>${esc(m)}</td><td>${esc(org)}</td><td>${esc(h)}</td><td class="num">${a.toFixed(1)}%</td><td class="num">${ci.toFixed(1)}</td><td class="num">${usd(cost / 330)}</td><td>${esc(e)}</td></tr>`).join('')}</tbody></table></div></details>
+  </div>`;
+
+  // tooltip shared by both charts
+  const tipFor = el => {
+    const [i, k] = el.dataset.tip.split('|');
+    if (k === 'bar') { const [m, org, h, a, ci, cost, e] = TBENCH[+i]; return `<b>${esc(m)}</b><span>${esc(org)} · ${esc(h)} · ${esc(e)} effort</span><br>${a.toFixed(1)}% solved (±${ci.toFixed(1)}) · ${usd(cost / 330)} per try`; }
+    const r = rows[+i];
+    if (k === 'new') return `<b>${esc(N.model)}: ${f1(r.nv)}%</b><span>${esc(r.t)}</span>`;
+    if (k === 'prev') return `<b>${esc(N.prev)}: ${f1(r.pv)}%</b><span>${esc(r.t)}</span>`;
+    return `<b>Best rival: ${esc(r.bestName)}, ${f1(r.best)}%</b><span>${esc(r.t)} · ${N.rivals.map((n, j) => `${esc(n)} ${f1(r.rv[j])}`).join(' · ')}</span>`;
+  };
+  Object.values(panels).forEach(p => {
+    const card = () => p.querySelector('.sc-card');
+    let tip = null;
+    const show = el => { const c = card(); if (!tip) { tip = document.createElement('div'); tip.className = 'sc-tip'; tip.setAttribute('role', 'status'); c.appendChild(tip); }
+      tip.innerHTML = tipFor(el); const cr = c.getBoundingClientRect(), er = el.getBoundingClientRect();
+      let x = er.left + er.width / 2 - cr.left - tip.offsetWidth / 2; x = Math.max(8, Math.min(x, cr.width - tip.offsetWidth - 8));
+      tip.style.left = x + 'px'; tip.style.top = (er.top - cr.top - tip.offsetHeight - 8) + 'px'; tip.hidden = false; };
+    const hide = () => { if (tip) tip.hidden = true; };
+    p.addEventListener('pointerover', e => { const el = e.target.closest('[data-tip]'); if (el) show(el); });
+    p.addEventListener('pointerout', e => { if (e.target.closest('[data-tip]')) hide(); });
+    p.addEventListener('focusin', e => { const el = e.target.closest('[data-tip]'); if (el) show(el); });
+    p.addEventListener('focusout', hide);
+    p.addEventListener('click', e => { const el = e.target.closest('[data-tip]'); if (el) show(el); else hide(); });
+  });
+
+  const pick = k => { Object.keys(tabs).forEach(t => { const on = t === k; tabs[t].setAttribute('aria-selected', on); tabs[t].setAttribute('aria-pressed', on); panels[t].hidden = !on; }); store.set('scoretab', k); };
+  Object.keys(tabs).forEach(k => tabs[k].addEventListener('click', () => pick(k)));
+  pick(store.get('scoretab') === 'har' ? 'har' : 'new');
+}
+
 renderFU();
 renderJobs();
 renderPaths();
@@ -1566,10 +1742,9 @@ renderStairs();
 renderLabs();
 renderStack();
 renderBrands();
-renderMoney();
+renderMoney(); renderScores();
 document.querySelectorAll('.nav-lab').forEach(a => a.insertAdjacentHTML('afterbegin', logo(a.dataset.logo)));
 if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
 </script>
 
-</body>
-</html>
+</body></html>
