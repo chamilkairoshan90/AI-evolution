@@ -493,6 +493,9 @@ section { padding-block: 48px; border-top: 1px solid var(--hair); }
 footer { padding-block: 40px 60px; border-top: 2px solid var(--ink); font-size: 14px; }
 footer ul { padding-left: 18px; margin: 8px 0 0; display: grid; gap: 4px; }
 footer li { word-break: break-word; }
+.sig { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--hair); display: flex; align-items: baseline; gap: 6px 12px; flex-wrap: wrap; }
+.sig span { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.sig b { font-family: var(--f-serif); font-style: italic; font-weight: 400; font-size: 32px; line-height: 1.1; letter-spacing: -.01em; }
 
 @media (max-width: 640px) {
   .year { grid-template-columns: 1fr; gap: 8px; }
@@ -748,6 +751,7 @@ footer li { word-break: break-word; }
         <li><a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">Model Context Protocol</a></li>
         <li><a href="https://artificialintelligenceact.eu" target="_blank" rel="noopener">EU AI Act: timeline and obligations</a></li>
       </ul>
+      <div class="sig"><span>Authored by</span><b>Chamilka Hewavitharana</b></div>
     </div>
   </footer>
 </main>
